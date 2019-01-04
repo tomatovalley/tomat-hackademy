@@ -15,12 +15,16 @@ class MainActivity : AppCompatActivity() {
         RecyclerView_Eventos_Usuario.layoutManager= LinearLayoutManager(this)
         RecyclerView_Eventos_Usuario.adapter= MainAdapter()
 
+
+        fetchJson()
+
         }
+        //aquí van las funciones
+    fun fetchJson(){
 
+            println("Tratemos de recibir un Json")
 
-    //aquí van las funciones
-
-
+        }
 
 
 
