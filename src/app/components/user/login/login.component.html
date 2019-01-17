@@ -1,0 +1,45 @@
+<script src="//connect.facebook.net/en_US/sdk.js"></script>
+<section id="login" class="mb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4 mx-auto">
+        <div class="card_login">
+          <div class="card">
+            <div class="card-body text-center">
+              <form #formLogin="ngForm" (ngSubmit)="onLogin()">
+                <h1 class="h3 mb3 font-weight-normal">Iniciar Sesion</h1>
+                <div class="form-group">
+                  <input type="email" id="email" name="email" class="form-control" [(ngModel)]="user.email" placeholder="Correo electronico" required>
+                </div>
+                <div class="form-group">
+                  <input type="password" id="password" name="password" class="form-control" [(ngModel)]="user.password" placeholder="Contraseña" required>
+                </div>
+                <button type="submit" class="btn btn-large btn-color-green btn-block text-color">
+                  Iniciar Sesion
+                </button>
+                <div class="form-group">
+                  o
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-block btn-fb btn-fb-color text-color" (click)="socialSignIn('facebook')"><i class="fab fa-facebook-f pr-1"></i>
+                      Facebook</button>
+                  </div>
+                  <div class="form-group">
+                    <button type="button" class="btn btn-block btn-gplus btn-g-color text-color" (click)="socialSignIn('google')"><i class="fab fa-google-plus-g"></i>
+                      Google</button>
+                  </div>
+                  <div class="form-group">
+                    <button type="button" class="btn btn-block btn-tw btn-twt-color text-color" ><i class="fab fa-twitter pr-1"></i>
+                      Twitter</button>
+                  </div>
+                <div class="form-group login-user">
+                  <a routerLink="/user/register" class="form-control login-user">Are you new?</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,12 @@
+.form-control.login-user{
+  border: 0px solid #ffffff !important;   
+}
+input::placeholder{
+  color: #000000;
+}
+.borders {
+  border-color: rgb(124, 124, 134);
+  background: transparent;
+  border: none transparent;
+  outline: none;
+}

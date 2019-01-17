@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+  crossorigin="anonymous">
+<form #formRegister="ngForm" (ngSubmit)="onRegister()">
+    <div class="container">
+        <div class="row">
+          <!--First Column-->
+          <div class="col-7">
+            <img src="../../../assets/Office.jpg" class="rounded" width="100%" height="100%" alt="">
+          </div>
+          <!--Second Column-->
+          <div class="col-5">
+            <h1 class="h3 mb3 font-weight-normal text-center text-color">¡Únete a Tomato Valley!</h1>
+            <div class="row">
+              <div class="form-group col-lg-6">
+                <input class="form-control input-lg textbox" id="name" name="name" type="text" placeholder="Nombre" [(ngModel)]="user.name" tabindex="1">
+              </div>
+              <div class="form-group col-lg-6">
+                <input class="form-control input-lg textbox" id="last_name" name="last_name" type="text" placeholder="Apellido" [(ngModel)]="user.last_name"
+                  tabindex="2">
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" name="user_name" id="user_name" class="form-control input-lg textbox" placeholder="Usuario" [(ngModel)]="user.user_name"
+                tabindex="3">
+            </div>
+            <div class="row">
+              <div class="form-group col-lg-6">
+                <input type="email" name="email" id="email" class="form-control input-lg textbox" placeholder="Correo electronico" [(ngModel)]="user.email"
+                  tabindex="4">
+              </div>
+              <div class="form-group col-lg-6">
+                <input type="password" name="password" id="password" class="form-control input-lg textbox" placeholder="Contraseña" [(ngModel)]="user.password"
+                  tabindex="5">
+              </div>
+              <div class="form-group col-lg-6 text-color">
+                <p>Fecha de Nacimiento</p>
+                <input type="date" class="form-control input-lg" name="birthdate" id="birthdate" [(ngModel)]="user.birthdate" tabindex="6"> 
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-lg-3 text-color">
+                <input type="radio" name="gender"  value="Hombre" [(ngModel)]="user.gender" tabindex="7">&nbsp;Hombre 
+              </div>
+              <div class="form-group col-lg-3 text-color">
+                <input type="radio" name="gender" value="Mujer" [(ngModel)]="user.gender" tabindex="8">&nbsp;Mujer
+              </div>
+            </div>
+            <p class="text-color text-size">
+              Al hacer clic en "Registrarse", aceptas nuestras condiciones, la Política de datos y la Política de cookies. Es
+              posible que te enviemos notificaciones por SMS, que puedes desactivar cuando quieras.
+            </p>
+            <button type="submit" class="btn btn-large btn-color-green btn-block text-color">
+              Registrarse
+            </button>
+            <div class="hr-sect">o</div>
+            <div class="row">
+              <div class="form-group col-lg-4 col-xs-3">
+                <button type="button" class="btn btn-block btn-fb btn-fb-color text-color" (click)="socialSignIn('facebook')"><i class="fab fa-facebook-f pr-1"></i>
+                  Facebook</button>
+              </div>
+              <div class="form-group col-lg-4 col-xs-3">
+                <button type="button" class="btn btn-block btn-gplus btn-g-color text-color" (click)="socialSignIn('google')"><i class="fab fa-google-plus-g"></i>
+                  Google</button>
+              </div>
+              <div class="form-group col-lg-4 col-xs-3">
+                <button type="button" class="btn btn-block btn-tw btn-twt-color text-color"><i class="fab fa-twitter pr-1"></i>
+                  Twitter</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</form>

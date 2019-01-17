@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-md navbar-dark navbar-default">
+  <img src="https://tomatovalley.net/wp-content/uploads/2018/03/Logo-tomato-TB.png" alt="" data-ww="341px" data-hh="241px" width="50" height="50" data-no-retina="">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavBar" aria-controls="mainNavBar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="mainNavBar">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link text-color" routerLink="/">Invertir | </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/">StartUps | </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/">Empresas | </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/">Eventos | </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/">Hackademy | </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/">Bolsa de Trabajo</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item" *ngIf="isLogged">
+        <a class="nav-link" routerLink="/user/profile">Perfil |</a>
+      </li>
+      <li class="nav-item" *ngIf="isLogged">
+        <a class="nav-link" routerLink="/admin/list-books">Eventos |</a>
+      </li>
+      <li class="nav-item" *ngIf="!isLogged">
+        <a class="nav-link" routerLink="/user/login">Log in</a>
+      </li>
+      <li class="nav-item" *ngIf="!isLogged">
+          <button class="btn btn-large btn-color-green btn-block text-color" routerLink="/">Sign in</button>
+        </li>
+      <li class="nav-item" *ngIf="isLogged">
+        <a href="#" class="nav-link" (click)="onLogout()">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>

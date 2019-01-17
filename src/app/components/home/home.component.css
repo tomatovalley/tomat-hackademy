@@ -1,0 +1,43 @@
+.text-color{
+    color: #ffffff;
+}
+.text-size{
+    font-size: 10px;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0; 
+}
+.hr-sect {
+	display: flex;
+	flex-basis: 100%;
+	align-items: center;
+	color: #ffffff;
+	margin: 8px 0px;
+}
+.hr-sect::before,
+.hr-sect::after {
+	content: "";
+	flex-grow: 1;
+	background: #ffffff;
+	height: 1px;
+	font-size: 0px;
+	line-height: 0px;
+	margin: 0px 8px;
+}
+.btn-fb-color{
+    background: #4267B2;
+}
+.btn-g-color{
+    background: #F92525;
+}
+.btn-twt-color{
+    background: #38A1F3;
+}
+
+
+
