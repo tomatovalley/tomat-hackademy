@@ -1,17 +1,20 @@
 package prueba.hackademi.eventos
 
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.eventos_row.view.*
+import org.json.JSONObject
 
 
-class MainAdapter: RecyclerView.Adapter<CustomViewHolder>() {
+class MainAdapter(val homeFeed: Array<HomeFeed>): RecyclerView.Adapter<CustomViewHolder>() {
 
-    val listaDeEventos = listOf<String>("Primer evento", "Segundo evento", "Tercer evento", "Otrooooos eventos")
+    //val listaDeEventos = listOf("Primer evento", "Segundo evento", "Tercer evento", "Otrooooos eventos","1","2","3","4")
     override fun getItemCount(): Int {
-        return listaDeEventos.size
+        return homeFeed.size
+
     }
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): CustomViewHolder {
@@ -20,12 +23,31 @@ class MainAdapter: RecyclerView.Adapter<CustomViewHolder>() {
         return CustomViewHolder(cellForRow)
     }
 
-    override fun onBindViewHolder(p0: CustomViewHolder, p1: Int) {
-        val titulo = listaDeEventos.get(p1)
-        p0?.view?.name_eventos?.text = titulo
+    override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
+
+        //val titulo = listaDeEventos.get(p1)
+        val titulo = homeFeed[position]
+        //val titulo = listaDeEventos.get(position)
+        holder.view.name_eventos?.text = titulo.evento
+        holder.view.name_sede?.text = titulo.sede
+
+        holder.detalle =titulo
     }
 }
 
-class CustomViewHolder(val view: View): RecyclerView.ViewHolder(view){
+class CustomViewHolder(val view: View, var detalle: HomeFeed? = null): RecyclerView.ViewHolder(view){
+
+    init {
+        view.setOnClickListener{
+            val intent = Intent(view.context,DetalleEvento::class.java)
+
+            intent.putExtra("Evento", detalle?.evento)
+            intent.putExtra("Sede", detalle?.sede)
+
+            view.context.startActivity(intent)
+
+
+        }
+    }
 
 }

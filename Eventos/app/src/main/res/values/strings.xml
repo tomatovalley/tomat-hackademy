@@ -3,4 +3,9 @@
     <string name="puchame">Puchame</string>
     <string name="eventos_proximos_en">EVENTOS PROXIMOS EN</string>
     <string name="tomato_sede">TOMATO SEDE:</string>
+    <string name="sede">Sede:</string>
+    <string name="crear_evento">Crear evento</string>
+    <string name="registrar">Registrar</string>
+    <string name="regresar">Regresar</string>
+    <string name="siguiente">Siguiente</string>
 </resources>
