@@ -1,9 +1,8 @@
 package com.example.luque.registrousuario
 
 import android.content.Intent
-import android.graphics.drawable.Drawable
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.text.InputType
 import android.widget.Button
 import android.widget.TextView
@@ -29,11 +28,13 @@ class login : AppCompatActivity() {
                 valor=true
             }
         }
+
         val botonlogin= findViewById(R.id.botonlogin) as Button
         botonlogin.setOnClickListener{
-            val intent4 = Intent(this, eventos::class.java)
-            startActivity(intent4)
+            val intent3 = Intent(this, eventos::class.java)
+            startActivity(intent3)
         }
+
 
 
     }
