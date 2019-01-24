@@ -1,0 +1,69 @@
+/*Apartado solamente mara el menu Nav*/
+img{
+    width: 40px;
+    height: 30px;
+    margin: 0 auto;
+    display: block;
+}
+
+.nav-link{
+    margin: 0 50px 0 0;
+    color: #ffffff;
+}
+.nav-link:hover{
+    background: #000000;
+    border-radius: 10px;
+    
+}
+#nav{
+    float: right;
+    display: inline;
+}
+#main-nav{
+    display: inline;
+
+}
+.signUp{
+background: #45DE54;
+}
+/* apartado solamente para el body*/
+
+h1 {
+    text-align: center;
+    width: 100%;
+    margin-top: 10%;
+}
+h2{
+    text-align: center;
+    
+}
+.h2{
+    margin-bottom: 10%;
+}
+p{
+    text-align: center;
+    
+}
+/*Apartado solamente para el footer*/
+.footer{
+    height: 107px;
+    background: #000000;
+
+}
+.fab {
+    display: inline;
+    margin: 1%;
+    
+    color:#ffffff;
+}
+.fas{
+    display: inline;
+    margin: 1%;
+    color: #ffffff;
+} 
+.fff{
+    
+    width: 10%;
+    margin: 0 auto;
+
+}

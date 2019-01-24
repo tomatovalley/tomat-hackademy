@@ -1,0 +1,94 @@
+.btn-group-vertical{
+    
+    display: block;
+}
+#btn-group-vertical{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 20%;
+    box-sizing: border-box;
+}
+.containerr{
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+.IniciarSesion{
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background: #45DE54;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.50em;
+    width: 20%;
+}
+.Facebook{
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background: #4267B2;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.50em;
+    width: 20%;
+    box-sizing: border-box;
+}
+.Google{
+    
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background: #F92525;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.50em;
+    width: 20%;
+    box-sizing: border-box;
+}
+.Twitter{
+    margin: 0 auto;
+    background: #38A1F3;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.50em;
+    width: 20%;
+}
+img{
+    margin-left: 1px;
+}
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  @media screen and (max-width:1200px){
+      .containerr{
+          width: 100%;
+          margin: 0 auto;
+      }
+      .IniciarSesion{
+          width: 50%;
+      }
+      .Facebook{
+    width: 50%; 
+    }
+    .Google{
+    width: 50%;
+    }
+    .Twitter{
+        width: 50%;
+    }
+    #btn-group-vertical{
+    width: 50%;
+    }
+
+
+  }

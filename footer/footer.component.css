@@ -1,0 +1,21 @@
+.font-small{
+    background: #000000;
+    height: 72px;
+}
+.fab{margin: 0 auto;
+    color: #ffffff;
+    font-size: 20px;
+}
+.fas{
+    color:#ffffff; 
+    font-size: 20px;
+}
+footer{
+    margin-top: 450px;
+}
+@media screen and (max-width:1200px)
+{
+    footer{
+        margin-top: 1200px;
+    }
+}
