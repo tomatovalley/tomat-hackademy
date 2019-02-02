@@ -67,10 +67,12 @@
         android:layout_marginStart="75dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="74dp"
+        android:layout_marginBottom="12dp"
         android:background="@drawable/fondobotonlisto"
         android:text="Continue"
         android:textAllCaps="false"
         android:textColor="@color/cardview_light_background"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBox" />
@@ -88,33 +90,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 
-    <TextView
-        android:id="@+id/linea1"
-        android:layout_width="97dp"
-        android:layout_height="1dp"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="63dp"
-        android:background="@drawable/colorgrislinea"
-        android:backgroundTint="@drawable/colorgrislinea"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <TextView
-        android:id="@+id/linea2"
-        android:layout_width="97dp"
-        android:layout_height="1dp"
-        android:layout_marginStart="63dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="200dp"
-        android:background="@drawable/colorgrislinea"
-        android:backgroundTint="@drawable/colorgrislinea"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
 
     <Button
         android:id="@+id/botonprueba2"
@@ -123,10 +100,11 @@
         android:layout_marginStart="136dp"
         android:layout_marginTop="21dp"
         android:layout_marginEnd="136dp"
+        android:layout_marginBottom="70dp"
         android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linea1" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>

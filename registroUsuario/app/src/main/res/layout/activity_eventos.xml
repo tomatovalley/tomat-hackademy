@@ -21,4 +21,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/TV_username"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="203dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="128dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

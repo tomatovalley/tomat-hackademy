@@ -5,7 +5,7 @@ import com.facebook.FacebookSdk
 
 import com.facebook.appevents.AppEventsLogger
 
-class facebookApp : Application() {
+class facebookApp : Application()  {
 
     override fun onCreate() {
         super.onCreate()

@@ -47,11 +47,6 @@ class datosRegistro : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
     private var mDisplayDate: TextView? = null
     private var mDateSetListener: DatePickerDialog.OnDateSetListener? = null
     private var date : String? = null
-
-
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_datos_registro)
@@ -181,8 +176,8 @@ class datosRegistro : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
 
         val botonListo= findViewById(R.id.botonListo) as Button
         botonListo.setOnClickListener{
-            val intent2 = Intent(this, login::class.java)
-            startActivity(intent2)
+            val intent100 = Intent(this, login::class.java)
+            startActivity(intent100)
             LoginManager.getInstance().logOut()
             goLoginScreen()
             logOutGoogle()
@@ -281,7 +276,7 @@ class datosRegistro : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
     }
     private fun goLoginScreen()
     {
-        val intent = Intent(this, registroSocialMedia::class.java)
+        val intent = Intent(this, login::class.java)
 
         startActivity(intent)
     }

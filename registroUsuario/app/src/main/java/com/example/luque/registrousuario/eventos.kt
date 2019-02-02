@@ -5,7 +5,10 @@ package com.example.luque.registrousuario
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
+import android.widget.TextView
 import com.facebook.login.LoginManager
+
+
 
 
 class eventos : AppCompatActivity() {
@@ -17,9 +20,10 @@ class eventos : AppCompatActivity() {
 
         btnLogout.setOnClickListener{
             LoginManager.getInstance().logOut()
-
-
         }
+        val username = intent.getStringExtra("username")
+        val uname = findViewById(R.id.TV_username) as TextView
+        uname.setText(username)
 
 
 
