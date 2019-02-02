@@ -1,4 +1,8 @@
 /* navbar */
+.navbar {
+    margin: 0;
+}
+
 .navbar-default {
     background-color: #000000;
     border-color: #ffffff;
@@ -58,18 +62,32 @@
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
     background-color: #DDD;
+    
 }
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #CCC;
 }
 .btn{
-    background: #bed650;
+    background: #45DE54;
+    font-family: 'Segoe UI';
+    font-size: 20px;
 }
 img{
-    width: 50px;
-    height: 50px;
+    width: 90px;
+    height: 60px;
     margin: 0px 200px 0px 50px;
     box-sizing: border-box;
+}
+.nav-link{
+    
+    font-size: 20px;
+    font-weight: 500;
+}
+.ml-auto{
+    float: right;
+}
+#mainNavBar{
+    float: left;
 }
 @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {

@@ -7,7 +7,6 @@ img{
     box-sizing: border-box;
 
 }
-
 .tag-CpP{
     text-align: center;
 }
@@ -39,7 +38,7 @@ aside{
     display: inline;
     font-size: 18px;
     font-weight: 550;
-    margin: 0px 0px 0px 95px;
+    margin: 0px 0px 0px 78px;
 }
 #mentores{
     width: 50%;
@@ -104,8 +103,57 @@ aside{
     border-radius: 10px;
     display: inline;
 }
-.person{
+.uno{
+    background: #ffffff;
+    
+}
+.dos{
     background: #FDFFC5;
+}
+
+/*Ventana para el mensaje*/
+.overlay{
+    background: rgba(0, 0 , 0, .3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+.popup{
+    background: #ffffff;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0 , 0, 9);
+    border-radius: 3px;
+    font-family: "Arial";
+    padding: 20px;
+    text-align: center;
+    width: 753px;
+}
+.popup .btn-cerrarpopup{
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color: #BBBBBB;
+    transition: .3s ease all;
+}
+.popup .btn-cerrarpopup:hover{
+    color: #000;
+}
+.btn-submit{
+    padding: 0 20px;
+     text-align: center;
+    width: 10%;
+    height: 75px;
+    border: 2px solid #45DE54;
+    color: #45DE54;
+    font-family: Arial;
+    background: #ffffff;
+    margin: 0 auto;
+    border-radius: 150px;
 }
 
 @media screen and (max-width:1200px){
