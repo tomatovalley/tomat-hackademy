@@ -2,6 +2,7 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const FacebookTokenStrategy = require("passport-facebook-token");
 const GooglePlusTokenStrategy = require("passport-google-plus-token");
+const TwitterStrategy = require('passport-twitter').Strategy;
 
 const User = require("../models/User");
 
@@ -23,20 +24,8 @@ passport.use(new LocalStrategy({
 }));
 
 
-/*passport.serializeUser((user, done)=>{
-    done(null, user.id);
-});
-
-passport.deserializeUser((id, done)=>{
-    User.findById(id, (err, user)=>{
-        done(err, user);
-    });
-});*/
-
 passport.serializeUser(function(user, done) {
     done(null, user._id);
-    // if you use Model.id as your idAttribute maybe you'd want
-    // done(null, user.id);
 });
 
 passport.deserializeUser(function(id, done) {
@@ -57,11 +46,11 @@ passport.use(new FacebookTokenStrategy({
 
         const existingUser = await User.findOne({"id": profile.id});
         if(existingUser){
-            console.log("User already exists in our DB");
+            console.log("El usuario ya existe en la base de datos");
             return done(null, existingUser);
         }
 
-        console.log("User doesnt's exist, we're creating in our DB");
+        console.log("El usuario no existe, se creará en la base de datos");
         const newUser = new User({
             id: profile.id,
             email: profile.emails[0].value,
@@ -88,10 +77,10 @@ passport.use("google", new GooglePlusTokenStrategy({
         // Checa si el usuario existe en la DB
         const existingUser = await User.findOne({"id":profile.id});
         if(existingUser){
-            console.log("User already exists in our DB");
+            console.log("El usuario ya existe en la base de datos");
             return done(null, existingUser);
         }
-        console.log("User doesnt's exist, we're creating in our DB");
+        console.log("El usuario no existe, se creará en la base de datos");
         const newUser = new User({
             id: profile.id,
             email: profile.emails[0].value
@@ -101,5 +90,25 @@ passport.use("google", new GooglePlusTokenStrategy({
     } catch (error) {
         done(error, false, error.message);
     }
-
 }));
+
+//Autentificación por Twitter
+passport.use(new TwitterStrategy({
+
+  consumerKey:    "fIooj6sd4HjDE1I7KSUqnLRXD",
+
+  consumerSecret: "cgGFyFgEDGTWdGuOolQvXSI9dJf9i6P6bqOUMj50ONBJBxHOrg",
+
+  callbackURL:    "http://localhost:3000/twitter/return"
+},
+  function(token, tokenSecret, profile, callback) {
+
+    return callbackURL(null, profile);
+
+  }));
+passport.serializeUser(function(user, callback){
+    callback(null, user);
+})
+passport.deserializeUser(function(obj, callback){
+    callback(null, obj);
+})

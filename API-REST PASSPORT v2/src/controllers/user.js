@@ -1,6 +1,12 @@
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
-//const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const forgot = require('password-reset')({
+    uri : 'http://localhost:3000/password_reset',
+    from : 'password-robot@localhost',
+    host : 'localhost', port : 3000,
+});
+
 
 
 module.exports = {
@@ -48,27 +54,41 @@ module.exports = {
         .then(user => {
             if(user.length < 1){
                 return res.status(401).json({
-                    message: "Auth failed"
+                    message: "Auth fallida"
                 });
             }
             bcrypt.compare(req.body.password, user[0].password, (err, result) => {
                 //console.log(req.body.password);
                 //console.log(user[0].password);
+                var userId = "";
                 if(err){
                     return res.status(401).json({
-                        message: "Auth failed"
+                        message: "Auth fallida"
                     });
                 }
                 if(result){
+                    const token = jwt.sign({
+                      email: user[0].email,
+                      userId: user[0]._id
+                    }, process.env.JWT_KEY, {
+                            expiresIn: "1h"
+                        } 
+                    );
+                    token: token
+                    //userId = token;
+                    user[0].id = token;
+                    //console.log(user[0].id);
+                    console.log(token);
                     return res.status(200).json(user);
                     /*return res.status(200).json({
-                        message: "Auth successful"
-                    });*/
+                        message: "Auth successful",
+                        token: token
+                    })*/
                     
                 }
                 if(req.body.password!=user[0].password){
                     return res.status(401).json({
-                        message: "Auth failed"
+                        message: "Auth fallida"
                     });
                 }
             });
@@ -87,7 +107,7 @@ module.exports = {
           .then(user => {
             if (user.length >= 1) {
               return res.status(409).json({
-                message: "Mail exists"
+                message: "El email ya se encuentra registrado"
               });
             } else {
               bcrypt.hash(req.body.password, 10, (err, hash) => {
@@ -134,7 +154,26 @@ module.exports = {
         });
       },
       facebookOAuth: async(req, res, next)=>{
-        console.log("Got here");
-        // console.log("req.user", req.user);
+      },
+      loginUserGoogle: async(req, res, next)=>{
+        User.find({ email: req.body.email })
+        .exec()
+        .then(user => {
+            if(user.length < 1){
+                return res.status(401).json({
+                    message: "Auth fallida"
+                });
+            }
+            
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({
+                error: err
+            });
+        });
       }
+
+
+
 };

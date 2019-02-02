@@ -6,6 +6,11 @@ const session = require("express-session");
 const flash = require("connect-flash");
 const passport = require("passport");
 const cors = require("cors");
+const forgot = require('password-reset')({
+    uri : 'http://localhost:3000/password_reset',
+    from : 'password-robot@localhost',
+    host : 'localhost', port : 3000,
+});
 
 const app = express();
 
@@ -40,6 +45,7 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Authorization, Content-Type, Accept");
     next();
 });
+app.use(forgot.middleware);
 
 // routes
 app.use("/users", usersRoutes);
