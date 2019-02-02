@@ -29,3 +29,8 @@ class EventoSerializer(serializers.ModelSerializer):
         fields = ('id', 'name','place','begin_date','image','start_hour', 'final_date','end_hour',
             'description','organizer','facebook','instagram','twitter', 'user_id')
 
+class TokenSerializer(serializers.Serializer):
+    """
+    This serializer serializes the token data
+    """
+    token = serializers.CharField(max_length=255)
