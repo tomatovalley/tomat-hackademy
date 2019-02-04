@@ -3,25 +3,41 @@ package prueba.hackademi.eventos
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
+import android.support.v7.app.AppCompatActivity
 import android.widget.DatePicker
 import android.widget.TextView
-import android.widget.Toast
+import com.google.android.gms.common.ConnectionResult
+import com.google.android.gms.common.api.GoogleApiClient
+import com.google.android.gms.location.places.GeoDataClient
+import com.google.android.gms.location.places.PlaceFilter
+import com.google.android.gms.location.places.Places
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.LatLngBounds
 import kotlinx.android.synthetic.main.crear_evento_sa1.*
-import okhttp3.*
-import okhttp3.RequestBody;
-import okhttp3.Response
-import okhttp3.MediaType;
-import okhttp3.OkHttpClient;
-import okhttp3.Request
-import java.io.IOException
+import okhttp3.OkHttpClient
 import java.text.SimpleDateFormat
 import java.util.*
 
 
-class CrearEventoSA : AppCompatActivity() {
+
+
+
+
+
+
+class CrearEventoSA : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener  {
+    override fun onConnectionFailed(p0: ConnectionResult) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    private val LAT_LNG_BOUNDS = LatLngBounds(
+        LatLng(-40.0, -168.0), LatLng(71.0, 136.0)
+    )
+    private var mGoogleApiClient: GoogleApiClient? = null
+    private var mPlaceAutocompleteAdapter: PlaceAutocompleteAdapter? = null
+    private var mPlaceFilter : PlaceFilter? = null
+
 
     val client2 = OkHttpClient()
     //var nombre:String? = null
@@ -57,6 +73,17 @@ class CrearEventoSA : AppCompatActivity() {
 
         }
 
+        mGoogleApiClient = GoogleApiClient.Builder(this)
+            .addApi(Places.GEO_DATA_API)
+            .addApi(Places.PLACE_DETECTION_API)
+            .enableAutoManage(this,this)
+            .build()
+
+        val mGeoDataClient = Places.getGeoDataClient(this, null)
+        val mPlaceFilter = PlaceFilter()
+
+        //mPlaceAutocompleteAdapter = PlaceAutocompleteAdapter(this,mGeoDataClient,LAT_LNG_BOUNDS,mPlaceFilter)
+
 
         var horaInicio: String
 
@@ -64,6 +91,11 @@ class CrearEventoSA : AppCompatActivity() {
         dia_fecha_fin.setText(""+day+"/"+month+"/"+year)
         hora_inicio.text = SimpleDateFormat("HH:mm").format(calendar.time)
 
+        boton_lugar.setOnClickListener{
+            //Toast.makeText(this,"Ya salio",Toast.LENGTH_SHORT).show()
+            val intent = Intent(applicationContext, MapaDeEvento::class.java)
+            startActivity(intent)
+        }
         //boton de fecha
 
         boton_fecha_inicio.setOnClickListener{
@@ -125,7 +157,7 @@ class CrearEventoSA : AppCompatActivity() {
             val nombreView = findViewById(R.id.registrar_organizador) as TextView
             val registerEvento = nombreView.text.toString()
 
-            val sedeView = findViewById(R.id.register_sede) as TextView
+            val sedeView = findViewById(R.id.input_search) as TextView
             val registerSede:String = sedeView.text.toString()
 
 
@@ -135,6 +167,7 @@ class CrearEventoSA : AppCompatActivity() {
             startActivity(intent)
 
         }
+
 
     }
 

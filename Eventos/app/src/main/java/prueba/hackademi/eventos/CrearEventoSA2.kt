@@ -1,7 +1,10 @@
 package prueba.hackademi.eventos
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.ContentValues
+import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -10,12 +13,19 @@ import android.os.Bundle
 import android.os.PersistableBundle
 import android.provider.MediaStore
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
+import android.view.Gravity
+import android.view.LayoutInflater
 import android.view.View
+import android.widget.LinearLayout
+import android.widget.PopupMenu
+import android.widget.PopupWindow
 import android.widget.Toast
 import kotlinx.android.synthetic.main.crear_evento_sa1.*
 import kotlinx.android.synthetic.main.crear_evento_sa2.*
 import kotlinx.android.synthetic.main.detalle_evento.*
 import kotlinx.android.synthetic.main.eventos_row.*
+import java.lang.Exception
 import java.util.jar.Manifest
 
 class CrearEventoSA2 : AppCompatActivity(){
@@ -43,12 +53,70 @@ class CrearEventoSA2 : AppCompatActivity(){
 
                 }
                 else{
-                    abrirCamara()
+
+                    val popupWindow = PopupWindow(this)
+
+                    popupWindow.showAtLocation(boton_de_repuesto, Gravity.AXIS_PULL_AFTER, 50, 50)
+
+
+
+                    val dialog: DialogInterface? = null
+                    val wich : Int = 0
+
+
+                    val selectorDeImagen = AlertDialog.Builder(this)
+                    selectorDeImagen.setTitle("Elige que hacer")
+
+                    val itemsDeImage : Array<String> = arrayOf("Tomar foto con camara", "Seleccionar foto desde la galeria")
+
+
+
+                    val popupMenu = PopupMenu(this, it)
+
+                    popupMenu.setOnMenuItemClickListener { item ->
+                        when (item.itemId){
+                            R.id.abrir_camara -> {
+                                abrirCamara()
+                                true
+
+                            }
+
+                            R.id.abrir_galeria -> {
+                                abrirGaleria()
+                                true
+                            }
+                            else -> false
+                        }
+                    }
+                    popupMenu.inflate(R.menu.popup_de_camara)
+                    popupMenu.show()
                 }
 
             }
             else{
-                abrirCamara()
+
+                val popupWindow = PopupWindow(this)
+
+                popupWindow.showAtLocation(boton_de_repuesto, Gravity.CENTER, 50, 50)
+
+                val popupMenu = PopupMenu(this, it)
+                popupMenu.setOnMenuItemClickListener { item ->
+                    when (item.itemId){
+                        R.id.abrir_camara -> {
+                            abrirCamara()
+                            true
+
+                        }
+
+                        R.id.abrir_galeria -> {
+                            abrirGaleria()
+                            true
+                        }
+                        else -> false
+                    }
+                }
+                popupMenu.inflate(R.menu.popup_de_camara)
+                popupMenu.show()
             }
 
         }
@@ -72,18 +140,51 @@ class CrearEventoSA2 : AppCompatActivity(){
 
                 }
                 else{
-                    abrirCamara()
+                    val popupMenu = PopupMenu(this, it)
+                    popupMenu.setOnMenuItemClickListener { item ->
+                        when (item.itemId){
+                            R.id.abrir_camara -> {
+                                abrirCamara()
+                                true
+
+                            }
+
+                            R.id.abrir_galeria -> {
+                                abrirGaleria()
+                                true
+                            }
+                            else -> false
+                        }
+                    }
+                    popupMenu.inflate(R.menu.popup_de_camara)
+                    popupMenu.show()
                 }
 
             }
             else{
-                abrirCamara()
+                val popupMenu = PopupMenu(this, it)
+                popupMenu.setOnMenuItemClickListener { item ->
+                    when (item.itemId){
+                        R.id.abrir_camara -> {
+                            abrirCamara()
+                            true
+
+                        }
+
+                        R.id.abrir_galeria -> {
+                            abrirGaleria()
+                            true
+                        }
+                        else -> false
+                    }
+                }
+                popupMenu.inflate(R.menu.popup_de_camara)
+                popupMenu.show()
+
             }
         }
 
     }
-
-
 
     fun abrirCamara(){
 
@@ -99,6 +200,12 @@ class CrearEventoSA2 : AppCompatActivity(){
         startActivityForResult(cameraIntent, IMAGE_CAPTURE_CODE)
 
 
+
+    }
+
+    fun abrirGaleria(){
+
+        Toast.makeText(this, "Prro",Toast.LENGTH_SHORT).show()
 
     }
 
@@ -118,7 +225,6 @@ class CrearEventoSA2 : AppCompatActivity(){
         }
 
     }
-
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
        if (resultCode == Activity.RESULT_OK){
 
@@ -126,9 +232,6 @@ class CrearEventoSA2 : AppCompatActivity(){
            imagen_de_boton.setImageURI(image_rui)
            imagen_de_boton.visibility = View.VISIBLE
            boton_de_repuesto.visibility = View.VISIBLE
-
-
-
        }
     }
 

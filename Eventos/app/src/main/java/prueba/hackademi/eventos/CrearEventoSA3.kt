@@ -1,9 +1,9 @@
 package prueba.hackademi.eventos
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.crear_evento_sa3.*
@@ -39,7 +39,7 @@ class CrearEventoSA3 : AppCompatActivity() {
         })
 
 
-        activar_redes_sociales.setOnClickListener {
+        activar_redes_sociales.setOnClickListener{
 
             if (activar_redes_sociales.isChecked){
                 registrar_facebook.visibility = View.VISIBLE
