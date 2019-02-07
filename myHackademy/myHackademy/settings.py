@@ -50,12 +50,16 @@ REST_FRAMEWORK = {
     # Authentication settings
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
     ],
     
     # inside the Rest framework settings dictionary, add the permission settings
     # Permission settings
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+        'rest_framework.permissions.IsAdminUser'
     ],
 }
 
@@ -132,9 +136,9 @@ WSGI_APPLICATION = 'myHackademy.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'hackademy',
-        'USER': 'leo2',
-        'PASSWORD': 'password',
+        'NAME': 'hackacady',
+        'USER': 'marco',
+        'PASSWORD': 'metallica1',
         'HOST':'localhost',
         'PORT': '5432',
     }

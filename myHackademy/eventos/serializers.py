@@ -10,11 +10,13 @@ from django.core.files.base import ContentFile
 
 
 from drf_extra_fields.fields import Base64ImageField
+
+
 class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('username',)
+        fields = ('username', 'password')
 
 
 
