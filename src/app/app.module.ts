@@ -6,13 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { OffersComponent } from './components/offers/offers.component';
 import { HeroComponent } from './components/hero/hero.component';
-import { DetailsBookComponent } from './components/details-book/details-book.component';
-import { ListBooksComponent } from './components/admin/list-books/list-books.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { RegisterComponent } from './components/user/register/register.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
+import { UpdateProfileComponent } from './components/user/update-profile/update-profile.component';
 import { Page404Component } from './components/page404/page404.component';
 import { FormsModule } from '@angular/forms';
 
@@ -21,6 +19,12 @@ import { DataApiService } from 'src/app/services/data-api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
 import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider } from "angular-6-social-login";
+import { CodigoConfirmacionComponent } from './components/codigo-confirmacion/codigo-confirmacion.component';
+import { CompletarPerfilComponent } from './components/user/completar-perfil/completar-perfil.component';
+import { IntroduceCodConfirmacionComponent } from './components/user/introduce-cod-confirmacion/introduce-cod-confirmacion.component';
+import { CompletePerfilWriteComponent } from './components/user/complete-perfil-write/complete-perfil-write.component';
+
+
 /*const config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
@@ -48,15 +52,17 @@ export function getAuthServiceConfigs() {
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    OffersComponent,
     HeroComponent,
-    DetailsBookComponent,
-    ListBooksComponent,
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
     Page404Component,
-    FooterComponent
+    FooterComponent,
+    UpdateProfileComponent,
+    CodigoConfirmacionComponent,
+    CompletarPerfilComponent,
+    IntroduceCodConfirmacionComponent,
+    CompletePerfilWriteComponent,
   ],
   imports: [
     BrowserModule,

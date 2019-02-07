@@ -1,38 +1,65 @@
-<section id="register" class="mb-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-4 mx-auto">
-        <div class="card_register">
-          <div class="card">
-            <div class="card-body text-center">
-              <form #formRegister="ngForm" (ngSubmit)="onRegister()">
-                <h1 class="h3 mb3 font-weight-normal">Register</h1>
-                <div class="form-group">
-                  <input type="text" id="name" name="name" class="form-control" placeholder="Name" [(ngModel)]="user.name" required>
-                </div>
-                <div class="form-group">
-                  <input type="text" id="last_name" name="last_name" class="form-control" [(ngModel)]="user.last_name" placeholder="Last name" required>
-                </div>
-                <div class="form-group">
-                  <input type="text" id="user_name" name="user_name" class="form-control" [(ngModel)]="user.user_name" placeholder="Username" required>
-                </div>
-                <div class="form-group">
-                  <input type="email" id="email" name="email" class="form-control" [(ngModel)]="user.email" placeholder="Email" required>
-                </div>
-                <div class="form-group">
-                  <input type="password" id="password" name="password" class="form-control" [(ngModel)]="user.password" placeholder="Password" required>
-                </div>
-                <button type="submit" class="btn btn-large btn-primary btn-block">
-                  Register
-                </button>
-                <div class="form-group">
-                  <a routerLink="/user/login" class="form-control login-user">Do you have an account?</a>
-                </div>
-              </form>
+<!-- Modal -->
+<div id="modalBook" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="form-book" #formBook="ngForm">
+            <input type="hidden" id="bookId" name="bookId" class="form-control">
+            <div class="form-group">
+              <label for="">Titulo</label>
+              <input type="text" id="titulo" name="titulo" class="form-control" placeholder="Titulo">
             </div>
-          </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="idioma">Idioma</label>
+                <select name="idioma" id="idioma" class="form-control">
+                  <option value="Inglés">Inglés</option>
+                  <option value="Castellano">Castellano</option>
+                </select>
+  
+              </div>
+              <div class="form-group col-md-6">
+                <label for="precio">Precio</label>
+                <input type="text" id="precio" name="precio" class="form-control" placeholder="0,00€">
+              </div>
+  
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="autor">Autor</label>
+                <input type="text" id="autor" name="autor" class="form-control" placeholder="Autor">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="oferta">Oferta</label>
+                <select name="oferta" id="oferta" class="form-control">
+                  <option value="1">SI</option>
+                  <option value="0">NO</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="portada">Portada</label>
+                <input type="text" id="portada" name="portada" class="form-control" placeholder="Portada">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="link_amazon">Link Amazon</label>
+                <input type="text" id="link_amazon" name="link_amazon" class="form-control" placeholder="Link Amazon">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="descripcion">Descripción</label>
+              <textarea name="descripcion" id="descripcion" class="form-control" cols="50" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary float-right">Save Book</button>
+          </form>
         </div>
       </div>
     </div>
   </div>
-</section>

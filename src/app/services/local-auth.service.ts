@@ -79,7 +79,7 @@ export class LocalAuthService {
   }
 
   loginGoogle(): Observable<any>{
-    const url_api = "http://localhost:3000/users/loginGoogle2";
+    const url_api = "http://localhost:3000/users/loginGoogle";
     return this.http.post<UserInterface>(url_api, {
     }, { headers: this.headers}
     ).pipe(map(data=>data))

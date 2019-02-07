@@ -107,7 +107,7 @@ export class HomeComponent implements OnInit {
         // Sign-in con Userdata
         // ...
         this.localAuth.setUser(userData);
-        let token = userData.id;
+        let token = userData.idToken;
         this.localAuth.setToken(token);     
         this.localAuth.registerUser(
           this.user.name = userData.name,
@@ -120,7 +120,7 @@ export class HomeComponent implements OnInit {
         ).subscribe(user =>{
           console.log(user);
           this.localAuth.setUser(user);
-          let token = user._id;
+          let token = userData.idToken;
           this.localAuth.setToken(token);
           this.router.navigate(["/user/profile"]);
         })   

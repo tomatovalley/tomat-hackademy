@@ -12,7 +12,10 @@
               <br>
               {{user.user_name}}
             </p>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias exercitationem illo ullam mollitia ab accusamus atque, veniam reprehenderit dolorum officiis, suscipit inventore sapiente esse possimus officia error eos molestiae ipsa?</span>
+            <button class="btn btn-primary" (click)= "onPreUpdateUser(user)" data-toggle="modal" data-target="#modalUser">Editar perfil</button>
+            <div class="form-group login-user " data-toggle="modal" data-target="#modalUser">
+                <a routerLink="/user/update" class="form-control login-user" (click)="onPreUpdateUser(user)">Editar perfil</a>
+            </div>
           </div>
       </div>
     </div>

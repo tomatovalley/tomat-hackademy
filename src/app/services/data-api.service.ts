@@ -16,6 +16,12 @@ export class DataApiService {
   users: Observable<any>;
   user: Observable<any>;
   
+  public selectedUser: UserInterface = {
+    _id: null,
+    name: "",
+    password: "",
+    email: ""
+  };
   
   headers : HttpHeaders = new HttpHeaders({
       "Content-Type": "application/json",
@@ -40,9 +46,12 @@ export class DataApiService {
   updateUser(user) {
     // TODO: obtener token
     // TODO: not null
+    
     const userId = user.userId;
+    console.log(user);
+    const id = user._id;
     const token = this.authService.getToken();
-    const url_api = `http://localhost:3000/${userId}/?access_token=${token}`;
+    const url_api = `http://localhost:3000/users/${userId}/?access_token=${token}`;
     return this.http
       .put<UserInterface>(url_api, user, { headers: this.headers })
       .pipe(map(data => data));
