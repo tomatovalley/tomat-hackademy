@@ -31,6 +31,15 @@ class MainActivity : AppCompatActivity() {
             val intent:Intent = Intent(applicationContext, CrearEventoSA::class.java)
             startActivity(intent)
         }
+        boton_ticket.setOnClickListener {
+            crear_evento.visibility = View.GONE
+        }
+
+        fab.setOnClickListener {
+            if(crear_evento.visibility == View.GONE) {
+                crear_evento.visibility = View.VISIBLE
+            }else crear_evento.visibility = View.GONE
+        }
 
 
 

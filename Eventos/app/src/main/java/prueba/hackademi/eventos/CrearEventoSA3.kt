@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.crear_evento_sa3.*
 import okhttp3.*
@@ -37,25 +38,6 @@ class CrearEventoSA3 : AppCompatActivity() {
 
 
         })
-
-
-        activar_redes_sociales.setOnClickListener{
-
-            if (activar_redes_sociales.isChecked){
-                registrar_facebook.visibility = View.VISIBLE
-                registrar_instagram.visibility = View.VISIBLE
-                registrar_twitter.visibility = View.VISIBLE
-                tags.visibility = View.VISIBLE
-            }
-            else{
-                registrar_facebook.visibility = View.GONE
-                registrar_instagram.visibility = View.GONE
-                registrar_twitter.visibility = View.GONE
-                tags.visibility = View.GONE
-
-            }
-
-        }
 
         capacidad_mayor.setOnClickListener {
 
@@ -119,13 +101,25 @@ class CrearEventoSA3 : AppCompatActivity() {
                     ,50
                 )
 
-                val intent = Intent(applicationContext,MainActivity::class.java)
+                val intent = Intent(applicationContext,CrearEventoSA4::class.java)
                 startActivity(intent)
 
             }
-            else{ Toast.makeText(applicationContext,"No se puede conectar con el servidor",Toast  .LENGTH_SHORT).show()}
+            else{
+                //Toast.makeText(applicationContext,"No se puede conectar con el servidor",Toast  .LENGTH_SHORT).show()
+                val intent = Intent(applicationContext,CrearEventoSA4::class.java)
+                startActivity(intent)
 
+                //Esto va en el registro de evento realizado, esto es para una prueba
+                /*val fb: String = findViewById<TextView>(R.id.registrar_facebook).text.toString()
+                val intent = Intent()
+                intent.action = Intent.ACTION_SEND
+                intent.putExtra(Intent.EXTRA_TEXT, fb )
+                intent.type = "text/plain"
 
+                startActivity(Intent.createChooser(intent, "Compartir con: "))*/
+
+            }
 
         }
 

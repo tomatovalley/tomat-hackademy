@@ -18,6 +18,12 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="AIzaSyAzyEdi2WlTOsw9C1OiAKilvZqx6sp2S50"/>
+
+        <activity android:name=".CrearEventoSA4">
+        </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -67,9 +73,6 @@
                     android:value=".CrearEventoSA2"/>
         </activity>
 
-        <meta-data
-                android:name="com.google.android.geo.API_KEY"
-                android:value="AIzaSyCRlGmZ5FRq9mFCsNiOzPEkZYoJ_cEwniE"/>
     </application>
 
 </manifest>

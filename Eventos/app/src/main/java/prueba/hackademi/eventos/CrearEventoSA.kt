@@ -5,6 +5,7 @@ import android.app.TimePickerDialog
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.View
 import android.widget.DatePicker
 import android.widget.TextView
 import com.google.android.gms.common.ConnectionResult
@@ -14,6 +15,7 @@ import com.google.android.gms.location.places.PlaceFilter
 import com.google.android.gms.location.places.Places
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.LatLngBounds
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.crear_evento_sa1.*
 import okhttp3.OkHttpClient
 import java.text.SimpleDateFormat
@@ -60,20 +62,10 @@ class CrearEventoSA : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
         val month = calendar.get(Calendar.MONTH)
         val day = calendar.get(Calendar.DAY_OF_MONTH)
         val hour = calendar.get(Calendar.HOUR_OF_DAY)
+        var nMonth: Int = month.plus(1)
 
-        if(calendar.get(Calendar.MINUTE) < 10){
-
-            val minute = calendar.get(Calendar.MINUTE)+1
-            hora_fin.setText(""+hour+":"+0+minute)
-
-        }else {
-
-            val minute = calendar.get(Calendar.MINUTE) + 1
-            hora_fin.setText("" + hour + ":" + minute)
-
-        }
-
-        mGoogleApiClient = GoogleApiClient.Builder(this)
+        hora_fin.text = SimpleDateFormat("HH:mm").format(calendar.time)
+      /*  mGoogleApiClient = GoogleApiClient.Builder(this)
             .addApi(Places.GEO_DATA_API)
             .addApi(Places.PLACE_DETECTION_API)
             .enableAutoManage(this,this)
@@ -82,13 +74,14 @@ class CrearEventoSA : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
         val mGeoDataClient = Places.getGeoDataClient(this, null)
         val mPlaceFilter = PlaceFilter()
 
+        quitar cuando se tenga implementado el geo*/
         //mPlaceAutocompleteAdapter = PlaceAutocompleteAdapter(this,mGeoDataClient,LAT_LNG_BOUNDS,mPlaceFilter)
 
 
         var horaInicio: String
 
-        dia_fecha_inicio.setText(""+day+"/"+month+"/"+year)
-        dia_fecha_fin.setText(""+day+"/"+month+"/"+year)
+        dia_fecha_inicio.setText(""+day+"/"+nMonth+"/"+year)
+        dia_fecha_fin.setText(""+day+"/"+nMonth+"/"+year)
         hora_inicio.text = SimpleDateFormat("HH:mm").format(calendar.time)
 
         boton_lugar.setOnClickListener{
@@ -100,19 +93,19 @@ class CrearEventoSA : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
 
         boton_fecha_inicio.setOnClickListener{
 
-            val dpd = DatePickerDialog(this,DatePickerDialog.OnDateSetListener{view: DatePicker?, mYear:            Int,  mMonth: Int, mDay: Int ->
-                dia_fecha_inicio.setText(""+mDay+"/"+mMonth+"/"+mYear)
+            val dpd = DatePickerDialog(this,DatePickerDialog.OnDateSetListener{view: DatePicker?, mYear:Int, mMonth: Int, mDay: Int ->
+                nMonth = mMonth.plus(1)
+                dia_fecha_inicio.setText(""+mDay+"/"+nMonth+"/"+mYear)
+
             },year,month,day)
 
             dpd.show()
         }
 
-
-
         boton_fecha_fin.setOnClickListener{
-            val dpd = DatePickerDialog(this,DatePickerDialog.OnDateSetListener { view, mYear, mMonth,                   mDay ->
-
-                dia_fecha_fin.setText(""+mDay+"/"+mMonth+"/"+mYear)
+            val dpd = DatePickerDialog(this,DatePickerDialog.OnDateSetListener { view, mYear, mMonth,mDay ->
+                nMonth = mMonth.plus(1)
+                dia_fecha_fin.setText(""+mDay+"/"+nMonth+"/"+mYear)
 
             },year,month,day)
             dpd.show()
@@ -131,7 +124,7 @@ class CrearEventoSA : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
                 hora_inicio.text = SimpleDateFormat("HH:mm").format(calendar.time)
                 horaInicio = SimpleDateFormat("HH:mm").format(calendar.time)
             }
-            TimePickerDialog(this,timeSetListener,calendar.get(Calendar.HOUR_OF_DAY),calendar.get                   (Calendar.MINUTE),true).show()
+            TimePickerDialog(this,timeSetListener,calendar.get(Calendar.HOUR_OF_DAY),calendar.get(Calendar.MINUTE),true).show()
         }
 
 

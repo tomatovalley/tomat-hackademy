@@ -217,8 +217,6 @@ class CrearEventoSA2 : AppCompatActivity(){
 
                     abrirCamara()
 
-                }else{
-                    Toast.makeText(this, "Permiso denegado", Toast.LENGTH_SHORT).show()
                 }
 
             }
