@@ -65,7 +65,7 @@ jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
 
 class EventoViewSet(viewsets.ModelViewSet):
     
-    permission_classes = (permissions.IsAuthenticated,)
+    permission_classes = (permissions.AllowAny,)
     
     queryset = Evento.objects.all()
     serializer_class = EventoSerializer
@@ -75,7 +75,7 @@ class EventoViewSet(viewsets.ModelViewSet):
 
 class CatchUser(viewsets.ModelViewSet):
 
-    permissions_classes = (permissions.IsAuthenticated,)
+    permissions_classes = (permissions.AllowAny,)
 
     queryset = User.objects.all()
     serializer_class = UserSerializer
@@ -90,7 +90,7 @@ class CatchUser(viewsets.ModelViewSet):
       
 class GetUser(viewsets.ModelViewSet):
     
-    permissions_classes = (permissions.IsAuthenticated,)
+    permissions_classes = (permissions.AllowAny,)
 
     queryset = User.objects.all()
     serializer_class = UserSerializer
@@ -106,7 +106,7 @@ class GetUser(viewsets.ModelViewSet):
 
 class GetEventoDetail(viewsets.ModelViewSet):
 
-    permissions_classes = (permissions.IsAuthenticated,)
+    permissions_classes = (permissions.AllowAny,)
 
 
     queryset = Evento.objects.all()
