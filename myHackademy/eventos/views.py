@@ -84,7 +84,7 @@ class CatchUser(viewsets.ModelViewSet):
         user = UserSerializer(data=request.data)
         if user.is_valid():
             user.save()
-            return Response(user.data, status= 200)
+            return Response(user.data)
 
     
       
