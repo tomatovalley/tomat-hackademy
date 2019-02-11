@@ -25,6 +25,7 @@ class CrearEventoSA4 : AppCompatActivity() {
 
             val intent = Intent(applicationContext,MainActivity::class.java)
             val intent2 = Intent(applicationContext,CrearEventoSA::class.java)
+            intent2.putExtra("eventolocacion","Ubicacion")
             startActivity(intent)
             startActivity(intent2)
             finishAffinity()

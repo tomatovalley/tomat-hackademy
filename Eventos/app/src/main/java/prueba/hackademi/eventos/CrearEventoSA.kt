@@ -5,9 +5,11 @@ import android.app.TimePickerDialog
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.text.Editable
 import android.view.View
 import android.widget.DatePicker
 import android.widget.TextView
+import android.widget.Toast
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.gms.location.places.GeoDataClient
@@ -39,14 +41,20 @@ class CrearEventoSA : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
     private var mGoogleApiClient: GoogleApiClient? = null
     private var mPlaceAutocompleteAdapter: PlaceAutocompleteAdapter? = null
     private var mPlaceFilter : PlaceFilter? = null
-
-
     val client2 = OkHttpClient()
     //var nombre:String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.crear_evento_sa1)
+        val position : String = intent.getStringExtra("eventolocacion")
+        if(position=="Ubicacion"){
+            input_search.hintTextColors
+            input_search.hint = position
+        }else{
+            input_search.setText(position)
+        }
+
 
 
     }
@@ -65,17 +73,6 @@ class CrearEventoSA : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
         var nMonth: Int = month.plus(1)
 
         hora_fin.text = SimpleDateFormat("HH:mm").format(calendar.time)
-      /*  mGoogleApiClient = GoogleApiClient.Builder(this)
-            .addApi(Places.GEO_DATA_API)
-            .addApi(Places.PLACE_DETECTION_API)
-            .enableAutoManage(this,this)
-            .build()
-
-        val mGeoDataClient = Places.getGeoDataClient(this, null)
-        val mPlaceFilter = PlaceFilter()
-
-        quitar cuando se tenga implementado el geo*/
-        //mPlaceAutocompleteAdapter = PlaceAutocompleteAdapter(this,mGeoDataClient,LAT_LNG_BOUNDS,mPlaceFilter)
 
 
         var horaInicio: String

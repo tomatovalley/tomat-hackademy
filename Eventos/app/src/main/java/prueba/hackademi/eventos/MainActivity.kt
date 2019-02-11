@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         fetchJson()
         crear_evento.setOnClickListener{
             val intent:Intent = Intent(applicationContext, CrearEventoSA::class.java)
+            intent.putExtra("eventolocacion", "Ubicacion")
             startActivity(intent)
         }
         boton_ticket.setOnClickListener {
