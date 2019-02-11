@@ -1,6 +1,9 @@
+import jwt
+import pprint
+from django.http import HttpResponse
+
 from django.shortcuts import render
 from rest_framework.exceptions import ParseError
-from .forms import EventoForm
 
 from .models import Evento
 from django.contrib.auth.models import User
@@ -42,8 +45,14 @@ from rest_framework import permissions
 from .serializers import TokenSerializer
 # Create your views here.
 from django.core.files.base import ContentFile
+from .models import Client
 
 
+from .serializers import ClientSerializer
+
+from rest_framework.mixins import CreateModelMixin
+
+from rest_framework.decorators import detail_route
 import base64
 from io import BytesIO
 from PIL import Image
@@ -54,15 +63,64 @@ jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
 
 
 
-class EventoViewSet(APIView):
-    permission_classes = (IsAuthenticated,)
-   
-    def post(self, request, *args, **kwargs):
-        evento_json = EventoSerializer(data = request.data)#unMarshall
-        if evento_json.is_valid():
-            evento_json.save()            
-            return Response(evento_json.data, status=201)          
-        return Response(evento_json.data, status = 404)
+class EventoViewSet(viewsets.ModelViewSet):
+    
+    permission_classes = (permissions.IsAuthenticated,)
+    
+    queryset = Evento.objects.all()
+    serializer_class = EventoSerializer
+    http_method_names =['post']
+
+
+
+class CatchUser(viewsets.ModelViewSet):
+
+    permissions_classes = (permissions.IsAuthenticated,)
+
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+    def create(self, request):
+        user = UserSerializer(data=request.data)
+        if user.is_valid():
+            user.save()
+            return Response(user.data, status= 200)
+
+    
+      
+class GetUser(viewsets.ModelViewSet):
+    
+    permissions_classes = (permissions.IsAuthenticated,)
+
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+    @detail_route()
+    def user_detail(self, request, pk):
+        user_ = self.get_object()
+        id_ = User.objects.filter(username = user_)
+        id_json = UserSerializer(id_, many=True)
+        return Response(id_json.data)
+    
+
+
+class GetEventoDetail(viewsets.ModelViewSet):
+
+    permissions_classes = (permissions.IsAuthenticated,)
+
+
+    queryset = Evento.objects.all()
+    serializer_class = EventoSerializer
+    http_method_names = ['get']
+
+    @detail_route()
+    def evento_detail(self, request, pk):
+
+        evento = self.get_object()
+        evento_ = Evento.objects.filter(name = evento)
+        evento_json = EventoSerializer(evento_, many=True)
+        return Response(evento_json.data)
+
 
 
 class GetEvento(APIView):
@@ -90,6 +148,29 @@ class DetailEvento(APIView):
     def post(self, request):
         pass
 
+
+class tokenView(APIView):
+
+    permissions_classes = (permissions.AllowAny,)
+
+    def post(self, request, *args, **kwargs):
+        
+        token = request.META['HTTP_AUTHORIZATION']
+        print(token)
+        if 'Bearer' in token:
+            newstr = token.replace('Bearer ',"")
+            print(newstr)
+            b64tkn = base64.b64decode(newstr)
+            print(b64tkn)
+        #payload = 
+        context = {
+            'response':'response'
+        }
+        return HttpResponse(context)
+
+
+
+"""
 class UserViewSet(APIView):
 
     permission_classes = (IsAuthenticated,)
@@ -99,17 +180,13 @@ class UserViewSet(APIView):
         user = User.objects.all()
         user_json = UserSerializer(user, many=True)
         return Response(user_json.data)
+"""
        
-def evento_instance(evento):
-    try:
-        return user.evento
-    except:
-        return Evento(user=user)
+
+
 
 class LoginView(generics.CreateAPIView):
-    """
-    POST auth/login/
-    """
+   
     # This permission class will overide the global permission
     # class setting
     permission_classes = (permissions.AllowAny,)
@@ -120,7 +197,7 @@ class LoginView(generics.CreateAPIView):
     def post(self, request, *args, **kwargs):
         username = request.data.get("username", "")
         password = request.data.get("password", "")
-        user = authenticate(request, username=username, password=password)
+        user = authenticate(request, username=username, password = password)
         if user is not None:
             # login saves the user’s ID in the session,
             # using Django’s session framework.
@@ -131,10 +208,25 @@ class LoginView(generics.CreateAPIView):
                     jwt_payload_handler(user)
                 )})
             serializer.is_valid()
-            #redirect('/eventos/crear' )
             return Response(serializer.data)
         return Response(status=status.HTTP_401_UNAUTHORIZED)
 
-def user(self, request):
 
-    return self.user.id
+"""
+def evento_instance(evento):
+    try:
+        return user.evento
+    except:
+        return Evento(user=user)
+
+"""
+"""
+def user(self, request, user):
+
+    try:
+        return user.username
+    except:
+        return Client(user=user)
+"""
+
+

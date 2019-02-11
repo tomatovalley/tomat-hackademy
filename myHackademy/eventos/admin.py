@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Evento
+#from .models import Evento
 
 
 # Register your models here.
@@ -9,4 +9,4 @@ from .models import Evento
 class EventoAdmin(admin.ModelAdmin):
     pass
 
-admin.site.register(Evento, EventoAdmin)
+#admin.site.register(Evento, EventoAdmin)

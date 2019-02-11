@@ -19,10 +19,12 @@ from django.conf.urls import include
 from rest_framework import routers
 from django.conf.urls.static import static
 from django.conf import settings
-from rest_framework_jwt.views import obtain_jwt_token
 #from eventos.views import EventoViewSet
 #from eventos.views import otherView
-
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
 
 
 router = routers.DefaultRouter()
@@ -37,6 +39,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('eventos/', include('eventos.urls')),
     path('uploadimages_rest/', include('uploadimages_rest.urls')),
-    path('api-token-auth/', obtain_jwt_token, name='create-token'),
-    re_path('api/(?P<version>(v1|v2))/', include('eventos.urls'))
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT )

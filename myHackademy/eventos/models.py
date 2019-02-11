@@ -5,9 +5,16 @@ import datetime
 from django.contrib.auth.models import User
 from django.utils import timezone
 
+
+
+class Client(models.Model):
+
+    user = models.OneToOneField(User, on_delete = models.CASCADE)
+
+
 class Evento(models.Model):
 
-    user = models.ForeignKey(User, related_name = 'eventos', on_delete = models.CASCADE)
+    user  = models.ForeignKey(User, related_name ='eventos', on_delete = models.CASCADE)
     name = models.TextField(max_length=200, default="")
     place = models.TextField(max_length=200, default="")
     begin_date = models.DateField( default = datetime.date.today )
@@ -24,4 +31,3 @@ class Evento(models.Model):
     def __str__(self):
 
         return self.name
-
