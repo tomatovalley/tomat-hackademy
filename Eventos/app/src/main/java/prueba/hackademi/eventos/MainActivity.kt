@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import okhttp3.*
 import java.io.IOException
 
-val url = "http://127.0.0.1:8000/eventos/detalles_evento/   "
+val url = "http://127.0.0.1:8000/eventos/detalles_evento/"
 
 class MainActivity : AppCompatActivity() {
 
