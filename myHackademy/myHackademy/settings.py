@@ -26,7 +26,7 @@ SECRET_KEY = 'qw0(j081-zyuc^ytm*-idn1q-0ui=iog8*85xqqqxm3*mh7d85'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'eventos.apps.EventosConfig',
     'uploadimages_rest.apps.UploadimagesRestConfig',
-    'rest_framework'
+    'rest_framework',
+    'corsheaders'
 ]
 
 REST_FRAMEWORK = {
@@ -71,8 +72,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
-
+CORS_ORIGIN_ALLOW_ALL = True   
     
 ROOT_URLCONF = 'myHackademy.urls'
 
