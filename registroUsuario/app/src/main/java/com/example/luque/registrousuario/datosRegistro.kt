@@ -24,6 +24,8 @@ import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.gms.common.api.ResultCallback
 import com.google.android.gms.common.api.Status
 import kotlinx.android.synthetic.main.activity_datos_registro.*
+import org.json.JSONException
+import org.json.JSONObject
 import java.util.*
 
 
@@ -179,18 +181,38 @@ class datosRegistro : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
             val intent100 = Intent(this, login::class.java)
             startActivity(intent100)
             LoginManager.getInstance().logOut()
-            goLoginScreen()
-            logOutGoogle()
+            //goLoginScreen()
+            //logOutGoogle()
             //Variables donde se almacenan los datos de registro
-            val idFinal : String = id.toString()
-            val correoFinal : String = correo.toString()
-            val nombre: String = textoNombre?.text.toString()
-            val apellido: String = textoApellido?.text.toString()
-            val usuario: String = textoUsuario?.text.toString()
-            val sexoFinal: String = sexo.toString()
-            val fecha: String = date.toString()
+            val id : String = id.toString()
+            val email : String = correo.toString()
+            val name: String = textoNombre?.text.toString()
+            val last_name: String = textoApellido?.text.toString()
+            val user_name: String = textoUsuario?.text.toString()
+            val gender: String = sexo.toString()
+            val birthdate: String = date.toString()
             val identidadFinal :String = identidad.toString()
             val trabajo: String = trabajoView?.text.toString()
+
+            var jsonRegistroo: JSONObject? = null
+                jsonRegistroo?.put("name", name)
+                jsonRegistroo?.put("last_name", last_name)
+                jsonRegistroo?.put("user_name", user_name)
+                //jsonRegistroo?.put("password",password)
+                jsonRegistroo?.put("email", email)
+                jsonRegistroo?.put("birthdate", birthdate)
+                jsonRegistroo?.put("gender", gender)
+
+            var jsonAllUsuarios: JSONObject? = null
+            jsonAllUsuarios?.put("id", id)
+            jsonAllUsuarios?.put("name", name)
+            jsonAllUsuarios?.put("last_name", last_name)
+            jsonAllUsuarios?.put("user_name", user_name)
+            //jsonRegistroo?.put("password",password)
+            jsonAllUsuarios?.put("birthdate", birthdate)
+            jsonAllUsuarios?.put("gender", gender)
+
+
         }
 
 
@@ -276,9 +298,9 @@ class datosRegistro : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
     }
     private fun goLoginScreen()
     {
-        val intent = Intent(this, login::class.java)
+        //val intent = Intent(this, login::class.java)
 
-        startActivity(intent)
+        ///startActivity(intent)
     }
 
     //IG

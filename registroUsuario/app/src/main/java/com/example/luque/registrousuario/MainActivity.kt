@@ -1,0 +1,67 @@
+package com.example.luque.registrousuario
+
+import android.content.Intent
+import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.LinearLayoutManager
+import android.widget.Button
+import com.google.gson.GsonBuilder
+import kotlinx.android.synthetic.main.activity_main.*
+import okhttp3.*
+import java.io.IOException
+
+val url = "http://10.112.31.201:3000/users"
+
+class MainActivity : AppCompatActivity() {
+
+    lateinit var crearEvento : Button
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        crearEvento = findViewById(R.id.crear_evento)
+
+
+        RecyclerView_Eventos_Usuario.layoutManager = LinearLayoutManager(this)
+        fetchJson()
+        crear_evento.setOnClickListener{
+            val intent:Intent = Intent(applicationContext, CrearEventoSA::class.java)
+            startActivity(intent)
+        }
+
+
+
+    }
+
+    //aquí van las funciones
+    fun fetchJson(){
+
+        println("Estoy trantando de tomar un Json")
+
+        val request = Request.Builder().url(url).build()
+
+        val client = OkHttpClient()
+        client.newCall(request).enqueue(object: Callback{
+
+            override fun onResponse(call: Call, response: Response) {
+                val body = response.body()?.string()
+                val gson = GsonBuilder().create()
+                val homeFeed: Array<HomeFeed> = gson.fromJson(body, Array<HomeFeed>::class.java)
+                runOnUiThread {
+                    RecyclerView_Eventos_Usuario.adapter = MainAdapter(homeFeed)
+                    println(homeFeed)
+
+                }
+
+            }
+
+            override fun onFailure(call: Call, e: IOException) {
+                println("Failure")
+            }
+        })
+    }
+
+
+}
+class HomeFeed(val evento:String, val sede:String)
