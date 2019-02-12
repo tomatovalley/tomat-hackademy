@@ -1,6 +1,7 @@
 blinker==1.4
 Click==7.0
 Django==2.1.5
+django-cors-headers==2.4.0
 django-extra-fields==1.0.0
 django-filter==2.0.0
 django-rest-framework-base64-fields==0.1.3
