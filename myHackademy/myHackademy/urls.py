@@ -28,8 +28,7 @@ from rest_framework_simplejwt.views import (
 
 
 router = routers.DefaultRouter()
-#router.register('test', otherView, base_name='test')
-#router.register('test', otherView, base_name='test')
+
 
 
 
@@ -38,7 +37,6 @@ urlpatterns = [
     #path('eventos/', include(router.urls)),
     path('admin/', admin.site.urls),
     path('eventos/', include('eventos.urls')),
-    path('uploadimages_rest/', include('uploadimages_rest.urls')),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT )

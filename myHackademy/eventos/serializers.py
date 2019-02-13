@@ -1,30 +1,36 @@
 from rest_framework import serializers
 
-from .models import Evento
-#from .models import Client
-
 from django.contrib.auth.models import User
-import base64
+from .models import Emprendimiento
+from .models import Evento
+from .models import ComentarioEmprendimiento
 from .models import Client
-
-from django.core.files.base import ContentFile
-
-
-from drf_extra_fields.fields import Base64ImageField
 
 
 
 
 class UserSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = User
-        fields = ('username','password',)
+        fields = ('username',)
 
-    def create(self, validated_data):
-        user = super(UserSerializer, self).create(validated_data)
-        user.set_password(validated_data['password'])
-        user.save()
-        return user
+
+
+class EmprendimientoSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = Emprendimiento
+        fields = ('user','name', 'description', 'website','email','image', 'create_date')
+
+
+class ComentarioSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = ComentarioEmprendimiento
+        fields = ('user','comment', 'comment_user', 'create_date')
+
+
 
 
 
@@ -32,23 +38,19 @@ class ClientSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Client
-        fields = ('user',)
+        fields = ('username',)
+
 
 class EventoSerializer(serializers.ModelSerializer):
     
-    #user_id = serializers.IntegerField()
-    #user = serializers.SerializerMethodField()
-    image = serializers.ImageField()
-    
-    #def get_user(self, obj):
-    #    return obj.user.username
-
     class Meta:
         model = Evento
-        fields = ('id', 'user', 'name','place','begin_date','image','start_hour', 'final_date','end_hour',
-            'description','organizer','facebook','instagram','twitter')
+        fields = ('id', 'username', 'name','place','begin_date','image', 'start_hour', 'final_date','end_hour',
+            'description','organizer')
 
-    
+
+
+
 
 class TokenSerializer(serializers.Serializer):
     """

@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'eventos.apps.EventosConfig',
-    'uploadimages_rest.apps.UploadimagesRestConfig',
     'rest_framework',
     'corsheaders'
 ]

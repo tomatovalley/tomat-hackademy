@@ -5,8 +5,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from rest_framework.exceptions import ParseError
 
-from .models import Evento
-from django.contrib.auth.models import User
+
 
 from .serializers import EventoSerializer
 from .serializers import UserSerializer
@@ -18,16 +17,13 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from rest_framework import viewsets
-from rest_framework.generics import ListAPIView
-from rest_framework.generics import CreateAPIView
+
 from rest_framework import status
 from django.http import Http404
 
 from django.views.generic.edit import CreateView
 
-from django.urls import reverse_lazy
 from django.http import HttpResponseRedirect
-from django.contrib.auth.mixins import LoginRequiredMixin
 
 from rest_framework.permissions import IsAuthenticated
 
@@ -42,21 +38,30 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth import login as loginDjango
 from rest_framework_jwt.settings import api_settings
 from rest_framework import permissions
-from .serializers import TokenSerializer
+
+
 # Create your views here.
 from django.core.files.base import ContentFile
+
+
+from django.contrib.auth.models import User
+from .models import ComentarioEmprendimiento
 from .models import Client
+from .models import Evento
+from .models import Emprendimiento
+
 
 
 from .serializers import ClientSerializer
+from .serializers import TokenSerializer
+from .serializers import EmprendimientoSerializer
+from .serializers import ComentarioSerializer
 
-from rest_framework.mixins import CreateModelMixin
+
 
 from rest_framework.decorators import detail_route
-import base64
-from io import BytesIO
-from PIL import Image
 
+from rest_framework.decorators import list_route
 # Get the JWT settings, add these lines after the import/from lines
 jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
 jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
@@ -72,7 +77,7 @@ class EventoViewSet(viewsets.ModelViewSet):
     http_method_names =['post']
 
 
-
+"""
 class CatchUser(viewsets.ModelViewSet):
 
     permissions_classes = (permissions.AllowAny,)
@@ -85,9 +90,9 @@ class CatchUser(viewsets.ModelViewSet):
         if user.is_valid():
             user.save()
         return Response(user.data)
-
+"""
     
-      
+"""   
 class GetUser(viewsets.ModelViewSet):
     
     permissions_classes = (permissions.AllowAny,)
@@ -100,9 +105,10 @@ class GetUser(viewsets.ModelViewSet):
         user_ = self.get_object()
         id_ = User.objects.filter(username = user_)
         id_json = UserSerializer(id_, many=True)
+        #print(self.request.data)
         return Response(id_json.data)
     
-
+"""
 
 class GetEventoDetail(viewsets.ModelViewSet):
 
@@ -122,7 +128,7 @@ class GetEventoDetail(viewsets.ModelViewSet):
         return Response(evento_json.data)
 
 
-
+"""
 class GetEvento(APIView):
 
     permission_classes = (permissions.AllowAny,)
@@ -133,7 +139,9 @@ class GetEvento(APIView):
         user_json = EventoSerializer(user, many=True)
 
         return Response(user_json.data)
+"""
 
+"""
 class DetailEvento(APIView):
 
     permission_classes = (permissions.AllowAny,)
@@ -147,8 +155,29 @@ class DetailEvento(APIView):
 
     def post(self, request):
         pass
+"""
+
+class EmprendimientoView(viewsets.ModelViewSet):
+
+    queryset  = Emprendimiento.objects.all()
+    serializer_class = EmprendimientoSerializer
 
 
+class CommentView(viewsets.ModelViewSet):
+
+    queryset = ComentarioEmprendimiento.objects.all()
+    serializer_class = ComentarioSerializer
+
+class ClientView(viewsets.ModelViewSet):
+
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+
+
+
+
+"""
 class tokenView(APIView):
 
     permissions_classes = (permissions.AllowAny,)
@@ -167,7 +196,7 @@ class tokenView(APIView):
             'response':'response'
         }
         return HttpResponse(context)
-
+"""
 
 
 """
@@ -184,7 +213,7 @@ class UserViewSet(APIView):
        
 
 
-
+"""
 class LoginView(generics.CreateAPIView):
    
     # This permission class will overide the global permission
@@ -211,6 +240,8 @@ class LoginView(generics.CreateAPIView):
             return Response(serializer.data)
         return Response(status=status.HTTP_401_UNAUTHORIZED)
 
+
+"""
 
 """
 def evento_instance(evento):
