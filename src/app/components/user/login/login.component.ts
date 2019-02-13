@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
     .subscribe(result=>{
       console.log(result[0]);
       this.localAuth.setUser(result[0])
-      let token = result[0]._id;
+      let token = result[0].id;
       this.localAuth.setToken(token);
       this.router.navigate(["/user/profile"]);
     },
@@ -42,6 +42,19 @@ export class LoginComponent implements OnInit {
 
   onLoginGoogle(){
     return this.localAuth.loginGoogle()
+    .subscribe(result=>{
+      console.log(result[0]);
+      this.localAuth.setUser(result[0]);
+      let token = result[0]._id;
+      this.localAuth.setToken(token);
+      this.router.navigate(["/user/profile"]);
+    },
+      error => console.log(error)
+    );
+  }
+
+  onLoginTwitter(){
+    return this.localAuth.loginTwitter()
     .subscribe(result=>{
       console.log(result[0]);
       this.localAuth.setUser(result[0]);

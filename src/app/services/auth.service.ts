@@ -82,4 +82,13 @@ export class AuthService {
     }, { headers: this.headers}
     ).pipe(map(data=>data))
   }
+
+  loginTwitter(){
+    const url_api = "http://localhost:3000/users/loginTwitter";
+    return this.http.post<UserInterface>(url_api, {
+      //email: email, 
+      //password: password
+    }, { headers: this.headers}
+    ).pipe(map(data=>data))
+  }
 }

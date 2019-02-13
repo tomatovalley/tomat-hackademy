@@ -1,0 +1,71 @@
+<meta name="viewport" content="width=device-width, initial-scale=1" >
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link rel="stylesheet" href="">
+<!--
+  <app-nav-var></app-nav-var>
+-->
+
+
+<div id="contenedor">
+  <h4 class="tag-CpP"><strong>Completar perfil</strong> </h4>
+   <hr style="color:#000; background-color: #000; width:75%; margin: 0 auto;" />
+   <section class="edit">
+       <article>
+          <figure> <!--<img src="https://2.bp.blogspot.com/-UoEU4j4nhVE/XEkPeY1iPSI/AAAAAAAAACg/44zLqxPR9kEhQpf2B3qXQvqAJ59eD6_dQCLcBGAs/s320/yami.jpeg" />-->
+            <img class="image" src="https://2.bp.blogspot.com/-AHJ-r3vomKg/XEo6w-LiQTI/AAAAAAAAACs/XR-30srZLH0z9BMSkOL4DvXQ-aO1kwEtgCLcBGAs/s320/UserProfileGray.fw.jpg" />
+         <p id="name"><strong>Isabella Jonsh </strong></p>
+         <p id="user">@BellaTech</p> 
+         <p  class="ww"><textarea name="text" id="txt" cols="15" rows="3"></textarea></p>
+         </figure>
+           <i ngClass="fas fa-birthday-cake fecha" id="i"></i><p class="fecha" id="date">21/Diciembre/2001</p><br>
+           <i ngClass="fas fa-envelope fecha" id="i" > </i> <p class="fecha" id="date">IsabellaJohns@gmail.com</p> <br>
+           <i ngClass="fas fa-globe fecha" id="i"></i> <p class="fecha" id="date"><input class="date" type="text" placeholder="website"></p> <br>
+           <button class="btn-edit">Editar</button> 
+       </article>
+    </section>
+    
+    
+    
+    <aside>
+      <h2 class="CatsDogss" id="catsDogs">Lugar de Trabajo:</h2>
+      <input type="text" class="CatsDogs" id="catsDogs" placeholder="Cats&Dogs"><br>
+       
+          <h2 class="mentores" id="Range">Rango:</h2>
+                <select name="Mentores" ngClass="mentores" id="mentores">
+               <option class="uno" value="1">Mentores</option> 
+               <option class="dos" value="2">Marco Hernandez</option> 
+               <option class="uno"value="3">Ivan Nuñes</option>
+               <option class="dos"value="10">Leonardo Fajardo</option> 
+               <option class="uno"  value="11">Eduardo Luque</option> 
+               <option class="dos" value="12">yamileth Rodriguez</option> 
+               <option class="uno"  value="11">Joaquin </option>
+               <option class="dos" value="12">Fernando Carrillo</option> 
+            </select> <br>
+            <div class="botones">
+              <button class="cancel" id="conclution">Cancel</button>
+              <button [disabled]="displayName" class="Aceptar" id="conclution"  >Aceptar</button>
+            </div>
+    </aside>
+  
+    <div *ngIf="true; else displayName; " class="overlay">
+      <div  class="popup">
+        <a href="#" id="btn-cerrar-popup" class="btn-cerrarpopup"><i class="fas fa-times"></i> </a>
+        <form   action="">
+          <div class="contenedor-inputs">
+            <h3 style="margin-bottom:40px;">Es necesario completar tu Perfil <br> Para poder acceder a las características de la plataforma</h3>
+            <h3>Solo te tomara como un minuto, no menos como 5 
+             <br> (:
+
+            </h3>
+          </div>
+          <input type="submit" class="btn-submit" value="OK">
+        </form>
+      </div>
+    </div>
+</div>    
+
+<app-footer></app-footer>
