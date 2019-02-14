@@ -103,7 +103,7 @@ WSGI_APPLICATION = 'myHackademy.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'hackacady',
+        'NAME': 'thisdatabase',
         'USER': 'marco',
         'PASSWORD': 'metallica1',
         'HOST':'localhost',

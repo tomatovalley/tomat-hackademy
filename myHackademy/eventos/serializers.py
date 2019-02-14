@@ -21,11 +21,17 @@ class EmprendimientoSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Emprendimiento
-        fields = ('user','name', 'description', 'website','email','image', 'create_date')
+        fields = ('user_id','name', 'description', 'website','email','image', 'create_date')
 
+    def __str__(self):
+        return self.user_id
 
 class ComentarioSerializer(serializers.ModelSerializer):
     
+
+    #user = serializers.SlugRelatedField(read_only=True, slug_field='username')
+    #comment_user = serializers.SlugRelatedField(read_only=True, slug_field='user')
+
     class Meta:
         model = ComentarioEmprendimiento
         fields = ('user','comment', 'comment_user', 'create_date')

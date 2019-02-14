@@ -8,7 +8,6 @@ from django.utils import timezone
 
 
 
-
 class Client(models.Model):
 
     username = models.OneToOneField(User, on_delete = models.CASCADE)
@@ -17,7 +16,7 @@ class Client(models.Model):
 
     def __str__(self):
 
-        return self.user.username
+        return self.username
 
 
 class Evento(models.Model):
@@ -55,7 +54,8 @@ class Evento(models.Model):
 
 class Emprendimiento(models.Model):
 
-    user = models.OneToOneField(User, on_delete =models.CASCADE)
+    user_id = models.ForeignKey(User, on_delete = models.CASCADE)
+    #username = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.TextField(max_length=200, default="")
     description = models.TextField(max_length = 500, default="")
     website = models.URLField(max_length=100, default="")
@@ -75,7 +75,7 @@ class Emprendimiento(models.Model):
 
     def __str__(self):
 
-        return self.name
+        return self.user_id.username
 
 
 
@@ -91,4 +91,4 @@ class ComentarioEmprendimiento(models.Model):
 
     def __str__(self):
 
-        return self.user.username
+        return self.user.user
