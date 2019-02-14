@@ -20,7 +20,7 @@ import com.twitter.sdk.android.core.*
 import com.twitter.sdk.android.core.identity.TwitterLoginButton
 
 open class registroSocialMedia :  AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
-
+//, GoogleApiClient.OnConnectionFailedListener
 
     private var profileTracker: ProfileTracker? = null
     //otra pantalla LOGIN
@@ -35,19 +35,20 @@ open class registroSocialMedia :  AppCompatActivity(), GoogleApiClient.OnConnect
     var callback : Callback<TwitterSession>? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Twitter.initialize(this)
+        Twitter.initialize(this) // twitter
         setContentView(R.layout.activity_registro_social_media)
         loginButtonTwitter = findViewById(R.id.loginButtonTwitterr)
         //otra pantalla LOGIN facebook
         callbackManager = CallbackManager.Factory.create()
         loginButton = findViewById(R.id.botonlogin)
-        loginButton?.setReadPermissions("email")
+        //loginButton?.setReadPermissions("email")
 
         var correo = findViewById<Button>(R.id.loginCorreo)
         correo.setOnClickListener {
             var intent100 = Intent(this, registroManual::class.java)
             startActivity(intent100)
         }
+        /*
         profileTracker = object : ProfileTracker() {
             override fun onCurrentProfileChanged(oldProfile: Profile, currentProfile: Profile?) {
                 if (currentProfile != null) {
@@ -65,6 +66,7 @@ open class registroSocialMedia :  AppCompatActivity(), GoogleApiClient.OnConnect
                 Profile.fetchProfileForCurrentAccessToken()
             }
         }
+        */
         loginButton?.registerCallback(callbackManager, object : FacebookCallback<LoginResult> {
             override fun onSuccess(loginResult: LoginResult) {
                 goMainScreen()
@@ -73,10 +75,12 @@ open class registroSocialMedia :  AppCompatActivity(), GoogleApiClient.OnConnect
 
             override fun onCancel() {
                 Toast.makeText(applicationContext, "R.string.cancel_login", Toast.LENGTH_SHORT).show()
+                print("entre cancel")
             }
 
             override fun onError(error: FacebookException) {
                 Toast.makeText(applicationContext, "R.string.error_login", Toast.LENGTH_SHORT).show()
+                print("entre error")
             }
         })
 
@@ -100,9 +104,8 @@ open class registroSocialMedia :  AppCompatActivity(), GoogleApiClient.OnConnect
         signInButton?.setOnClickListener {
             val intent = Auth.GoogleSignInApi.getSignInIntent(googleApiClient)
             startActivityForResult(intent, 777)
-
-
         }
+
 
         //TWITTER
         var loginButtonTwitter = findViewById<TwitterLoginButton>(R.id.loginButtonTwitterr) //BIEN
@@ -122,22 +125,24 @@ open class registroSocialMedia :  AppCompatActivity(), GoogleApiClient.OnConnect
     }
 
     //FACEBOOK
+    /*
     private fun displayProfileInfo(profile: Profile)
     {
         val id = profile.id
         val name = profile.firstName as String
         val photoUrl = profile.getProfilePictureUri(100, 100).toString()
 
-        //nameTextView?.text = name
-        //idTextView?.text = id
+        nameTextView?.text = name
+        idTextView?.text = id
 
         Glide.with(this.applicationContext)
-                //.load(photoUrl)
-                //.into(photoImageView)
+                .load(photoUrl)
+                .into(photoImageView)
     }
+    */
     private fun goLoginScreen()
     {
-        val intent = Intent(this, login::class.java) //checar
+        val intent = Intent(this, datosRegistro::class.java) //checar
         startActivity(intent) //checar
     }
 
@@ -155,9 +160,7 @@ open class registroSocialMedia :  AppCompatActivity(), GoogleApiClient.OnConnect
 
     //LOGIN ACTIVITE GOOGLE
 
-    override fun onConnectionFailed(connectionResult: ConnectionResult) {
 
-   }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {//da error por el metodo de TWITTER que tiene el mismo nombre con los mismos parametros si el metodo de Twitter es comentariado agarra el de google,el metodo esta bien implementado
         super.onActivityResult(requestCode, resultCode, data)
 
@@ -165,6 +168,17 @@ open class registroSocialMedia :  AppCompatActivity(), GoogleApiClient.OnConnect
             val result = Auth.GoogleSignInApi.getSignInResultFromIntent(data)
             handleSignInResult(result)
         }
+        if(requestCode == 64206){
+            callbackManager?.onActivityResult(requestCode, resultCode, data)
+        }
+        if(requestCode == 140){
+            loginButtonTwitter?.onActivityResult(requestCode, resultCode, data)
+        }
+    }
+
+
+    override fun onConnectionFailed(connectionResult: ConnectionResult) {
+
     }
     private fun handleSignInResult(result: GoogleSignInResult) {
         if (result.isSuccess) {
@@ -173,11 +187,13 @@ open class registroSocialMedia :  AppCompatActivity(), GoogleApiClient.OnConnect
             Toast.makeText(this, "R.string.not_log_in", Toast.LENGTH_SHORT).show()
         }
     }
+
     private fun goMainScreen() {
        val intent = Intent(this, datosRegistro::class.java) //checar
-       intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK) //checar
+       //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK) //checar
        startActivity(intent) //checar
     }
+
 
     //LOGIN TWITTER
 
@@ -186,19 +202,30 @@ open class registroSocialMedia :  AppCompatActivity(), GoogleApiClient.OnConnect
         Toast.makeText(this, "Authentication suceesfult!", Toast.LENGTH_LONG).show()
         val intent10 = Intent(
                 this,
-                eventos::class.java
+                datosRegistro::class.java
         )
         //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
         intent.putExtra("username", username)
         startActivity(intent10)
     }
 
-    /*
+/*
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) { //da error por el metodo de google que tiene el mismo nombre con los mismos parametros si los metodos de google son comentariados agarra el de twitter,el metodo esta bien implementado
         super.onActivityResult(requestCode, resultCode, data)
         loginButtonTwitter?.onActivityResult(requestCode, resultCode, data)
+        Toast.makeText(this, "el valor de requestcode es: "+requestCode, Toast.LENGTH_SHORT).show()
     }
     */
+
+    /*
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        callbackManager?.onActivityResult(requestCode, resultCode, data)
+        Toast.makeText(this, "el valor de requestcode es: "+requestCode, Toast.LENGTH_SHORT).show()
+
+    }
+    */
+
 }
 
 

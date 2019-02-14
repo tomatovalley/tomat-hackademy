@@ -3,5 +3,21 @@
     <string name="facebook_app_id">2142483415816695</string>
     <string name="com.twitter.sdk.android.CONSUMER_KEY" tools:ignore="ExtraTranslation">fn7rRGfsdyEXSXgICxDVkpw4b</string>
     <string name="com.twitter.sdk.android.CONSUMER_SECRET" tools:ignore="ExtraTranslation">A5JnCv7CWJj9hBXffO8eIhd9CnG5thm7MDtVeACBpan1Ku2xN7</string>
+    <string name="puchame">Puchame</string>
+    <string name="eventos_proximos_en">EVENTOS PROXIMOS EN</string>
+    <string name="tomato_sede">TOMATO SEDE:</string>
+    <string name="sede">Sede:</string>
+    <string name="crear_evento">Crear evento</string>
+    <string name="registrar">Registrar</string>
+    <string name="regresar">Regresar</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="title_activity_mapa_de_evento">Map</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 
 </resources>

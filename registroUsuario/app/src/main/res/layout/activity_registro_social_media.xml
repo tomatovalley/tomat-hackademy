@@ -10,7 +10,7 @@
     <com.facebook.login.widget.LoginButton
         android:id="@+id/botonlogin"
         android:layout_width="216dp"
-        android:layout_height="58dp"
+        android:layout_height="80dp"
         android:layout_marginStart="74dp"
         android:layout_marginLeft="74dp"
         android:layout_marginTop="150dp"
@@ -39,30 +39,31 @@
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/SignInButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="230dp"
+        android:layout_height="35dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_marginStart="74dp"
-        android:layout_marginLeft="74dp"
         android:layout_marginTop="14dp"
         android:layout_marginEnd="74dp"
-        android:layout_marginRight="74dp"
         android:layout_marginBottom="128dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonlogin" />
+        app:layout_constraintTop_toBottomOf="@+id/botonlogin"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/loginCorreo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="216dp"
+        android:layout_height="40dp"
         android:layout_marginStart="136dp"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="96dp"
         android:layout_marginEnd="136dp"
         android:text="correo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.596"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 

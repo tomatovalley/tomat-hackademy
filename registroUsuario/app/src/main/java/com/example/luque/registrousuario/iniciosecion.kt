@@ -17,10 +17,12 @@ class iniciosecion : AppCompatActivity() {
 
 
 
-            val botonInicioSecion= findViewById(R.id.botonInicioSecion) as Button
+            val botonInicioSecion= findViewById<Button>(R.id.botonInicioSecion)
             botonInicioSecion.setOnClickListener {
                 var intent = Intent(this, login::class.java)
                 startActivity(intent)
+                //finish()
+
 
             }
 
@@ -28,8 +30,10 @@ class iniciosecion : AppCompatActivity() {
             val botonregistrarse= findViewById<Button>(R.id.botonRegistrarse)
             botonregistrarse.setOnClickListener{
 
-                var intent2 = Intent(this, registroSocialMedia::class.java)
-                startActivity(intent2)
+                var intent = Intent(this, registroSocialMedia::class.java)
+                startActivity(intent)
+                //finish()
+
 
             }
 
@@ -39,4 +43,5 @@ class iniciosecion : AppCompatActivity() {
 
 
     }
+
 }
