@@ -11,7 +11,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/name_eventos" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/imageView6"/>
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/foto_evento"/>
     <TextView
             android:text="TextView"
             android:layout_width="0dp"
@@ -30,8 +30,8 @@
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" app:srcCompat="@drawable/ic_wallpaper_black_24dp"
-            android:id="@+id/imageView6" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/foto_evento" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp" android:contentDescription="Foto del evento"/>
 </android.support.constraint.ConstraintLayout>

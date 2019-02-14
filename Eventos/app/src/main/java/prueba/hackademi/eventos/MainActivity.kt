@@ -1,22 +1,25 @@
 package prueba.hackademi.eventos
 
 import android.content.Intent
+import android.media.Image
+import android.media.ImageReader
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.Toast
 import com.google.gson.GsonBuilder
 import kotlinx.android.synthetic.main.activity_main.*
 import okhttp3.*
 import java.io.IOException
 
-val url = "http://127.0.0.1:8000/eventos/detalles_evento/"
+val url = "http://192.168.10.65:8000/eventos/detalles_evento/"
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var crearEvento : Button
+        lateinit var crearEvento : ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -76,4 +79,4 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-class HomeFeed(val evento:String, val sede:String)
+class HomeFeed(val name:String, val place:String, val image:String)
