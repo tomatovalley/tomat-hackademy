@@ -42,7 +42,7 @@ class Evento(models.Model):
     def save(self, *args, **kwargs):
 
         self.validate_unique()
-        super(Emprendimiento, self).save(*args, **kwargs)
+        super(Evento, self).save(*args, **kwargs)
 
 
     def __str__(self):
@@ -73,10 +73,7 @@ class Emprendimiento(models.Model):
         self.validate_unique()
         super(Emprendimiento, self).save(*args, **kwargs)
 
-    def __str__(self):
-
-        return self.user_id.username
-
+   
 
 
 """Modelo Comentarios Emprendimiento"""
@@ -87,8 +84,3 @@ class ComentarioEmprendimiento(models.Model):
     comment_user = models.ForeignKey(Emprendimiento, related_name = 'Emprendimiento', on_delete= models.CASCADE)
     comment = models.TextField(max_length= 250, default="")
     create_date = models.DateField(default = datetime.date.today)
-
-
-    def __str__(self):
-
-        return self.user.user

@@ -19,22 +19,21 @@ class UserSerializer(serializers.ModelSerializer):
 
 class EmprendimientoSerializer(serializers.ModelSerializer):
     
+    #user_id = serializers.CharField()
+
     class Meta:
         model = Emprendimiento
-        fields = ('user_id','name', 'description', 'website','email','image', 'create_date')
+        fields = ('id',  'user_id','name', 'description', 'website','email','image', 'create_date')
 
     def __str__(self):
         return self.user_id
 
 class ComentarioSerializer(serializers.ModelSerializer):
     
-
-    #user = serializers.SlugRelatedField(read_only=True, slug_field='username')
-    #comment_user = serializers.SlugRelatedField(read_only=True, slug_field='user')
-
+    
     class Meta:
         model = ComentarioEmprendimiento
-        fields = ('user','comment', 'comment_user', 'create_date')
+        fields = ('id','user','comment', 'comment_user', 'create_date')
 
 
 
@@ -49,13 +48,16 @@ class ClientSerializer(serializers.ModelSerializer):
 
 class EventoSerializer(serializers.ModelSerializer):
     
+    #username = serializers.CharField(read_only=True)
+
     class Meta:
         model = Evento
-        fields = ('id', 'username', 'name','place','begin_date','image', 'start_hour', 'final_date','end_hour',
+        fields = ('username', 'name','place','begin_date','image', 'start_hour', 'final_date','end_hour',
             'description','organizer')
 
 
-
+        def create(self, validate_data):
+            return Evento.objects.create(**validate_data)
 
 
 class TokenSerializer(serializers.Serializer):

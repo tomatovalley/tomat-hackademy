@@ -173,9 +173,14 @@ class ClientView(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
+class FilterComment(APIView):
 
+    def get(self, request):
 
+        user = ComentarioEmprendimiento.objects.all()
+        user_json = ComentarioSerializer(user, many=True)
 
+        return Response(user_json.data, status=200)
 
 """
 class tokenView(APIView):
@@ -251,13 +256,13 @@ def evento_instance(evento):
         return Evento(user=user)
 
 """
-"""
+
 def user(self, request, user):
 
     try:
         return user.username
     except:
-        return Client(user=user)
-"""
+        return User(user=user)
+
 
 
