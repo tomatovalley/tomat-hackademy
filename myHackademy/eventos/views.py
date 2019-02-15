@@ -49,6 +49,7 @@ from .models import ComentarioEmprendimiento
 from .models import Client
 from .models import Evento
 from .models import Emprendimiento
+from .models import Comentario
 
 
 
@@ -56,7 +57,7 @@ from .serializers import ClientSerializer
 from .serializers import TokenSerializer
 from .serializers import EmprendimientoSerializer
 from .serializers import ComentarioSerializer
-
+from .serializers import CommentSerializer
 
 
 from rest_framework.decorators import detail_route
@@ -71,10 +72,17 @@ jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
 class EventoViewSet(viewsets.ModelViewSet):
     
     permission_classes = (permissions.AllowAny,)
+    parser_classes = (FileUploadParser,)
     
     queryset = Evento.objects.all()
     serializer_class = EventoSerializer
     http_method_names =['post']
+
+
+class Commentario(viewsets.ModelViewSet):
+
+    queryset = Comentario.objects.all()
+    serializer_class = ComentarioSerializer
 
 
 """
@@ -159,8 +167,13 @@ class DetailEvento(APIView):
 
 class EmprendimientoView(viewsets.ModelViewSet):
 
+    #parser_classes = (FileUploadParser,)
+
     queryset  = Emprendimiento.objects.all()
     serializer_class = EmprendimientoSerializer
+
+
+
 
 
 class CommentView(viewsets.ModelViewSet):

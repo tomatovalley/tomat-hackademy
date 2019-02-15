@@ -74,13 +74,20 @@ class Emprendimiento(models.Model):
         super(Emprendimiento, self).save(*args, **kwargs)
 
    
-
-
 """Modelo Comentarios Emprendimiento"""
 
 class ComentarioEmprendimiento(models.Model):
 
-    user = models.ForeignKey(User, on_delete = models.CASCADE)
-    comment_user = models.ForeignKey(Emprendimiento, related_name = 'Emprendimiento', on_delete= models.CASCADE)
+    comment_user = models.ForeignKey(User, related_name='User', on_delete = models.CASCADE)
+    name = models.ForeignKey(Emprendimiento, related_name = 'comments', on_delete= models.CASCADE)
     comment = models.TextField(max_length= 250, default="")
     create_date = models.DateField(default = datetime.date.today)
+
+    def __str__(self):
+
+        return self.comment
+class Comentario(models.Model):
+
+    comment = models.ForeignKey(ComentarioEmprendimiento, on_delete = models.CASCADE)
+    emprendimiento = models.ForeignKey(Emprendimiento,  on_delete = models.CASCADE)
+

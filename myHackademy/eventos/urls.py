@@ -18,6 +18,7 @@ from .views import EmprendimientoView
 from .views import CommentView
 from .views import ClientView
 from .views import FilterComment
+from .views import Commentario
 
 app_name = 'eventos'
 
@@ -32,6 +33,7 @@ router.register('detalles_evento', GetEventoDetail, 'events')
 router.register('crear_emprendimiento', EmprendimientoView, 'emprendimiento')
 router.register('comment_emp', CommentView, 'comments')
 router.register('clientes', ClientView, 'clients')
+router.register('comentarios', Commentario, 'comentarios')
 
 urlpatterns = [
     
