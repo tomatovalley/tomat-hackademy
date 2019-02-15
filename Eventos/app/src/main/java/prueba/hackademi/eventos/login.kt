@@ -42,7 +42,6 @@ class login : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
         setContentView(R.layout.activity_login)
         callbackManager = CallbackManager.Factory.create()
 
-        loginButton = findViewById(R.id.botonloginn)
         loginButtonTwitter = findViewById(R.id.loginButtonTwitterr)
         val textoContraseña= findViewById(R.id.textoContraseña) as TextView
         var valor = true
@@ -77,14 +76,6 @@ class login : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
             startActivity(intent3)
             finishAffinity()
         }
-
-
-
-
-
-
-
-
 
 
 
