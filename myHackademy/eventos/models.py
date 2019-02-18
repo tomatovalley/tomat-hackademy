@@ -12,8 +12,6 @@ class Client(models.Model):
 
     username = models.OneToOneField(User, on_delete = models.CASCADE)
 
-
-
     def __str__(self):
 
         return self.username
@@ -31,9 +29,7 @@ class Evento(models.Model):
     end_hour = models.TimeField(blank=True,null=True, default = datetime.time)
     description = models.TextField( blank=True, null=True, max_length = 500, default="" )
     organizer = models.TextField(blank=True, null=True, max_length = 50, default="")
-    #facebook = models.URLField(blank=True, null=True,max_length = 100, default="")
-    #instagram = models.URLField(blank=True, null = True, max_length = 100, default="")
-    #twitter = models.URLField(blank=True, null = True, max_length = 100, default="")
+   
 
     def validate_unique(self, exclude=None):
         if Evento.objects.filter(name=self.name).exists():
@@ -55,7 +51,6 @@ class Evento(models.Model):
 class Emprendimiento(models.Model):
 
     user_id = models.ForeignKey(User, on_delete = models.CASCADE)
-    #username = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.TextField(max_length=200, default="")
     description = models.TextField(max_length = 500, default="")
     website = models.URLField(max_length=100, default="")
@@ -73,21 +68,19 @@ class Emprendimiento(models.Model):
         self.validate_unique()
         super(Emprendimiento, self).save(*args, **kwargs)
 
+    def __str__(self):
+        return self.name
    
 """Modelo Comentarios Emprendimiento"""
 
 class ComentarioEmprendimiento(models.Model):
 
-    comment_user = models.ForeignKey(User, related_name='User', on_delete = models.CASCADE)
+    comment_user= models.ForeignKey(User, related_name='User', on_delete = models.CASCADE)
     name = models.ForeignKey(Emprendimiento, related_name = 'comments', on_delete= models.CASCADE)
     comment = models.TextField(max_length= 250, default="")
     create_date = models.DateField(default = datetime.date.today)
 
     def __str__(self):
 
-        return self.comment
-class Comentario(models.Model):
-
-    comment = models.ForeignKey(ComentarioEmprendimiento, on_delete = models.CASCADE)
-    emprendimiento = models.ForeignKey(Emprendimiento,  on_delete = models.CASCADE)
+        return '{} : {} {}'.format(self.comment_user, self.comment, self.create_date)
 

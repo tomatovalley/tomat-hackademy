@@ -5,7 +5,6 @@ from .models import Emprendimiento
 from .models import Evento
 from .models import ComentarioEmprendimiento
 from .models import Client
-from .models import Comentario
 
 
 
@@ -13,25 +12,20 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('username',)
-
-
-
-
+        fields = ('username', 'password')
 
 
 class EmprendimientoSerializer(serializers.ModelSerializer):
     
 
     user_id= serializers.SlugRelatedField(queryset = User.objects.all(), slug_field = 'username')
-    #comments = ComentarioSerializer(many = True)
-    #comentario = ComentarioSerializer(many= True, read_only= True)
     comments  = serializers.StringRelatedField(many = True)
-
+    #comment = ComentarioSerializer()
     class Meta:
         model = Emprendimiento
         fields = ('id',  'user_id','name', 'description', 'website','email','image', 'create_date', 'comments')
-        depth = 1
+        ordering = ['comments']
+        depth = 2
 
 
     def __str__(self):
@@ -45,17 +39,9 @@ class ComentarioSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ComentarioEmprendimiento
-        fields = ('id','comment_user','comment', 'name', 'create_date')
+        fields = ('id','comment', 'name', 'create_date', 'comment_user')
         depth = 1
-
-
    
-
-class ClientSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Client
-        fields = ('username',)
 
 
 class EventoSerializer(serializers.ModelSerializer):
@@ -70,17 +56,6 @@ class EventoSerializer(serializers.ModelSerializer):
 
         def create(self, validate_data):
             return Evento.objects.create(**validate_data)
-
-
-class CommentSerializer(serializers.ModelSerializer):
-
-    #emp = EmprendimientoSerializer(many= True, read_only= True, source= 'Emprendimiento')
-
-    class Meta:
-        model= Comentario
-        fields = ('comment', 'emprendimiento')
-        depth = 1
-
 
 class TokenSerializer(serializers.Serializer):
     """

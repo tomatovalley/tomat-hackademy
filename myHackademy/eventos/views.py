@@ -49,15 +49,10 @@ from .models import ComentarioEmprendimiento
 from .models import Client
 from .models import Evento
 from .models import Emprendimiento
-from .models import Comentario
 
-
-
-from .serializers import ClientSerializer
 from .serializers import TokenSerializer
 from .serializers import EmprendimientoSerializer
 from .serializers import ComentarioSerializer
-from .serializers import CommentSerializer
 
 
 from rest_framework.decorators import detail_route
@@ -79,45 +74,6 @@ class EventoViewSet(viewsets.ModelViewSet):
     http_method_names =['post']
 
 
-class Commentario(viewsets.ModelViewSet):
-
-    queryset = Comentario.objects.all()
-    serializer_class = ComentarioSerializer
-
-
-"""
-class CatchUser(viewsets.ModelViewSet):
-
-    permissions_classes = (permissions.AllowAny,)
-
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-
-    def create(self, request):
-        user = UserSerializer(data=request.data)
-        if user.is_valid():
-            user.save()
-        return Response(user.data)
-"""
-    
-"""   
-class GetUser(viewsets.ModelViewSet):
-    
-    permissions_classes = (permissions.AllowAny,)
-
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-
-    @detail_route()
-    def user_detail(self, request, pk):
-        user_ = self.get_object()
-        id_ = User.objects.filter(username = user_)
-        id_json = UserSerializer(id_, many=True)
-        #print(self.request.data)
-        return Response(id_json.data)
-    
-"""
-
 class GetEventoDetail(viewsets.ModelViewSet):
 
     permissions_classes = (permissions.AllowAny,)
@@ -136,44 +92,12 @@ class GetEventoDetail(viewsets.ModelViewSet):
         return Response(evento_json.data)
 
 
-"""
-class GetEvento(APIView):
-
-    permission_classes = (permissions.AllowAny,)
-
-    def get(self, request):
-
-        user = Evento.objects.all()
-        user_json = EventoSerializer(user, many=True)
-
-        return Response(user_json.data)
-"""
-
-"""
-class DetailEvento(APIView):
-
-    permission_classes = (permissions.AllowAny,)
-
-    def get(self, request, pk):
-
-        id_evento = Evento.objects.get(pk=pk)        
-        id_evento_json = EventoSerializer(id_evento)
-
-        return Response(id_evento_json.data)
-
-    def post(self, request):
-        pass
-"""
-
 class EmprendimientoView(viewsets.ModelViewSet):
 
     #parser_classes = (FileUploadParser,)
 
     queryset  = Emprendimiento.objects.all()
     serializer_class = EmprendimientoSerializer
-
-
-
 
 
 class CommentView(viewsets.ModelViewSet):
