@@ -18,6 +18,9 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".CrearEmprendimientoSA">
+        </activity>
+
         <meta-data
                 android:name="com.google.android.geo.API_KEY"
                 android:value="AIzaSyAzyEdi2WlTOsw9C1OiAKilvZqx6sp2S50"/>
@@ -51,7 +54,6 @@
         <activity
                 android:name=".MainActivity"
                 android:launchMode="singleTop">
-
         </activity>
         <activity
                 android:name=".CrearEventoSA"
@@ -80,7 +82,6 @@
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".CrearEventoSA2"/>
         </activity>
-
     </application>
 
 </manifest>

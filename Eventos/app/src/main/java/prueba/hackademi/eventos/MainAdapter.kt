@@ -76,7 +76,6 @@ private class DownLoadImageTask(internal val imageView: ImageView) : AsyncTask<S
         if (result != null) {
             // Display the downloaded image into image view
             imageView.setImageBitmap(result)
-        } else {
         }
     }
 }

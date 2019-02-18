@@ -1,5 +1,6 @@
 package prueba.hackademi.eventos
 
+import android.annotation.TargetApi
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.ContentValues
@@ -25,8 +26,11 @@ import kotlinx.android.synthetic.main.crear_evento_sa1.*
 import kotlinx.android.synthetic.main.crear_evento_sa2.*
 import kotlinx.android.synthetic.main.detalle_evento.*
 import kotlinx.android.synthetic.main.eventos_row.*
+import java.io.File
 import java.lang.Exception
 import java.util.jar.Manifest
+import java.util.Base64
+
 
 class CrearEventoSA2 : AppCompatActivity(){
 
@@ -40,6 +44,12 @@ class CrearEventoSA2 : AppCompatActivity(){
 
         val registerSede= intent.getStringExtra("registerSede")
         val registerEvento = intent.getStringExtra("registerEvento")
+        val sdate = intent.getStringExtra("registerSdate")
+        val fdate = intent.getStringExtra("registerFdate")
+        val shour = intent.getStringExtra("registerShour")
+        val fhour = intent.getStringExtra("registerFhour")
+        val registerDetalle = intent.getStringExtra("registerDetalle")
+
 
 
         agregar_imagen.setOnClickListener {
@@ -122,13 +132,6 @@ class CrearEventoSA2 : AppCompatActivity(){
         }
 
 
-        button_next2.setOnClickListener{
-            val intent = Intent(applicationContext,CrearEventoSA3::class.java)
-            intent.putExtra("registerSede",registerSede)
-            intent.putExtra("registerEvento",registerEvento)
-            startActivity(intent)
-        }
-
         boton_de_repuesto.setOnClickListener {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
 
@@ -158,6 +161,7 @@ class CrearEventoSA2 : AppCompatActivity(){
                     }
                     popupMenu.inflate(R.menu.popup_de_camara)
                     popupMenu.show()
+                    val foto = encoder(image_rui?.path)
                 }
 
             }
@@ -182,6 +186,21 @@ class CrearEventoSA2 : AppCompatActivity(){
                 popupMenu.show()
 
             }
+        }
+
+        button_next2.setOnClickListener{
+            Toast.makeText(this,image_rui?.path,Toast.LENGTH_SHORT).show()
+            //val foto = encoder(image_rui?.path)
+            val intent = Intent(applicationContext,CrearEventoSA3::class.java)
+            intent.putExtra("registerSede",registerSede)
+            intent.putExtra("registerEvento",registerEvento)
+            intent.putExtra("registerSdate",sdate)
+            intent.putExtra("registerFdate",fdate)
+            intent.putExtra("registerShour",shour)
+            intent.putExtra("registerFhour",fhour)
+            intent.putExtra("registerDetalle",registerDetalle)
+            //intent.putExtra("Foto",foto)
+            startActivity(intent)
         }
 
     }
@@ -231,6 +250,10 @@ class CrearEventoSA2 : AppCompatActivity(){
            imagen_de_boton.visibility = View.VISIBLE
            boton_de_repuesto.visibility = View.VISIBLE
        }
+    }
+    fun encoder(filePath: String?): String{
+        val bytes = File(filePath).readBytes()
+        return bytes.toString()
     }
 
 }

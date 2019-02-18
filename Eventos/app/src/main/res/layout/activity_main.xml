@@ -77,4 +77,12 @@
             app:layout_constraintEnd_toEndOf="@+id/fab" app:layout_constraintStart_toStartOf="@+id/fab"
             android:visibility="gone" android:contentDescription="@string/imagen_para_crear_evento"/>
 
+    <ImageButton
+            android:layout_width="42dp"
+            android:layout_height="40dp" app:srcCompat="@drawable/estrella_mitad" android:id="@+id/crear_emprendimiento"
+            android:background="@drawable/boton_redondo"
+            android:visibility="gone" android:contentDescription="@string/boton_para_crear_emprendimiento"
+            app:layout_constraintStart_toStartOf="@+id/fab" app:layout_constraintEnd_toEndOf="@+id/fab"
+            android:layout_marginBottom="50dp" app:layout_constraintBottom_toBottomOf="@+id/crear_evento"/>
+
 </android.support.constraint.ConstraintLayout>

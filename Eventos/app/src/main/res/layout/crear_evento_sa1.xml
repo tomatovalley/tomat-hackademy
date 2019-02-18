@@ -191,7 +191,7 @@
         <android.support.design.widget.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Descripción"/>
+                android:hint="Descripción" android:id="@+id/texto_detalle"/>
     </android.support.design.widget.TextInputLayout>
 
 

@@ -3,7 +3,7 @@
                                              xmlns:app="http://schemas.android.com/apk/res-auto"
                                              xmlns:tools="http://schemas.android.com/tools"
                                              android:layout_width="match_parent"
-                                             android:layout_height="262dp">
+                                             android:layout_height="wrap_content">
 
     <TextView
             android:text="TextView"
@@ -11,27 +11,30 @@
             android:layout_height="wrap_content"
             android:id="@+id/name_eventos" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/foto_evento"/>
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/foto_evento"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/name_sede"/>
     <TextView
             android:text="TextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/name_sede" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/name_eventos"
-            app:layout_constraintStart_toEndOf="@+id/textView2" android:layout_marginStart="4dp"/>
+            app:layout_constraintStart_toEndOf="@+id/textView2" android:layout_marginStart="4dp"
+            android:layout_marginBottom="1dp" app:layout_constraintBottom_toBottomOf="parent"/>
     <TextView
             android:text="@string/sede"
             android:layout_width="wrap_content"
             android:layout_height="23dp"
             android:id="@+id/textView2" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
             android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/name_eventos"
-    />
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="1dp"
+            app:layout_constraintEnd_toStartOf="@+id/name_sede" android:layout_marginEnd="4dp"/>
     <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content" app:srcCompat="@drawable/ic_wallpaper_black_24dp"
             android:id="@+id/foto_evento" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            android:layout_marginTop="20dp" android:contentDescription="Foto del evento"/>
+            android:layout_marginTop="20dp" android:contentDescription="Foto del evento"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/name_eventos"/>
 </android.support.constraint.ConstraintLayout>

@@ -160,7 +160,7 @@ open class registroSocialMedia :  AppCompatActivity(), GoogleApiClient.OnConnect
 
     //LOGIN ACTIVITE GOOGLE
 
-
+    /*
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {//da error por el metodo de TWITTER que tiene el mismo nombre con los mismos parametros si el metodo de Twitter es comentariado agarra el de google,el metodo esta bien implementado
         super.onActivityResult(requestCode, resultCode, data)
 
@@ -175,6 +175,7 @@ open class registroSocialMedia :  AppCompatActivity(), GoogleApiClient.OnConnect
             loginButtonTwitter?.onActivityResult(requestCode, resultCode, data)
         }
     }
+    */
 
 
     override fun onConnectionFailed(connectionResult: ConnectionResult) {
@@ -217,14 +218,16 @@ open class registroSocialMedia :  AppCompatActivity(), GoogleApiClient.OnConnect
     }
     */
 
-    /*
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        callbackManager?.onActivityResult(requestCode, resultCode, data)
-        Toast.makeText(this, "el valor de requestcode es: "+requestCode, Toast.LENGTH_SHORT).show()
+        val result = Auth.GoogleSignInApi.getSignInResultFromIntent(data)
+        handleSignInResult(result)
+        //callbackManager?.onActivityResult(requestCode, resultCode, data)
+       //Toast.makeText(this, "el valor de requestcode es: "+requestCode, Toast.LENGTH_SHORT).show()
 
     }
-    */
+
 
 }
 

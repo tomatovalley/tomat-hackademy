@@ -15,7 +15,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 import okhttp3.*
 import java.io.IOException
 
-val url = "http://192.168.10.65:8000/eventos/detalles_evento/"
+//val url = "http://192.168.10.65:8000/eventos/detalles_evento/"
+val url = "http://157.230.182.120/eventos/detalles_evento/"
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,12 +38,21 @@ class MainActivity : AppCompatActivity() {
         }
         boton_ticket.setOnClickListener {
             crear_evento.visibility = View.GONE
+            crear_emprendimiento.visibility = View.GONE
         }
 
         fab.setOnClickListener {
-            if(crear_evento.visibility == View.GONE) {
+            if(crear_evento.visibility == View.GONE && crear_emprendimiento.visibility == View.GONE) {
                 crear_evento.visibility = View.VISIBLE
-            }else crear_evento.visibility = View.GONE
+                crear_emprendimiento.visibility = View.VISIBLE
+            }else{
+                crear_evento.visibility = View.GONE
+             crear_emprendimiento.visibility = View.GONE
+            }
+        }
+        crear_emprendimiento.setOnClickListener {
+            val intent = Intent(applicationContext,CrearEmprendimientoSA::class.java)
+            startActivity(intent)
         }
 
 

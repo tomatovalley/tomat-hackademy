@@ -4,6 +4,7 @@ import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.Intent
 import android.os.Bundle
+import android.support.design.widget.TextInputEditText
 import android.support.v7.app.AppCompatActivity
 import android.text.Editable
 import android.view.View
@@ -31,6 +32,10 @@ import java.util.*
 
 
 class CrearEventoSA : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener  {
+    var sdate: String? = null
+    var fdate:String? = null
+    var shour:String? = null
+    var fhour:String? = null
     override fun onConnectionFailed(p0: ConnectionResult) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
@@ -86,32 +91,57 @@ class CrearEventoSA : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
             val intent = Intent(applicationContext, MapaDeEvento::class.java)
             startActivity(intent)
         }
-        //boton de fecha
 
+        //boton de fecha
         boton_fecha_inicio.setOnClickListener{
 
             val dpd = DatePickerDialog(this,DatePickerDialog.OnDateSetListener{view: DatePicker?, mYear:Int, mMonth: Int, mDay: Int ->
                 nMonth = mMonth.plus(1)
-                dia_fecha_inicio.setText(""+mDay+"/"+nMonth+"/"+mYear)
+                var dia = "$mDay"
+                var mes = "$nMonth"
+                if(mMonth<10 || mDay<10){
+                    if(mMonth<10){
+                         mes = "0$nMonth"
+                    }
+                    if(mDay<10){
+                         dia = "0$mDay"
+                    }
+                }
+                dia_fecha_inicio.setText(""+dia+"/"+mes+"/"+mYear)
+                val date ="$mYear-$mes-$dia"
+                Date(date)
 
             },year,month,day)
 
             dpd.show()
+
         }
+
+
 
         boton_fecha_fin.setOnClickListener{
             val dpd = DatePickerDialog(this,DatePickerDialog.OnDateSetListener { view, mYear, mMonth,mDay ->
                 nMonth = mMonth.plus(1)
-                dia_fecha_fin.setText(""+mDay+"/"+nMonth+"/"+mYear)
+                var dia = "$mDay"
+                var mes = "$nMonth"
+                if(mMonth<10 || mDay<10){
+                    if(mMonth<10){
+                        mes = "0$nMonth"
+                    }
+                    if(mDay<10){
+                        dia = "0$mDay"
+                    }
+                }
+                dia_fecha_fin.setText(""+dia+"/"+mes+"/"+mYear)
+                val date ="$mYear-$mes-$dia"
+                Date(y=date)
 
             },year,month,day)
             dpd.show()
         }
 
+
         //botones de hora
-
-
-
         boton_hora_inicio.setOnClickListener {
 
             val timeSetListener = TimePickerDialog.OnTimeSetListener{ timePicker,mHour, mMinute ->
@@ -119,11 +149,11 @@ class CrearEventoSA : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
                 calendar.set(Calendar.HOUR_OF_DAY, mHour)
                 calendar.set(Calendar.MINUTE, mMinute)
                 hora_inicio.text = SimpleDateFormat("HH:mm").format(calendar.time)
-                horaInicio = SimpleDateFormat("HH:mm").format(calendar.time)
+                Date(v=SimpleDateFormat("HH:mm").format(calendar.time))
+
             }
             TimePickerDialog(this,timeSetListener,calendar.get(Calendar.HOUR_OF_DAY),calendar.get(Calendar.MINUTE),true).show()
         }
-
 
 
         boton_hora_fin.setOnClickListener {
@@ -133,32 +163,49 @@ class CrearEventoSA : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
                 calendar.set(Calendar.HOUR_OF_DAY, mHour)
                 calendar.set(Calendar.MINUTE, mMinute)
                 hora_fin.text = SimpleDateFormat("HH:mm").format(calendar.time)
+                Date(w=SimpleDateFormat("HH:mm").format(calendar.time))
             }
             TimePickerDialog(this,timeSetListener,calendar.get(Calendar.HOUR_OF_DAY),calendar.get
             (Calendar.MINUTE),true).show()
             //Toast.makeText(this, "$horaInicio",Toast.LENGTH_SHORT).show()
         }
 
+
         //va a la siguiente actividad
-
-
         boton_siguiente.setOnClickListener{
 
-            val nombreView = findViewById(R.id.registrar_organizador) as TextView
+            val nombreView = findViewById<TextView>(R.id.registrar_organizador)
             val registerEvento = nombreView.text.toString()
 
-            val sedeView = findViewById(R.id.input_search) as TextView
+            val sedeView = findViewById<TextView>(R.id.input_search)
             val registerSede:String = sedeView.text.toString()
+
+            val detalle = findViewById<TextInputEditText>(R.id.texto_detalle)
+            val registerDetalle:String = detalle.text.toString()
 
 
             val intent = Intent(applicationContext,CrearEventoSA2::class.java)
             intent.putExtra("registerSede",registerSede)
             intent.putExtra("registerEvento",registerEvento)
+
+            intent.putExtra("registerSdate",sdate)
+            intent.putExtra("registerFdate",fdate)
+
+            intent.putExtra("registerShour",shour)
+            intent.putExtra("registerFhour",fhour)
+
+            intent.putExtra("registerDetalle",registerDetalle)
+
             startActivity(intent)
 
         }
 
 
     }
-
+    fun Date (x:String?=sdate, y:String?=fdate, v:String?=shour, w:String?=fhour) {
+        sdate = x
+        fdate = y
+        shour = v
+        fhour = w
+    }
 }
