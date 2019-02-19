@@ -1,0 +1,84 @@
+.imagen{
+    margin-bottom: 10%;
+}
+.imagend{
+    width: 100%;
+    margin-left: 10%;
+    margin-top: 10%;
+    border-radius: 30px;
+}
+.tema{
+    margin-left: 10%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+.texto{
+    width: 60%;
+    margin-left: 17%;
+    text-align: start;
+    margin-bottom: 10%;
+}
+.line{
+    
+    border-bottom: 2px solid #cccccc;
+}
+.comentario{
+    width: 100%;
+    margin-left:10%;
+    margin-top: 10%;
+    border-radius: 5px;
+}
+
+.photo{
+    width: 80%;
+    height: 200px;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    margin-left: 10%;
+    
+}
+.usuario{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    margin-left: 10%;
+}
+.name{
+    float: right;
+    margin-right: 80%;
+}
+.description{
+    margin-left: 10%;
+    margin-top: 5%;
+    font-size: 30px;
+    font-family: 'Segoe UI';
+
+}
+.date-time{
+    float: right;
+    margin-right: 5%;
+}
+.col-sm-12{
+    margin-bottom: 5%;
+    
+}
+.textarea{ 
+width: 80%;
+height: 200px;
+border-radius: 10px;
+border: 1px solid #cccccc;
+margin-left: 10%;
+}
+.comentt{
+float: right;
+margin-right: 15%;
+margin-top:2%;
+width: 20%;
+height: 40px;
+background: #33cc44;
+color: #ffffff;
+border: 0;
+border-radius: 5px;
+font-size: 25px;
+}
+

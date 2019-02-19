@@ -6,7 +6,8 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <link rel="stylesheet" href="">
 <nav class="navbar navbar-expand-md navbar-dark navbar-default">
-  <img src="https://tomatovalley.net/wp-content/uploads/2018/03/Logo-tomato-TB.png" alt="" data-ww="341px" data-hh="241px" width="50" height="50" data-no-retina="">
+  <a href="#"><img src="https://tomatovalley.net/wp-content/uploads/2018/03/Logo-tomato-TB.png" alt="" data-ww="341px" data-hh="241px" width="50" height="50" data-no-retina="">
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavBar" aria-controls="mainNavBar" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -47,8 +48,8 @@
         <a class="nav-link" routerLink="/user/login">Log in</a>
       </li>
       <li class="nav-item" id="nav-item" *ngIf="!isLogged">
-          <button class="btn btn-large btn-color-green btn-block text-color" routerLink="/">Sign in</button>
-        </li>
+        <a href="#" class="btn btn-large btn-color-green btn-block text-color" routerLink="/">Sign in</a>
+      </li>
     </ul>
   </div>
 </nav>

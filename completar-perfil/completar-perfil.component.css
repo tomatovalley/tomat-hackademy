@@ -7,6 +7,7 @@ img{
     box-sizing: border-box;
 
 }
+
 .tag-CpP{
     text-align: center;
 }
@@ -30,10 +31,14 @@ aside{
 }
 #catsDogs{
     display: inline;
+    font-size: 20px;
+    font-weight: 600;
     font-family: 'Arial';
 }
 .mentores{
     display: inline;
+    font-size: 18px;
+    font-weight: 550;
     margin: 0px 0px 0px 95px;
 }
 #mentores{
@@ -43,6 +48,9 @@ aside{
 }
 .cancel{
     background: #F92525;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
     border-radius: 50px;
     width: 20%;
     height: 43px;
@@ -50,6 +58,9 @@ aside{
 }
 .Aceptar{
     background: #45DE54;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
     border-radius: 50px;
     width: 20%;
     height: 43px;
@@ -68,6 +79,9 @@ aside{
 }
 .btn-edit{
     background: #ffffff;
+    color: #38A1F3;
+    font-size: 17px;
+    font-weight: 900;
     width: 322px;
     height: 43px;
     border-radius: 20px;
@@ -88,8 +102,12 @@ aside{
 }
 .date{
     border-radius: 10px;
-    width: 50%;
+    display: inline;
 }
+.person{
+    background: #FDFFC5;
+}
+
 @media screen and (max-width:1200px){
     article{
         text-align: center;
@@ -144,6 +162,5 @@ aside{
  }
 .fecha{
       float: left;
-      margin-left: 10%;
     }
 }

@@ -1,0 +1,141 @@
+.col-sm-12{
+    background: #000000;
+    background-image: url("https://2.bp.blogspot.com/-3XDHn5xq8P4/XGYNuzm-DXI/AAAAAAAAAF0/83W-UP1a6Uo69VlNcoCowt9FjNh1-XGXwCLcBGAs/s640/hermes-rivera-724956-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 800px;
+    width: 100%;
+    
+
+}
+.content{
+    float: right;
+    width: 70%;
+}
+.circles{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.fas{
+    color: #ffffff;
+    font-size: 20px;
+}
+.title{
+    color: #ffffff;
+    font-family: Georgia;
+}
+.description{
+    width: 35%;
+    line-height: 40px;
+    font-size: 20px;
+    color: #ffffff;
+    font-family: Arial;
+    margin-bottom: 2%;
+}
+.sign{
+    width: 30%;
+    height: 40px;
+    background: none;
+    border: 4px solid #25B833;
+    color: #ffffff;
+    
+}
+.content{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ImageFont{
+    /*  */
+   background-image: url("https://1.bp.blogspot.com/-WbTrriibX7Q/XGYQBQUIymI/AAAAAAAAAGA/VX2Ik-7g_tAWIQTrCN-39EqZWUwYAx6QgCLcBGAs/s640/oscar-nord-588057-unsplash.jpg");
+    height: 1000px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 1200px;
+    width: 1000px;
+    
+    
+}
+.col-sm-3 {
+
+height: 500px;
+margin-top: 10%;
+}
+.controller{
+    margin-left: 10%;
+    margin-top: 10%;
+}
+.col-sm-9{
+    
+height: 500px;
+margin-top: 10%;
+}
+.image{
+    width: 90%;
+    height: 90%;
+    text-align: center;
+}
+.image2{
+    float: left;
+}
+.contenido{
+    width: 50%;
+    margin-top: 20%;
+    margin-left: 15%;
+    margin-bottom: 3%;
+}
+.emprender{
+    width: 35%;
+    height: 40px;
+    background: #ffffff;
+    font-size: 20px;
+    font-weight: 800;
+    border: 2px solid #25B833;
+    margin-left: 15%;
+    
+}
+.imagend{
+    width: 90%;
+    height: 30%;
+    margin-left: 40%;
+}
+.check{
+    color: #000000;
+    font-size: 80px;
+    font-family: Segoe UI;
+    margin-top: 5%;
+}
+/*
+.form{
+    w
+}*/
+@media screen and (max-width:800px){
+    .contenido{
+        width: 90%;
+        font-size: 12px;
+        margin-left: 5%;
+    }
+    .emprender{
+    width: 90%;
+    margin-left: 5%;
+    }
+    .imagend{
+        margin-top: 50%;
+        width: 70%;
+        height: 50%;
+        margin-left: 40%;
+    }
+    .check{
+        font-size: 20px;
+        margin-left: 5%;
+        
+    }
+   .description{
+       width: 100%;
+   }
+    .col-sm-9{
+        width: 70%;
+    }
+}

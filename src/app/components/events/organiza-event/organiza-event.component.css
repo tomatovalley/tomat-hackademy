@@ -1,0 +1,169 @@
+
+.col-sm-{
+    width: 50%;
+    float: left;
+}
+.col-{
+    float: right;
+    width: 45%;
+    margin-right: 5%;
+    margin-bottom: 10%;
+}
+.perfil{
+    margin-left: 10%;
+}
+.ibm{
+    margin-left: 10%;
+}
+.Notification{
+    margin-left: 10%;
+}
+.perfilImage{
+    width: 7%;
+    height: 7%;
+    border-radius: 40px;
+
+}
+.name{
+    display: inline;
+    color: #2699FB;
+}
+.text{
+    width: 75%;
+    color: #cccccc;
+    margin-left: 10%;
+}
+.incididunt .fas{
+    color: #000000;
+}
+.notification{
+    color: #38A1F3;
+}
+.masNotification{
+    margin-left: 10%;
+    display: inline;
+}
+.text{
+    width: 50%;
+}
+.col- {
+    margin-top: 2%;
+    border: 3px solid #000000;
+}
+.input{
+    width: 90%;
+    height: 40px;
+}
+::placeholder{
+    color: #000000;
+    font-size: 20px;
+}
+.description{
+    margin-bottom: 2%;
+}
+
+.organizador{
+    width: 20%;
+    height: 50px;
+    text-align: center;
+    background-color: #2699FB;
+    color: #ffffff;
+    font-size:30px;
+    margin-bottom: 20px;
+    margin: 0;
+
+/*
+    text-align: center;
+    background: #38A1F3;
+    width: 15%;
+    height: 50px;
+    */
+}
+.btn{
+    width: 100%;
+}
+.Create{
+    width: 50%;
+    height: 60px;
+    border-radius: 30px;
+    border: 2px solid #2699FB;
+    color: #000000;
+    background: #ffffff;
+}
+.btn-row{
+    margin: 5px;
+    background: #BCE0FD;
+    border: 1px solid #BCE0FD;
+    border-radius: 5px;
+}
+.col-sm-12{
+    background: #000000;
+}
+#circle{
+    font-size: 20px;
+    color: #ffffff;
+}
+.active{
+    width: 50%;
+    height: 100px;
+}
+.encendido{
+    
+    background: #2699FB;
+    border-radius: 10px;
+    height: 100px;
+
+}
+.Capacidad{
+    width: 40%;
+    height: 50px;
+    text-align: center;
+    background-color: #2699FB;
+    color: #ffffff;
+    font-size:30px;
+    margin-bottom: 20px;
+    margin: 0;
+    float: right;
+    margin-right: 20%;
+}
+.coment{
+    width: 70%;
+    float: right;
+    margin-right: 20%;
+}
+.on{
+    background: none;
+    border: 0;
+}
+.ok{
+    width: 20%;
+    color: #ffffff;
+    font-size: 20px;
+    background: #45DE54;
+    border-radius: 20px;
+    border: 0;
+    margin-left: 40%;
+}
+@media screen and (max-width:1200px){
+    .col-sm-{
+        width: 100%;
+    }
+    .section{
+        margin-left: 20%;
+    }
+    .text{
+        width: 70%;
+    }
+    .col-{
+        width: 100%;
+        margin-right: 0;
+    }
+    .organizador{
+        width: 25%;
+        
+    }
+    .Capacidad{
+        width: 50%;
+        margin-right: 20%;
+    }
+}

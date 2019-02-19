@@ -1,0 +1,86 @@
+.name{
+    font-size: 20px;
+    
+}
+.perfilImage{
+    width: 10%;
+    height: 10%;
+    border-radius: 40px;
+}
+.section{
+ margin-left: 10%;
+}
+.name{
+    display: inline;
+    color: #2699FB;
+}
+.text {
+    width: 100%;
+    font-size: 12px;
+    color: #cccccc;
+    line-height: 20px;
+}
+.ibm{
+    width: 100%;
+}
+.notification{
+    color: #38A1F3;
+    font-size: 30px;
+}
+.masNotification{
+    width: 100%;
+    margin-left: 10%;
+    font-size: 12px;
+}
+
+.ss{
+    width: 50%;
+    margin-left: 20%;
+    margin-top: 2%;
+border:  2px solid #000000;
+}
+.boton{
+    margin-left: 30%;
+    width: 40%;
+}
+.event{
+    margin-left: 27%;
+    font-size: 30px;
+    font-weight: bold;
+}
+.imagen{
+    margin-left: 2%;
+    width: 96%;
+    background: #BCE0FD;
+    height: 60px;
+}
+.agregar{
+    width: 30%;
+}
+.font{
+    width: 96%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+.next{
+    width: 20%;
+    height: 40px;
+    background: #33cc44;
+    color: #ffffff;
+    margin-left: 38%;
+    font-size: 20px;
+    font-weight: 900;
+    border-radius: 20px;
+    border: 0;
+    margin-bottom: 5%;  
+}
+.boton{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 50%;
+    background: #ffffff;
+    border:2px solid #2699FB;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: 25%;
+}
