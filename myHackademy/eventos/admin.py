@@ -4,7 +4,7 @@ from django.contrib.auth.admin import UserAdmin as AuthUserAdmin
 
 
 from .models import Evento
-from .models import Client
+#from .models import Client
 from .models import Emprendimiento
 from .models import ComentarioEmprendimiento
 
@@ -51,6 +51,6 @@ class UserAdmin(AuthUserAdmin):
 admin.site.unregister(User)
 admin.site.register(User) #AuthUserAdmin)
 admin.site.register(Evento) #, EventoAdmin)
-admin.site.register(Client)#, ClientAdmin)
+#admin.site.register(Client)#, ClientAdmin)
 admin.site.register(Emprendimiento) #, EmprendimientoAdmin)
 admin.site.register(ComentarioEmprendimiento) #, CommentAdmin)

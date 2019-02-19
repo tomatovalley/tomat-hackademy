@@ -8,13 +8,13 @@ from django.utils import timezone
 
 
 
-class Client(models.Model):
+#class Client(models.Model):
 
-    username = models.OneToOneField(User, on_delete = models.CASCADE)
+ #   username = models.OneToOneField(User, null = True, blank = True, on_delete = models.CASCADE)
 
-    def __str__(self):
+  #  def __str__(self):
 
-        return self.username
+   #     return self.username
 
 
 class Evento(models.Model):
@@ -43,7 +43,7 @@ class Evento(models.Model):
 
     def __str__(self):
 
-        return self.name
+        return '{}{}'.format(self.name, self.username)
 
 """Modelo Emprendimiento"""
 

@@ -18,7 +18,6 @@ from .views import EmprendimientoView
 from .views import CommentView
 from .views import ClientView
 from .views import FilterComment
-
 app_name = 'eventos'
 
 router = routers.DefaultRouter()
@@ -36,7 +35,8 @@ router.register('clientes', ClientView, 'clients')
 urlpatterns = [
     
     re_path('', include(router.urls)),
-    path('comments/', FilterComment.as_view(), name='view')
+    path('comments/', FilterComment.as_view(), name='view'),
+    #path('cliente_login/', Cliente.as_view(), name='hoy_cliente')
     #path('token/', views.tokenView.as_view(), name='token'),
    # path('login/', views.LoginView.as_view(), name='login')
     

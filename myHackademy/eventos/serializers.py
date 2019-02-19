@@ -1,19 +1,29 @@
 from rest_framework import serializers
+from django.contrib.auth.hashers import make_password
+
+
 
 from django.contrib.auth.models import User
 from .models import Emprendimiento
 from .models import Evento
 from .models import ComentarioEmprendimiento
-from .models import Client
+#from .models import Client
 
+class CreateUserSerializer(serializers.HyperlinkedModelSerializer):
+    pass
 
+class UserSerializer(serializers.HyperlinkedModelSerializer):
 
-class UserSerializer(serializers.ModelSerializer):
+    #password = serializers.CharField(required = True, style = {'input_type':'password'}) 
 
     class Meta:
         model = User
         fields = ('username', 'password')
 
+
+    def create(self, validate_data):
+        user = User.objects.create_user(**validate_data)
+        return user
 
 class EmprendimientoSerializer(serializers.ModelSerializer):
     
@@ -46,8 +56,6 @@ class ComentarioSerializer(serializers.ModelSerializer):
 
 class EventoSerializer(serializers.ModelSerializer):
     
-    username = serializers.SlugRelatedField(queryset = User.objects.all(), slug_field = 'username')
-
     class Meta:
         model = Evento
         fields = ('username', 'name','place','begin_date','image', 'start_hour', 'final_date','end_hour',

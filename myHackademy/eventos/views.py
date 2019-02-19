@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from rest_framework.exceptions import ParseError
 
-
+from rest_framework.parsers import JSONParser
 
 from .serializers import EventoSerializer
 from .serializers import UserSerializer
@@ -46,7 +46,7 @@ from django.core.files.base import ContentFile
 
 from django.contrib.auth.models import User
 from .models import ComentarioEmprendimiento
-from .models import Client
+#from .models import Client
 from .models import Evento
 from .models import Emprendimiento
 
@@ -67,7 +67,7 @@ jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
 class EventoViewSet(viewsets.ModelViewSet):
     
     permission_classes = (permissions.AllowAny,)
-    parser_classes = (FileUploadParser,)
+    #parser_classes = (FileUploadParser,)
     
     queryset = Evento.objects.all()
     serializer_class = EventoSerializer
@@ -105,10 +105,19 @@ class CommentView(viewsets.ModelViewSet):
     queryset = ComentarioEmprendimiento.objects.all()
     serializer_class = ComentarioSerializer
 
+
+
 class ClientView(viewsets.ModelViewSet):
 
     queryset = User.objects.all()
     serializer_class = UserSerializer
+
+    #def perform_create(self, serializers):
+
+    #    instance = serializers.save()
+    #    instance.set_password(instance.password)
+    #    instance.save()
+
 
 class FilterComment(APIView):
 
