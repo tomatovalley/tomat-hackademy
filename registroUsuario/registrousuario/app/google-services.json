@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "233746645992",
+    "firebase_url": "https://registrousuario-d98a4.firebaseio.com",
+    "project_id": "registrousuario-d98a4",
+    "storage_bucket": "registrousuario-d98a4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:233746645992:android:7f875b44a4ebffe2",
+        "android_client_info": {
+          "package_name": "com.example.luque.registrousuario"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "233746645992-nqrn8e209fiiqk8oucpr7rubu35i1lms.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.luque.registrousuario",
+            "certificate_hash": "5995c79ace4c6c1f792c21b3c93d222747897a6d"
+          }
+        },
+        {
+          "client_id": "233746645992-i10ibclnqhesi7tusb1i5l6es87g8tqr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBj1uI1ClfvIfLnNzpnJOrogZ2ZsjYL2_Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "233746645992-i10ibclnqhesi7tusb1i5l6es87g8tqr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

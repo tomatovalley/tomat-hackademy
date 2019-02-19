@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondoapptomato"
+    android:visibility="visible"
+    tools:background="@drawable/fondoapptomato"
+    tools:context=".datosRegistro"
+    tools:layout_editor_absoluteY="25dp">
+
+    <EditText
+        android:id="@+id/textoNombre"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/textoApellido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photoImageView" />
+
+    <EditText
+        android:id="@+id/textoApellido"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:ems="10"
+        android:hint="Apellido"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/textoUsuario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoNombre" />
+
+    <EditText
+        android:id="@+id/textoUsuario"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:ems="10"
+        android:hint="Usuario"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoApellido" />
+
+    <TextView
+        android:id="@+id/textoSexo"
+        android:layout_width="156dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="102dp"
+        android:text="¿Te identificas como?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoUsuario" />
+
+    <Button
+        android:id="@+id/botonHombre"
+        android:layout_width="99dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="242dp"
+        android:layout_marginRight="242dp"
+        android:background="@drawable/boton_redondeado"
+        android:text="Hombre"
+        android:textAllCaps="false"
+        android:textColor="@color/cardview_dark_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoSexo"
+        tools:text="Hombre" />
+
+    <Button
+        android:id="@+id/botonMujer"
+        android:layout_width="99dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="131dp"
+        android:layout_marginRight="131dp"
+        android:background="@drawable/boton_redondeado"
+        android:text="Mujer"
+        android:textAllCaps="false"
+        android:textColor="@color/cardview_dark_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoSexo" />
+
+    <Button
+        android:id="@+id/botonOtro"
+        android:layout_width="99dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="242dp"
+        android:layout_marginLeft="242dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginRight="19dp"
+        android:background="@drawable/boton_redondeado"
+        android:text="Otro"
+        android:textAllCaps="false"
+        android:textColor="@color/cardview_dark_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoSexo" />
+
+    <TextView
+        android:id="@+id/textoFecha"
+        android:layout_width="128dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="116dp"
+        android:text="¿Cuando Naciste?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonMujer" />
+
+    <TextView
+        android:id="@+id/textoEres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="50dp"
+        android:text="¿Eres un?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFecha" />
+
+    <Button
+        android:id="@+id/botonInversionista"
+        android:layout_width="99dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/boton_redondeado"
+        android:text="Inversionista"
+        android:textAllCaps="false"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoEres" />
+
+    <Button
+        android:id="@+id/botonPadawan"
+        android:layout_width="99dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="44dp"
+        android:background="@drawable/boton_redondeado"
+        android:text="Padawan"
+        android:textAllCaps="false"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/botonEmprendedor"
+        app:layout_constraintStart_toEndOf="@+id/botonInversionista"
+        app:layout_constraintTop_toBottomOf="@+id/textoEres" />
+
+    <Button
+        android:id="@+id/botonEmprendedor"
+        android:layout_width="99dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/boton_redondeado"
+        android:text="Emprendedor"
+        android:textAllCaps="false"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoEres" />
+
+    <Button
+        android:id="@+id/botonEmpresario"
+        android:layout_width="99dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/boton_redondeado"
+        android:text="Empresario"
+        android:textAllCaps="false"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonInversionista" />
+
+    <Button
+        android:id="@+id/botonMentor"
+        android:layout_width="99dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="44dp"
+        android:background="@drawable/boton_redondeado"
+        android:text="Mentor"
+        android:textAllCaps="false"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/botonEstudiante"
+        app:layout_constraintStart_toEndOf="@+id/botonEmpresario"
+        app:layout_constraintTop_toBottomOf="@+id/botonPadawan" />
+
+    <Button
+        android:id="@+id/botonEstudiante"
+        android:layout_width="99dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/boton_redondeado"
+        android:text="Estudiante"
+        android:textAllCaps="false"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonEmprendedor" />
+
+    <Button
+        android:id="@+id/botonListo"
+        android:layout_width="211dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="44dp"
+        android:background="@drawable/fondobotonlisto"
+        android:text="¡Estoy listo!"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoTrabajo" />
+
+    <EditText
+        android:id="@+id/textoTrabajo"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="¿Donde trabajas?"
+        android:textAlignment="center"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonMentor" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/photoImageView"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_marginStart="113dp"
+        android:layout_marginLeft="113dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginRight="112dp"
+        android:src="@drawable/com_facebook_button_login_silver_background"
+        app:civ_border_color="#FFFFFF"
+        app:civ_border_width="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/textViewFecha"
+        android:layout_width="150dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="116dp"
+        android:background="@drawable/boton_redondeado"
+        android:text="Selecciona la fecha"
+        android:textAllCaps="false"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/botonEmprendedor"
+        app:layout_constraintStart_toEndOf="@+id/botonInversionista"
+        app:layout_constraintTop_toBottomOf="@+id/textoFecha" />
+
+</android.support.constraint.ConstraintLayout>

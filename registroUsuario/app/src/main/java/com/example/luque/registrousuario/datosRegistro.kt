@@ -24,8 +24,6 @@ import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.gms.common.api.ResultCallback
 import com.google.android.gms.common.api.Status
 import kotlinx.android.synthetic.main.activity_datos_registro.*
-import org.json.JSONException
-import org.json.JSONObject
 import java.util.*
 
 
@@ -33,22 +31,35 @@ import java.util.*
 
 class datosRegistro : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
     //INICIO DE SESION CON GOOGLE
-    private var googleApiClient : GoogleApiClient? = null //IG
-    private var photoImageView: ImageView? = null //IG
-    private var textoNombre: TextView? = null //IG
-    private var textoApellido: TextView? = null //IG
-    private var correo : TextView? = null
-    private var id : TextView? = null
+    var googleApiClient : GoogleApiClient? = null //IG
+    var photoImageView: ImageView? = null //IG
+    var textoNombre: TextView? = null //IG
+    var textoApellido: TextView? = null //IG
+    var correo : TextView? = null
+    var id : TextView? = null
+    var correoemail : String = ""
+
+
+    var name: String = ""
+    var last_name: String = ""
+    var user_name: String = ""
+    var gender: String = ""
+    var birthdate: String = ""
+    var identidadFinal :String = ""
+    var trabajo: String = ""
+    var email = this.correoemail
+    var password="1234567"
     //CAMPOS NORMALES
-    private var textoUsuario: TextView? = null
-    private var trabajoView: TextView? = null
-    private var sexo: String? =null
-    private var identidad : String? = null
+    var textoUsuario: TextView? = null
+    var trabajoView: TextView? = null
+    var sexo: String? =null
+    var identidad : String? = null
     //calendar
     val TAG = "datosRegistro"
-    private var mDisplayDate: TextView? = null
-    private var mDateSetListener: DatePickerDialog.OnDateSetListener? = null
-    private var date : String? = null
+    var mDisplayDate: TextView? = null
+    var mDateSetListener: DatePickerDialog.OnDateSetListener? = null
+    var date : String? = null
+    var fechaNacimiento : String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_datos_registro)
@@ -141,8 +152,9 @@ class datosRegistro : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
             month = month + 1
             Log.d(TAG, "onDateSet: mm/dd/yyy: $month/$day/$year")
 
-            this.date = month.toString() + "/" + day + "/" + year
+            this.date = month.toString() + "-" + day + "-" + year
             mDisplayDate?.setText(date)
+            this.fechaNacimiento = "$year+-$day+-$month+T00:00:00.000Z"
         }
 
         //INICIO DE SESION CON GOOGLE
@@ -155,227 +167,253 @@ class datosRegistro : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
                 .enableAutoManage(this, this)
                 .addApi<GoogleSignInOptions?>(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         val botonListo= findViewById(R.id.botonListo) as Button
         botonListo.setOnClickListener{
-            val intent100 = Intent(this, login::class.java)
-            startActivity(intent100)
             LoginManager.getInstance().logOut()
-            //goLoginScreen()
-            //logOutGoogle()
+            //Toast.makeText(this, textoNombre!!.text.toString().show()
+            goLoginScreen()
+            logOutGoogle()
             //Variables donde se almacenan los datos de registro
-            val id : String = id.toString()
-            val email : String = correo.toString()
-            val name: String = textoNombre?.text.toString()
-            val last_name: String = textoApellido?.text.toString()
-            val user_name: String = textoUsuario?.text.toString()
-            val gender: String = sexo.toString()
-            val birthdate: String = date.toString()
-            val identidadFinal :String = identidad.toString()
-            val trabajo: String = trabajoView?.text.toString()
+            //id : String = id.toString()
 
-            var jsonRegistroo: JSONObject? = null
-                jsonRegistroo?.put("name", name)
-                jsonRegistroo?.put("last_name", last_name)
-                jsonRegistroo?.put("user_name", user_name)
-                //jsonRegistroo?.put("password",password)
-                jsonRegistroo?.put("email", email)
-                jsonRegistroo?.put("birthdate", birthdate)
-                jsonRegistroo?.put("gender", gender)
+            //val email:String = correo.toString()
 
-            var jsonAllUsuarios: JSONObject? = null
-            jsonAllUsuarios?.put("id", id)
-            jsonAllUsuarios?.put("name", name)
-            jsonAllUsuarios?.put("last_name", last_name)
-            jsonAllUsuarios?.put("user_name", user_name)
-            //jsonRegistroo?.put("password",password)
-            jsonAllUsuarios?.put("birthdate", birthdate)
-            jsonAllUsuarios?.put("gender", gender)
+            //var correomanual = intent.getStringExtra("correoManual")
+            //var pass = intent.getStringExtra("correoContraseña")
+            /*
+            if( correomanual!= null){
+                this.email= correomanual
+            }
+            else{
+                this.email = this.correoemail
+            */
 
 
-        }
+            this.name = textoNombre?.text.toString()
+            this.last_name = textoApellido?.text.toString()
+            this.user_name = textoUsuario?.text.toString()
+            this.gender = sexo.toString()
+            this.birthdate = fechaNacimiento.toString()
+            this.identidadFinal = identidad.toString()
+            this.trabajo = trabajoView?.text.toString()
+            //this.email = this.correoemail
+            var bundle= intent.extras
+            if(bundle.getString("datoCorreo")==null){
+                this.email = this.correoemail
+            }
+            else{
+                this.email= bundle.getString("datoCorreo")
+            }
+
+
+
+            val password= bundle.getString("datoContraseña")
+            //Toast.makeText(this, password, Toast.LENGTH_LONG).show()
+
+            //if(name == null && this.last_name == null && this.user_name == null && this.email == null && this.password == null && this.birthdate == null && this.gender == null)
+            //{
+
+
+                //Toast.makeText(this, name, Toast.LENGTH_LONG).show()
+                /*
+                Toast.makeText(this, last_name, Toast.LENGTH_LONG).show()
+                Toast.makeText(this, user_name, Toast.LENGTH_LONG).show()
+                Toast.makeText(this, email, Toast.LENGTH_LONG).show()
+                Toast.makeText(this, password, Toast.LENGTH_LONG).show()
+                Toast.makeText(this, birthdate, Toast.LENGTH_LONG).show()
+                */
+                //val intent100 = Intent(this@datosRegistro, login::class.java)
+                //startActivity(intent100)
+                consumirServicio()
+
+
+
+            //}
+            //else {
+
+                /*
+                Toast.makeText(this, name, Toast.LENGTH_LONG).show()
+                Toast.makeText(this, last_name, Toast.LENGTH_LONG).show()
+                Toast.makeText(this, user_name, Toast.LENGTH_LONG).show()
+                Toast.makeText(this, email, Toast.LENGTH_LONG).show()
+                Toast.makeText(this, password, Toast.LENGTH_LONG).show()
+                Toast.makeText(this, birthdate, Toast.LENGTH_LONG).show()
+                */
+                val intent100 = Intent(this, login::class.java)
+
+                startActivity(intent100)
+                consumirServicio()
+                //name, last_name, user_name, email, password, birthdate, gender
+
+
+
+//}
+
+
+
+}
 
 
 
 
+
+}
+//INICIO DE SESION CON GOOGLE
+//IG
+fun consumirServicio(){
+    val jsonRegistro = jsonRegistro(httpContext = this,linkAPI = "http://192.168.10.71:3000/users/signup", name=this.name, last_name=this.last_name, user_name=this.user_name, email=this.email, password=this.password, birthdate="1997-07-20T00:00:00.000Z",gender=this.gender)
+    jsonRegistro.execute()
+}
+
+
+
+
+
+
+
+fun botonSeleccionadoSexo(tipoSexo : String){
+    if (tipoSexo.equals("Hombre")){
+        this.botonHombre.setBackgroundResource(R.drawable.fondobotonverde)
+        this.botonMujer.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonOtro.setBackgroundResource(R.drawable.boton_redondeado)
     }
-    //INICIO DE SESION CON GOOGLE
-    //IG
-
-
-
-
-
-
-
-    fun botonSeleccionadoSexo(tipoSexo : String){
-        if (tipoSexo.equals("Hombre")){
-            this.botonHombre.setBackgroundResource(R.drawable.fondobotonverde)
-            this.botonMujer.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonOtro.setBackgroundResource(R.drawable.boton_redondeado)
-        }
-        else if (tipoSexo.equals("Mujer")){
-            this.botonMujer.setBackgroundResource(R.drawable.fondobotonverde)
-            this.botonHombre.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonOtro.setBackgroundResource(R.drawable.boton_redondeado)
-        }
-        else if(tipoSexo.equals("Otro")){
-            this.botonMujer.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonHombre.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonOtro.setBackgroundResource((R.drawable.fondobotonverde))
-        }
+    else if (tipoSexo.equals("Mujer")){
+        this.botonMujer.setBackgroundResource(R.drawable.fondobotonverde)
+        this.botonHombre.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonOtro.setBackgroundResource(R.drawable.boton_redondeado)
     }
-
+    else if(tipoSexo.equals("Otro")){
+        this.botonMujer.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonHombre.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonOtro.setBackgroundResource((R.drawable.fondobotonverde))
+    }
+}
     fun botonSeleccionadoIdentidad(identidad : String){
-        if (identidad.equals("Inversionista")){
-            this.botonInversionista.setBackgroundResource(R.drawable.fondobotonverde)
-            this.botonPadawan.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonEmprendedor.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonEmpresario.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonMentor.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonEstudiante.setBackgroundResource(R.drawable.boton_redondeado)
-        }
-        else if (identidad.equals("Padawan")){
-            this.botonInversionista.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonPadawan.setBackgroundResource(R.drawable.fondobotonverde)
-            this.botonEmprendedor.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonEmpresario.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonMentor.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonEstudiante.setBackgroundResource(R.drawable.boton_redondeado)
-        }
-        else if(identidad.equals("Emprendedor")){
-            this.botonInversionista.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonPadawan.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonEmprendedor.setBackgroundResource(R.drawable.fondobotonverde)
-            this.botonEmpresario.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonMentor.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonEstudiante.setBackgroundResource(R.drawable.boton_redondeado)
-        }
-        else if(identidad.equals("Empresario")){
-            this.botonInversionista.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonPadawan.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonEmprendedor.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonEmpresario.setBackgroundResource(R.drawable.fondobotonverde)
-            this.botonMentor.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonEstudiante.setBackgroundResource(R.drawable.boton_redondeado)
-        }
-        else if(identidad.equals("Mentor")){
-            this.botonInversionista.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonPadawan.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonEmprendedor.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonEmpresario.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonMentor.setBackgroundResource(R.drawable.fondobotonverde)
-            this.botonEstudiante.setBackgroundResource(R.drawable.boton_redondeado)
-        }
-        else if(identidad.equals("Estudiante")){
-            this.botonInversionista.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonPadawan.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonEmprendedor.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonEmpresario.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonMentor.setBackgroundResource(R.drawable.boton_redondeado)
-            this.botonEstudiante.setBackgroundResource(R.drawable.fondobotonverde)
-        }
+    if (identidad.equals("Inversionista")){
+        this.botonInversionista.setBackgroundResource(R.drawable.fondobotonverde)
+        this.botonPadawan.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonEmprendedor.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonEmpresario.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonMentor.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonEstudiante.setBackgroundResource(R.drawable.boton_redondeado)
     }
+    else if (identidad.equals("Padawan")){
+        this.botonInversionista.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonPadawan.setBackgroundResource(R.drawable.fondobotonverde)
+        this.botonEmprendedor.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonEmpresario.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonMentor.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonEstudiante.setBackgroundResource(R.drawable.boton_redondeado)
+    }
+    else if(identidad.equals("Emprendedor")){
+        this.botonInversionista.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonPadawan.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonEmprendedor.setBackgroundResource(R.drawable.fondobotonverde)
+        this.botonEmpresario.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonMentor.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonEstudiante.setBackgroundResource(R.drawable.boton_redondeado)
+    }
+    else if(identidad.equals("Empresario")){
+        this.botonInversionista.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonPadawan.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonEmprendedor.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonEmpresario.setBackgroundResource(R.drawable.fondobotonverde)
+        this.botonMentor.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonEstudiante.setBackgroundResource(R.drawable.boton_redondeado)
+    }
+    else if(identidad.equals("Mentor")){
+        this.botonInversionista.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonPadawan.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonEmprendedor.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonEmpresario.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonMentor.setBackgroundResource(R.drawable.fondobotonverde)
+        this.botonEstudiante.setBackgroundResource(R.drawable.boton_redondeado)
+    }
+    else if(identidad.equals("Estudiante")){
+        this.botonInversionista.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonPadawan.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonEmprendedor.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonEmpresario.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonMentor.setBackgroundResource(R.drawable.boton_redondeado)
+        this.botonEstudiante.setBackgroundResource(R.drawable.fondobotonverde)
+    }
+}
     private fun goLoginScreen()
     {
         //val intent = Intent(this, login::class.java)
-
-        ///startActivity(intent)
+        //startActivity(intent)
     }
 
-    //IG
-    override fun onStart() {
-        super.onStart()
+//IG
+override fun onStart() {
+super.onStart()
 
-        val opr = Auth.GoogleSignInApi.silentSignIn(googleApiClient)
-        if (opr.isDone) {
-            val result = opr.get()
-            handleSignInResult(result)
-        } else {
-            opr.setResultCallback(object : ResultCallback<GoogleSignInResult> {
-                override fun onResult(googleSignInResult: GoogleSignInResult) {
-                    handleSignInResult(googleSignInResult)
-                }
-            })
+val opr = Auth.GoogleSignInApi.silentSignIn(googleApiClient)
+if (opr.isDone) {
+val result = opr.get()
+handleSignInResult(result)
+} else {
+opr.setResultCallback(object : ResultCallback<GoogleSignInResult> {
+override fun onResult(googleSignInResult: GoogleSignInResult) {
+    handleSignInResult(googleSignInResult)
+}
+})
+}
+}
+//IG
+private fun handleSignInResult(result: GoogleSignInResult) {
+    if (result.isSuccess) {
+        val account = result.signInAccount
+        //emailTextView?.setText(account?.email)
+        textoNombre?.setText(account?.givenName)
+        textoApellido?.setText(account?.familyName)
+        //textoUsuario?.setText(account?.email)
+        correoemail = account?.email.toString()
+        //id?.setText(account?.id)
+        //correo?.setText(account?.email)
+        Glide.with(this).load(account?.photoUrl).into(photoImageView)
+        if(account?.photoUrl == null){
+            photoImageView?.setBackgroundResource(R.drawable.iconoregistro)
         }
     }
-    //IG
-    private fun handleSignInResult(result: GoogleSignInResult) {
-        if (result.isSuccess) {
-
-
-            val account = result.signInAccount
-            //emailTextView?.setText(account?.email)
-            textoNombre?.setText(account?.givenName)
-            textoApellido?.setText(account?.familyName)
-            textoUsuario?.setText(account?.email)
-            id?.setText(account?.id)
-            correo?.setText(account?.email)
-
-            Glide.with(this).load(account?.photoUrl).into(photoImageView)
-            if(account?.photoUrl == null){
-                photoImageView?.setBackgroundResource(R.drawable.iconoregistro)
-            }
-
-
-        } else {
-            goLogInScreen()
-        }
+    else {
+        goLogInScreen()
     }
-    //IG
-    private fun goLogInScreen() {
-        //val intent5 = Intent(this, login::class.java)
-        //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
-        //startActivity(intent5)
-    }
-    //IG
-    fun logOutGoogle() {
-        Auth.GoogleSignInApi.signOut(googleApiClient).setResultCallback(object : ResultCallback<Status> {
-            override fun onResult(status: Status) {
-                if (status.isSuccess()) {
-                    goLogInScreen()
-                } else {
-                    Toast.makeText(applicationContext, "R.string.not_close_session", Toast.LENGTH_SHORT).show()
-                }
-            }
-        })
-    }
-    //IG
-    fun revoke(view: View) {
-        Auth.GoogleSignInApi.revokeAccess(googleApiClient).setResultCallback(object : ResultCallback<Status> {
-            override fun onResult(status: Status) {
-                if (status.isSuccess()) {
-                    goLogInScreen()
-                } else {
-                    Toast.makeText(applicationContext, "R.string.not_revoke", Toast.LENGTH_SHORT).show()
-                }
-            }
-        })
-    }
-    //IG
-    override fun onConnectionFailed(connectionResult: ConnectionResult) {
+}
+//IG
+private fun goLogInScreen() {
+//val intent5 = Intent(this, login::class.java)
+//intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+//startActivity(intent5)
+}
+//IG
+fun logOutGoogle() {
+Auth.GoogleSignInApi.signOut(googleApiClient).setResultCallback(object : ResultCallback<Status> {
+override fun onResult(status: Status) {
+if (status.isSuccess()) {
+    goLogInScreen()
+} else {
+    Toast.makeText(applicationContext, "R.string.not_close_session", Toast.LENGTH_SHORT).show()
+}
+}
+})
+}
+//IG
+fun revoke(view: View) {
+Auth.GoogleSignInApi.revokeAccess(googleApiClient).setResultCallback(object : ResultCallback<Status> {
+override fun onResult(status: Status) {
+if (status.isSuccess()) {
+    goLogInScreen()
+} else {
+    Toast.makeText(applicationContext, "R.string.not_revoke", Toast.LENGTH_SHORT).show()
+}
+}
+})
+}
+//IG
+override fun onConnectionFailed(connectionResult: ConnectionResult) {
 
-    }
+}
 }
 
 

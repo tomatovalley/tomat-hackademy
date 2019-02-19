@@ -1614,7 +1614,7 @@ id dimensions
 id direct
 id disableHome
 id display_always
-id editText2
+id editTextContraseña
 id editTextCorreo
 id edit_query
 id end
