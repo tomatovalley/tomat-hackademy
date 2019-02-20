@@ -1,156 +1,174 @@
-
-.section{
+.section {
     float: left;
     width: 30%;
     height: 980px;
     background: #ffffff;
     margin-top: 30px;
 }
-.perfilImage{
+
+.perfilImage {
     width: 7%;
     height: 7%;
     border-radius: 40px;
-
+    margin-left: 5%;
 }
-.name{
+
+.name {
     display: inline;
     color: #2699FB;
+    font-size: 90%;
+    margin-left: 3%;
 }
-.text{
+
+.text {
     width: 75%;
     color: #cccccc;
+    margin-left: 5%;
+    margin-top: 3%;
 }
-.incididunt .fas{
+
+.ibm {
+    margin-left: 5%;
+    width: 55%;
+    height: 13%;
+    margin-top: -10%;
+}
+
+.incididunt .fas {
     color: #000000;
 }
-.notification{
+
+.notification {
+    font-size: 80%;
     color: #38A1F3;
+    margin-left: 5%;
+    margin-top: 7%;
 }
-.masNotification{
+
+.masNotification {
     margin-left: 10%;
     display: inline;
 }
-.message{
+
+.message {
     width: 70%;
     color: #000000;
-    font-size: 20px;
+    font-size: 10px;
+    margin-left: 15%;
 }
-.aside{
-    float: right;
-    width: 70%;
+
+.notification2 {
+    font-size: 80%;
+    color: #38A1F3;
+    margin-left: 25%;
+    margin-top: -3%;
+}
+
+.aside {
+    /* float: right;*/
+    margin-left: 30%;
+    width: 50%;
     background: #ffffff;
     border: 2px solid #cccccc;
     margin-top: 30px;
 }
-.div-btn-1{
+
+.div-btn-1 {
     margin-left: 20%;
 }
-.div-btn-2{
+
+.div-btn-2 {
     margin-left: 10%;
 }
-.newEvent{
-    width: 70%;
-    height: 50px;
+
+.newEvent {
+    width: 60%;
+    height: 45px;
     border-radius: 40px;
     background: #ffffff;
     border: 2px solid #2699FB;
     color: #000000;
-    font-size: 25px;
+    font-size: 15px;
     margin: 0;
     margin-top: 5%;
     margin-bottom: 20px;
 }
-.nameEvent{
-    width: 20%;
-    height: 50px;
+
+.nameEvent {
+    width: 15%;
+    height: 35px;
+    /*  align-items: center;*/
     text-align: center;
     background-color: #2699FB;
     color: #ffffff;
-    font-size:30px;
-    margin-bottom: 20px;
-    
-}
-.Required{
-    width: 70%;
-    height: 50px;
-}
-::placeholder{
-    color: #cccccc;
-    font-size: 25px;
-    margin-bottom: 20px;
-}
-.Require{
-    width: 15%;
-    height: 50px;
     font-size: 15px;
-    margin-bottom: 5%;
+    /*  margin-top: 5%;*/
+    /*   margin-bottom: 5px;*/
 }
 
-.time{
-    width: 25%;
-    height: 50px;
+.Required {
+    width: 88%;
+    height: 40px;
+    margin-bottom: 2%;
+}
+
+::placeholder {
+    color: #cccccc;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.Require {
+    width: 22%;
+    height: 30px;
+    font-size: 15px;
+    /* margin-top: -50%;*/
+    margin-bottom: 2%;
+}
+
+.time {
+    width: 18%;
+    height: 35px;
     text-align: center;
     background-color: #2699FB;
     color: #ffffff;
-    font-size:30px;
+    font-size: 15px;
     margin-bottom: 0;
     border: 0;
-    margin: 30px 120px 0px 0px;
+    margin: 30px 150px 0px 0px;
 }
-.next{
-    width: 30%;
-    height: 50px;
+
+.next {
+    width: 15%;
+    height: 30px;
     border-radius: 40px;
     background-color: #45DE54;
-    margin-left: 30%;
+    border: 1px solid #45DE54;
+    margin-left: 43%;
     margin-bottom: 5%;
 }
-.fas{
+
+.fas {
     color: #ffffff;
 }
 
+.range {
+    width: 70%;
+    margin-left: 15%;
+}
 
-  .range{
-      width: 70%;
-  }
-  .range::-ms-track {
+.range::-ms-track {
     background-color: #777;
     height: 3px;
-  }
-  .rang{
-      display: inline;
-      margin: 0px 20px 0px 0px;
-      margin-left: 7%;
-  }
-  body{
-      background: #ffffff;
-  }
-  @media screen and (max-width:1200px){
-      .aside{
-          width: 100%;
-      }
-      .time{
-          width: 30%;
-          margin: 10px 10px 0px 0px;
+}
 
-      }
-      .nameEvent{
-          width: 40%;
-      }
-      .section{
-          width: 100%;
-      }
-      .perfil{
-        margin-left: 10%;
-      }
-      .text{
-          margin-left: 20%;
-          width: 70%;
-      }
-      .IBm{
-          margin-left: 30%;
-      }
-      .Notification{
-          margin-left: 20%;
-      }
-  }
+.rang {
+    display: inline;
+    margin: 0px 20px 0px 0px;
+    margin-left: 10%;
+    font-size: 70%;
+}
+
+body {
+    background: #ffffff;
+}

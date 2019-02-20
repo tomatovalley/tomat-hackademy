@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2'
+
 
 @Component({
   selector: 'app-organiza-event',
@@ -11,5 +13,16 @@ export class OrganizaEventComponent implements OnInit {
 
   ngOnInit() {
   }
+    eventoCreado(){
+      
+      Swal.fire({
+        title:'Felicidades evento creado',
+        text:'',
+        type:'success',
+        confirmButtonText:'Regresar'
+      });
+    }
+  
+
 
 }
