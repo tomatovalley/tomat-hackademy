@@ -12,8 +12,15 @@
 <body>
     <div>
         <form method="POST">
+
             {% csrf_token %}
             {{ form.as_p }}
+
+            {% for coment in comentario %}
+                <p> {{ coment.comment_user }} </p>
+                <p> {{ coment.comment}} </p>
+
+            {% endfor %}
 
             <input type="submit" value="crear Evento">
 

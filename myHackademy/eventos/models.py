@@ -4,17 +4,7 @@ from django.db import models
 import datetime
 from django.contrib.auth.models import User
 from django.utils import timezone
-
-
-
-
-#class Client(models.Model):
-
- #   username = models.OneToOneField(User, null = True, blank = True, on_delete = models.CASCADE)
-
-  #  def __str__(self):
-
-   #     return self.username
+import json
 
 
 class Evento(models.Model):
@@ -80,7 +70,15 @@ class ComentarioEmprendimiento(models.Model):
     comment = models.TextField(max_length= 250, default="")
     create_date = models.DateField(default = datetime.date.today)
 
+
     def __str__(self):
 
-        return '{} : {} {}'.format(self.comment_user, self.comment, self.create_date)
 
+        dic = {}
+        username_ = self.comment_user
+        comment = self.comment
+
+        dic = {"username":[str(username_ )],"Comentarios":[comment]} 
+         #return f"Username: {self.comment_user}  {self.comment}   {self.create_date}"
+        dic_json = json.dumps(dic)
+        return f"{dic_json}"

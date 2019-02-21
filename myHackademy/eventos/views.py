@@ -2,9 +2,10 @@ import jwt
 import pprint
 from django.http import HttpResponse
 
+
 from django.shortcuts import render
 from rest_framework.exceptions import ParseError
-
+from rest_framework.renderers import TemplateHTMLRenderer
 from rest_framework.parsers import JSONParser
 
 from .serializers import EventoSerializer
@@ -46,7 +47,6 @@ from django.core.files.base import ContentFile
 
 from django.contrib.auth.models import User
 from .models import ComentarioEmprendimiento
-#from .models import Client
 from .models import Evento
 from .models import Emprendimiento
 
@@ -66,8 +66,7 @@ jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
 
 class EventoViewSet(viewsets.ModelViewSet):
     
-    permission_classes = (permissions.AllowAny,)
-    #parser_classes = (FileUploadParser,)
+    #permission_classes = (permissions.IsAuthenticated,)
     
     queryset = Evento.objects.all()
     serializer_class = EventoSerializer
@@ -76,7 +75,8 @@ class EventoViewSet(viewsets.ModelViewSet):
 
 class GetEventoDetail(viewsets.ModelViewSet):
 
-    permissions_classes = (permissions.AllowAny,)
+    #permissions_classes = (permissions.AllowAny,)
+    #permission_classes = (permissions.IsAuthenticated,)
 
 
     queryset = Evento.objects.all()
@@ -95,12 +95,26 @@ class GetEventoDetail(viewsets.ModelViewSet):
 class EmprendimientoView(viewsets.ModelViewSet):
 
     #parser_classes = (FileUploadParser,)
+    #permissions_classes = (permissions.IsAuthenticated, )
 
     queryset  = Emprendimiento.objects.all()
     serializer_class = EmprendimientoSerializer
 
 
+class Prueba(APIView):
+
+    def get(self, request, *args, **kwargs):
+
+        prueba = Emprendimiento.objects.all()
+        prueba_json = EmprendimientoSerializer(prueba, many= True)
+
+        return Response(prueba_json.data, status=200)
+
+
 class CommentView(viewsets.ModelViewSet):
+
+
+    #permissions_classes = (permissions.IsAuthenticated, )
 
     queryset = ComentarioEmprendimiento.objects.all()
     serializer_class = ComentarioSerializer
@@ -109,6 +123,7 @@ class CommentView(viewsets.ModelViewSet):
 
 class ClientView(viewsets.ModelViewSet):
 
+    permissions_classes = (permissions.AllowAny,)
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
@@ -128,7 +143,7 @@ class FilterComment(APIView):
 
         return Response(user_json.data, status=200)
 
-"""
+
 class tokenView(APIView):
 
     permissions_classes = (permissions.AllowAny,)
@@ -147,7 +162,7 @@ class tokenView(APIView):
             'response':'response'
         }
         return HttpResponse(context)
-"""
+
 
 
 """
@@ -164,7 +179,7 @@ class UserViewSet(APIView):
        
 
 
-"""
+
 class LoginView(generics.CreateAPIView):
    
     # This permission class will overide the global permission
@@ -192,7 +207,7 @@ class LoginView(generics.CreateAPIView):
         return Response(status=status.HTTP_401_UNAUTHORIZED)
 
 
-"""
+
 
 """
 def evento_instance(evento):

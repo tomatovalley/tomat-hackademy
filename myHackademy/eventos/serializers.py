@@ -12,7 +12,7 @@ from .models import ComentarioEmprendimiento
 class CreateUserSerializer(serializers.HyperlinkedModelSerializer):
     pass
 
-class UserSerializer(serializers.HyperlinkedModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
 
     #password = serializers.CharField(required = True, style = {'input_type':'password'}) 
 
@@ -30,7 +30,8 @@ class EmprendimientoSerializer(serializers.ModelSerializer):
 
     user_id= serializers.SlugRelatedField(queryset = User.objects.all(), slug_field = 'username')
     comments  = serializers.StringRelatedField(many = True)
-    #comment = ComentarioSerializer()
+    #comments = serializers.HyperlinkedRelatedField(many=True, view_name = 'emprendimiento', read_only = True)
+    
     class Meta:
         model = Emprendimiento
         fields = ('id',  'user_id','name', 'description', 'website','email','image', 'create_date', 'comments')
@@ -46,13 +47,14 @@ class ComentarioSerializer(serializers.ModelSerializer):
     comment_user = serializers.SlugRelatedField(queryset = User.objects.all(), slug_field = 'username')
     name = serializers.SlugRelatedField(queryset = Emprendimiento.objects.all(), slug_field = 'name')
 
-
     class Meta:
         model = ComentarioEmprendimiento
         fields = ('id','comment', 'name', 'create_date', 'comment_user')
         depth = 1
    
+    def __str__(self):
 
+        return self.comment_user, self.id
 
 class EventoSerializer(serializers.ModelSerializer):
     
