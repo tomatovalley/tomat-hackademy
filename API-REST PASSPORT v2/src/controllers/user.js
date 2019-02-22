@@ -1,11 +1,20 @@
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const config = require('../config');
 const forgot = require('password-reset')({
     uri : 'http://localhost:3000/password_reset',
     from : 'password-robot@localhost',
     host : 'localhost', port : 3000,
 });
+const { Pool, Client } = require('pg');
+
+const client = new Client({
+  user: 'hackamigo',
+  host: '157.230.182.120',
+  database: 'tomatohack',
+  password: 'Tomato123'
+})
 
 
 
@@ -70,7 +79,7 @@ module.exports = {
                     const token = jwt.sign({
                       email: user[0].email,
                       userId: user[0]._id
-                    }, process.env.JWT_KEY, {
+                    }, config.secret, {
                             expiresIn: "1h"
                         } 
                     );
@@ -116,6 +125,7 @@ module.exports = {
                     error: err
                   });
                 } else {
+                  const data = {text: req.body.name, text: req.body.user_name, text: req.body.email, complete: false};
                   const user = new User({
                     //_id: new mongoose.Types.ObjectId(),
                     name: req.body.name,
@@ -126,6 +136,8 @@ module.exports = {
                     gender: req.body.gender,
                     birthdate: req.body.birthdate
                   });
+                  client.query('INSERT INTO auth_user(name, user_name, email) values($1, $2, $3)',
+    [               data.text, data.complete]);
                   user
                     .save()
                     .then(result => {

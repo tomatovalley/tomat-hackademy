@@ -11,6 +11,7 @@ const forgot = require('password-reset')({
     from : 'password-robot@localhost',
     host : 'localhost', port : 3000,
 });
+const { Pool, Client } = require('pg');
 
 const app = express();
 
@@ -24,12 +25,41 @@ mongoose.Promise = global.Promise;
     useFindAndModify: false
 }).then(db => console.log("db is connected"))
     .catch(err => console.log(err));*/
-mongoose.connect("mongodb://localhost/rest-api-example", {
+mongoose.connect("mongodb://localhost/Hackademy", {
     useCreateIndex: true,
     useNewUrlParser: true,
     useFindAndModify: false
 }).then(db => console.log("db is connected"))
     .catch(err => console.log(err));
+
+/*const pool = new Pool({
+  user: 'marco',
+  host: 'localhost',
+  database: 'hackacady',
+  password: 'metallica1',
+  port: 5432,
+})*/
+
+
+/*Conexión para postgress
+const client = new Client({
+  user: 'hackamigo',
+  host: '157.230.182.120',
+  database: 'tomatohack',
+  password: 'Tomato123'
+})
+
+client.connect()
+
+client.query('SELECT * FROM auth_user', (err, res) => {
+  console.log(err, res)
+  client.end()
+})*/
+
+
+
+
+
 
 //settings
 app.set("port",process.env.PORT || 3000);
