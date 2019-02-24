@@ -36,6 +36,7 @@
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/18cacb816cc8cfa6e09aa59c056c99a5/res/animator/mtrl_fab_hide_motion_spec.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_list_pressed_holo_light.9.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/drawable-hdpi-v4/abc_list_pressed_holo_light.9.png"
     },
@@ -46,6 +47,18 @@
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/drawable-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_bar_up_container.xml.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\34d5d5ec171557aaf345752cf2e04535\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\34d5d5ec171557aaf345752cf2e04535\\res\\drawable-hdpi-v4\\abc_popup_background_mtrl_mult.9.png"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_menu_item_action_area.xml.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\366c52fde1db1c61b2c2af729eed3ec6\\res\\layout\\design_menu_item_action_area.xml"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00059.png.flat",
@@ -56,20 +69,34 @@
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/18cacb816cc8cfa6e09aa59c056c99a5/res/drawable-mdpi-v4/design_ic_visibility.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/color_common_google_signin_btn_tint.xml.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/66acb51a8af7f55cf0d6160d37c6bbdf/res/color/common_google_signin_btn_tint.xml"
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/color_mtrl_chip_ripple_color.xml.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/18cacb816cc8cfa6e09aa59c056c99a5/res/color/mtrl_chip_ripple_color.xml"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_text_select_handle_middle_mtrl_dark.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\34d5d5ec171557aaf345752cf2e04535\\res\\drawable-hdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_icon_dark_focused.xml.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/66acb51a8af7f55cf0d6160d37c6bbdf/res/drawable/common_google_signin_btn_icon_dark_focused.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/animator_mtrl_fab_transformation_sheet_expand_spec.xml.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/18cacb816cc8cfa6e09aa59c056c99a5/res/animator/mtrl_fab_transformation_sheet_expand_spec.xml"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\34d5d5ec171557aaf345752cf2e04535\\res\\drawable-ldrtl-xxxhdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__ic_play_default.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\tweet-ui-3.1.1.aar\\a890f3794eee1c39a13dbba554753850\\res\\drawable-mdpi-v4\\tw__ic_play_default.png"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable_abc_ic_go_search_api_material.xml.flat",
@@ -156,6 +183,7 @@
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/layout/select_dialog_singlechoice_material.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/drawable-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
     },
@@ -166,6 +194,18 @@
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_messenger_bubble_small_blue.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.39.0.aar/e413166e07e71a2c64215976b671d5c4/res/drawable-hdpi-v4/messenger_bubble_small_blue.png"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__ic_video_replay_pressed.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\tweet-ui-3.1.1.aar\\a890f3794eee1c39a13dbba554753850\\res\\drawable-hdpi-v4\\tw__ic_video_replay_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__ic_play_pressed.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\tweet-ui-3.1.1.aar\\a890f3794eee1c39a13dbba554753850\\res\\drawable-xhdpi-v4\\tw__ic_play_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_today_black_24dp.xml.flat",
+        "source": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\src\\main\\res\\drawable\\ic_today_black_24dp.xml"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
@@ -280,6 +320,7 @@
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/drawable-xxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/layout_design_layout_tab_text.xml.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/18cacb816cc8cfa6e09aa59c056c99a5/res/layout/design_layout_tab_text.xml"
     },
@@ -290,6 +331,18 @@
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_messenger_bubble_small_white.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.39.0.aar/e413166e07e71a2c64215976b671d5c4/res/drawable-xhdpi-v4/messenger_bubble_small_white.png"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\34d5d5ec171557aaf345752cf2e04535\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\2d98d2b1087434c674d9edd6c5f4faa6\\res\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/anim_tw__slide_out.xml.flat",
@@ -300,6 +353,7 @@
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/color-v23/abc_tint_switch_track.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_places_ic_search.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/play-services-places-16.0.0.aar/8b2b27fe5514d348f5accfa06cedbbd3/res/drawable-xxhdpi-v4/places_ic_search.png"
     },
@@ -310,22 +364,44 @@
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/f4a368298d0ef5e5461e574bf8aa7728/res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable_com_facebook_button_background.xml.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.39.0.aar\\ec9fafa00ad265529b6fc05d40734db2\\res\\drawable\\com_facebook_button_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__ic_tweet_photo_error_dark.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\tweet-ui-3.1.1.aar\\a890f3794eee1c39a13dbba554753850\\res\\drawable-xxhdpi-v4\\tw__ic_tweet_photo_error_dark.png"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/color-v23_abc_tint_btn_checkable.xml.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/color-v23/abc_tint_btn_checkable.xml"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__composer_logo_blue.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\tweet-composer-3.1.1.aar\\047e6852ed1299b1b0b622f99245f1e2\\res\\drawable-hdpi-v4\\tw__composer_logo_blue.png"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00003.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/tweet-ui-3.1.1.aar/b5d75a6ae1d0a38ea51c54f4f82bfe1c/res/drawable-xhdpi-v4/tw__heart_animation_detail_60fps_00003.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_messenger_bubble_small_white.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.39.0.aar/e413166e07e71a2c64215976b671d5c4/res/drawable-mdpi-v4/messenger_bubble_small_white.png"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_longpressed_holo.9.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\34d5d5ec171557aaf345752cf2e04535\\res\\drawable-hdpi-v4\\abc_list_longpressed_holo.9.png"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_powered_by_google_light.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\0f2afc507142dac0fd57feed28570ed1\\res\\drawable-xxxhdpi-v4\\powered_by_google_light.png"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_com_facebook_button_send_icon_blue.png.flat",
@@ -384,6 +460,7 @@
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
     },
@@ -394,6 +471,18 @@
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_tw__ic_seekbar_bg.9.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/tweet-ui-3.1.1.aar/b5d75a6ae1d0a38ea51c54f4f82bfe1c/res/drawable-xhdpi-v4/tw__ic_seekbar_bg.9.png"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\34d5d5ec171557aaf345752cf2e04535\\res\\drawable-mdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00049.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\tweet-ui-3.1.1.aar\\a890f3794eee1c39a13dbba554753850\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00049.png"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\anim_design_snackbar_in.xml.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\366c52fde1db1c61b2c2af729eed3ec6\\res\\anim\\design_snackbar_in.xml"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable_iconoregistro.png.flat",
@@ -552,6 +641,7 @@
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/facebook-login-4.39.0.aar/4fbd8842198dae83656675c19cd4b0a4/res/drawable-hdpi-v4/com_facebook_tooltip_black_topnub.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
     },
@@ -562,6 +652,18 @@
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable_com_facebook_button_login_background.xml.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/facebook-login-4.39.0.aar/4fbd8842198dae83656675c19cd4b0a4/res/drawable/com_facebook_button_login_background.xml"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\34d5d5ec171557aaf345752cf2e04535\\res\\drawable-mdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\34d5d5ec171557aaf345752cf2e04535\\res\\drawable-mdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\layout_select_dialog_item_material.xml.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\34d5d5ec171557aaf345752cf2e04535\\res\\layout\\select_dialog_item_material.xml"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
@@ -620,6 +722,7 @@
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/tweet-ui-3.1.1.aar/b5d75a6ae1d0a38ea51c54f4f82bfe1c/res/drawable-xhdpi-v4/tw__heart_animation_detail_60fps_00033.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable_abc_ic_menu_overflow_material.xml.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/drawable/abc_ic_menu_overflow_material.xml"
     },
@@ -630,6 +733,18 @@
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_tw__action_heart_off_default.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/tweet-ui-3.1.1.aar/b5d75a6ae1d0a38ea51c54f4f82bfe1c/res/drawable-xhdpi-v4/tw__action_heart_off_default.png"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_messenger_bubble_large_white.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.39.0.aar\\de92aff376d5b8825d8a9f5d7fc44277\\res\\drawable-mdpi-v4\\messenger_bubble_large_white.png"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\34d5d5ec171557aaf345752cf2e04535\\res\\drawable-xhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00055.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\tweet-ui-3.1.1.aar\\a890f3794eee1c39a13dbba554753850\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00055.png"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_tw__ic_play_pressed.png.flat",
@@ -780,28 +895,47 @@
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/tweet-ui-3.1.1.aar/b5d75a6ae1d0a38ea51c54f4f82bfe1c/res/drawable-hdpi-v4/tw__ic_video_play.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
         "source": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_tw__ic_video_play.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\tweet-ui-3.1.1.aar\\a890f3794eee1c39a13dbba554753850\\res\\drawable-mdpi-v4\\tw__ic_video_play.png"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_tw__ic_tweet_verified.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/tweet-ui-3.1.1.aar/b5d75a6ae1d0a38ea51c54f4f82bfe1c/res/drawable-hdpi-v4/tw__ic_tweet_verified.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/anim_abc_slide_in_bottom.xml.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/anim/abc_slide_in_bottom.xml"
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/layout_notification_template_big_media_narrow.xml.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/b0c0674de1e9a64b15a8d1dc4d478f12/res/layout/notification_template_big_media_narrow.xml"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable_messenger_button_white_bg_selector.xml.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.39.0.aar\\de92aff376d5b8825d8a9f5d7fc44277\\res\\drawable\\messenger_button_white_bg_selector.xml"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00047.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/tweet-ui-3.1.1.aar/b5d75a6ae1d0a38ea51c54f4f82bfe1c/res/drawable-xhdpi-v4/tw__heart_animation_detail_60fps_00047.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_tw__ic_seekbar_progress_bg.9.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/tweet-ui-3.1.1.aar/b5d75a6ae1d0a38ea51c54f4f82bfe1c/res/drawable-xxhdpi-v4/tw__ic_seekbar_progress_bg.9.png"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tw__composer_logo_blue.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\tweet-composer-3.1.1.aar\\047e6852ed1299b1b0b622f99245f1e2\\res\\drawable-xxhdpi-v4\\tw__composer_logo_blue.png"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_messenger_bubble_small_blue.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.39.0.aar\\de92aff376d5b8825d8a9f5d7fc44277\\res\\drawable-xxhdpi-v4\\messenger_bubble_small_blue.png"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_tw__ic_logo_white.png.flat",
@@ -828,6 +962,7 @@
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/b0c0674de1e9a64b15a8d1dc4d478f12/res/layout/notification_media_cancel_action.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_015.png"
     },
@@ -838,6 +973,18 @@
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-watch-v20_abc_dialog_material_background.xml.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/drawable-watch-v20/abc_dialog_material_background.xml"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_chip_state_list_anim.xml.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\366c52fde1db1c61b2c2af729eed3ec6\\res\\animator\\mtrl_chip_state_list_anim.xml"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\34d5d5ec171557aaf345752cf2e04535\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_messenger_bubble_large_blue.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.39.0.aar\\de92aff376d5b8825d8a9f5d7fc44277\\res\\drawable-mdpi-v4\\messenger_bubble_large_blue.png"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable_tw__login_btn_default.xml.flat",
@@ -912,6 +1059,7 @@
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/tweet-ui-3.1.1.aar/b5d75a6ae1d0a38ea51c54f4f82bfe1c/res/drawable-xhdpi-v4/tw__ic_tweet_photo_error_light.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/drawable-hdpi-v4/abc_ic_star_black_48dp.png"
     },
@@ -922,6 +1070,18 @@
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_000.png"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00016.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\tweet-ui-3.1.1.aar\\a890f3794eee1c39a13dbba554753850\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00016.png"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\layout_mtrl_layout_snackbar.xml.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\366c52fde1db1c61b2c2af729eed3ec6\\res\\layout\\mtrl_layout_snackbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_16dp.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\34d5d5ec171557aaf345752cf2e04535\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_16dp.png"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_launcher_foreground.png.flat",
@@ -948,6 +1108,7 @@
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/drawable-xhdpi-v4/abc_ic_star_black_48dp.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/layout_mtrl_layout_snackbar.xml.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/18cacb816cc8cfa6e09aa59c056c99a5/res/layout/mtrl_layout_snackbar.xml"
     },
@@ -958,20 +1119,38 @@
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/color_mtrl_btn_text_color_selector.xml.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/18cacb816cc8cfa6e09aa59c056c99a5/res/color/mtrl_btn_text_color_selector.xml"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\layout_com_facebook_login_fragment.xml.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.39.0.aar\\ec9fafa00ad265529b6fc05d40734db2\\res\\layout\\com_facebook_login_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_com_facebook_button_icon_white.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.39.0.aar\\ec9fafa00ad265529b6fc05d40734db2\\res\\drawable-hdpi-v4\\com_facebook_button_icon_white.png"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00022.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/tweet-ui-3.1.1.aar/b5d75a6ae1d0a38ea51c54f4f82bfe1c/res/drawable-xhdpi-v4/tw__heart_animation_detail_60fps_00022.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_black_16dp.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\34d5d5ec171557aaf345752cf2e04535\\res\\drawable-xhdpi-v4\\abc_ic_star_black_16dp.png"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_messenger_bubble_small_blue.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.39.0.aar\\de92aff376d5b8825d8a9f5d7fc44277\\res\\drawable-mdpi-v4\\messenger_bubble_small_blue.png"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_messenger_bubble_large_blue.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.39.0.aar/e413166e07e71a2c64215976b671d5c4/res/drawable-xhdpi-v4/messenger_bubble_large_blue.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/f4a368298d0ef5e5461e574bf8aa7728/res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
     },
@@ -982,6 +1161,18 @@
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_tw__ic_video_pause.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/tweet-ui-3.1.1.aar/b5d75a6ae1d0a38ea51c54f4f82bfe1c/res/drawable-mdpi-v4/tw__ic_video_pause.png"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_dialog_title_material.xml.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\34d5d5ec171557aaf345752cf2e04535\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_com_facebook_button_send_icon_white.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-share-4.39.0.aar\\2d3fd77dca8f50f7b6f4145ada9b517c\\res\\drawable-xxhdpi-v4\\com_facebook_button_send_icon_white.png"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_seekbar_tick_mark_material.xml.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\34d5d5ec171557aaf345752cf2e04535\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable_ic_mtrl_chip_checked_black.xml.flat",
@@ -1096,6 +1287,7 @@
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/facebook-login-4.39.0.aar/4fbd8842198dae83656675c19cd4b0a4/res/drawable/com_facebook_button_login_silver_background.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_tw__composer_logo_blue.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/tweet-composer-3.1.1.aar/a415c9d3e5cd8906ec7c85efe6421820/res/drawable-xxhdpi-v4/tw__composer_logo_blue.png"
     },
@@ -1106,14 +1298,31 @@
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-v21_avd_show_password.xml.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/18cacb816cc8cfa6e09aa59c056c99a5/res/drawable-v21/avd_show_password.xml"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_tw__ic_video_play_pressed.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\tweet-ui-3.1.1.aar\\a890f3794eee1c39a13dbba554753850\\res\\drawable-hdpi-v4\\tw__ic_video_play_pressed.png"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable_logofacebook4.jpg.flat",
         "source": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/src/main/res/drawable/logofacebook4.jpg"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable_abc_ic_voice_search_api_material.xml.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/drawable/abc_ic_voice_search_api_material.xml"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_com_facebook_tooltip_blue_background.9.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.39.0.aar\\e3d648cba1ced2be6653c77c07c68610\\res\\drawable-mdpi-v4\\com_facebook_tooltip_blue_background.9.png"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_layout_snackbar.xml.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\366c52fde1db1c61b2c2af729eed3ec6\\res\\layout\\design_layout_snackbar.xml"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-v24_ic_launcher_foreground.xml.flat",
@@ -1144,6 +1353,7 @@
         "source": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/src/main/res/drawable/ic_share.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/layout_tw__activity_oauth.xml.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/twitter-core-3.1.1.aar/1c79a118802d796377d968b35aeed404/res/layout/tw__activity_oauth.xml"
     },
@@ -1158,14 +1368,35 @@
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/color_abc_tint_switch_track.xml.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/color/abc_tint_switch_track.xml"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_mode_close_item_material.xml.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\34d5d5ec171557aaf345752cf2e04535\\res\\layout\\abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_design_ic_visibility_off.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\366c52fde1db1c61b2c2af729eed3ec6\\res\\drawable-hdpi-v4\\design_ic_visibility_off.png"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable_ic_access_time_black_24dp.xml.flat",
         "source": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/src/main/res/drawable/ic_access_time_black_24dp.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/layout_com_facebook_tooltip_bubble.xml.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/facebook-login-4.39.0.aar/4fbd8842198dae83656675c19cd4b0a4/res/layout/com_facebook_tooltip_bubble.xml"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_mtrl_chip_checked_circle.xml.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\366c52fde1db1c61b2c2af729eed3ec6\\res\\drawable\\ic_mtrl_chip_checked_circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_com_facebook_button_icon_white.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.39.0.aar\\ec9fafa00ad265529b6fc05d40734db2\\res\\drawable-mdpi-v4\\com_facebook_button_icon_white.png"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_com_facebook_tooltip_blue_bottomnub.png.flat",
@@ -1240,6 +1471,7 @@
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/66acb51a8af7f55cf0d6160d37c6bbdf/res/drawable-hdpi-v4/common_google_signin_btn_text_light_normal_background.9.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_googleg_standard_color_18.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/66acb51a8af7f55cf0d6160d37c6bbdf/res/drawable-mdpi-v4/googleg_standard_color_18.png"
     },
@@ -1250,6 +1482,18 @@
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00004.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/tweet-ui-3.1.1.aar/b5d75a6ae1d0a38ea51c54f4f82bfe1c/res/drawable-xhdpi-v4/tw__heart_animation_detail_60fps_00004.png"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_mtrl_chip_checked_black.xml.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\366c52fde1db1c61b2c2af729eed3ec6\\res\\drawable\\ic_mtrl_chip_checked_black.xml"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_arrow_forward_black_24dp.xml.flat",
+        "source": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\src\\main\\res\\drawable\\ic_arrow_forward_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tw__call_to_action.xml.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\tweet-ui-3.1.1.aar\\a890f3794eee1c39a13dbba554753850\\res\\drawable\\tw__call_to_action.xml"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_text_select_handle_middle_mtrl_dark.png.flat",
@@ -3096,6 +3340,7 @@
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/anim/abc_shrink_fade_out_from_bottom.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_tw__ic_seekbar_progress_bg.9.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/tweet-ui-3.1.1.aar/b5d75a6ae1d0a38ea51c54f4f82bfe1c/res/drawable-mdpi-v4/tw__ic_seekbar_progress_bg.9.png"
     },
@@ -3106,6 +3351,18 @@
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/f4a368298d0ef5e5461e574bf8aa7728/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_crear_evento_sa3.xml.flat",
+        "source": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\src\\main\\res\\layout\\activity_crear_evento_sa3.xml"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\color_switch_thumb_material_light.xml.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\34d5d5ec171557aaf345752cf2e04535\\res\\color\\switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\34d5d5ec171557aaf345752cf2e04535\\res\\drawable-ldrtl-xxhdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
@@ -3144,20 +3401,34 @@
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_015.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/drawable-hdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable_boton_redondo_transp.xml.flat",
+        "source": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\src\\main\\res\\drawable\\boton_redondo_transp.xml"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_powered_by_google_dark.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\0f2afc507142dac0fd57feed28570ed1\\res\\drawable-xxhdpi-v4\\powered_by_google_dark.png"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/color_abc_tint_default.xml.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/color/abc_tint_default.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/drawable-xhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00011.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/tweet-ui-3.1.1.aar/b5d75a6ae1d0a38ea51c54f4f82bfe1c/res/drawable-xhdpi-v4/tw__heart_animation_detail_60fps_00011.png"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\2d98d2b1087434c674d9edd6c5f4faa6\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/color_abc_background_cache_hint_selector_material_light.xml.flat",
@@ -3416,6 +3687,7 @@
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/18cacb816cc8cfa6e09aa59c056c99a5/res/animator/mtrl_btn_unelevated_state_list_anim.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
     },
@@ -3426,6 +3698,18 @@
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_design_ic_visibility.png.flat",
         "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/18cacb816cc8cfa6e09aa59c056c99a5/res/drawable-xxhdpi-v4/design_ic_visibility.png"
+=======
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_detalle_evento.xml.flat",
+        "source": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\src\\main\\res\\layout\\activity_detalle_evento.xml"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\34d5d5ec171557aaf345752cf2e04535\\res\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
+        "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\34d5d5ec171557aaf345752cf2e04535\\res\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
     },
     {
         "merged": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_star_half_black_48dp.png.flat",

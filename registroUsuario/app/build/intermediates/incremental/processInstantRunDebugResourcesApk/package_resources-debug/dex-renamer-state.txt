@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 #Mon Feb 18 18:41:13 MST 2019
+=======
+#Mon Feb 18 16:24:09 MST 2019
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff

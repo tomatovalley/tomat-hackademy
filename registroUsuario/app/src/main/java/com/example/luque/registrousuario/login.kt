@@ -36,6 +36,9 @@ class login : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
     open var googleApiClient: GoogleApiClient? = null
     open var signInButton: SignInButton? = null
 
+    var email: String = ""
+    var password: String = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Twitter.initialize(this)
@@ -44,7 +47,9 @@ class login : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
 
         loginButton = findViewById(R.id.botonloginn)
         loginButtonTwitter = findViewById(R.id.loginButtonTwitterr)
+        val textoCorreo= findViewById(R.id.textoCorreo) as TextView
         val textoContraseña= findViewById(R.id.textoContraseña) as TextView
+
         var valor = true
         botonOjo.setOnClickListener{
             if(valor == true){
@@ -61,6 +66,9 @@ class login : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
 
         val botonlogin= findViewById(R.id.botonlogin) as Button
         botonlogin.setOnClickListener{
+            this.email=textoCorreo.text.toString()
+            this.password=textoContraseña.text.toString()
+            consumirServicio()
             val intent3 = Intent(this, MainActivity::class.java)
             startActivity(intent3)
         }
@@ -82,6 +90,7 @@ class login : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
                 .build()
 
         googleApiClient = GoogleApiClient.Builder(this)
+
                 .enableAutoManage(this, this)
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build()
@@ -112,6 +121,7 @@ class login : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
             }
             //BIEN
         }
+
 
 
 
@@ -146,6 +156,9 @@ class login : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
     }
     private fun handleSignInResult(result: GoogleSignInResult) {
         if (result.isSuccess) {
+            val account = result.signInAccount
+            email = account?.email.toString()
+            consumirServicio()
             goMainScreen()
         } else {
             Toast.makeText(this, "R.string.not_log_in", Toast.LENGTH_SHORT).show()
@@ -161,5 +174,9 @@ class login : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
         //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
         intent.putExtra("username", username)
         startActivity(intent10)
+    }
+    fun consumirServicio(){
+        val jsonLogin = jsonLogin(httpContext = this,linkAPI = "http://192.168.1.68:3000/users/login",  email= this.email, password= this.password)
+        jsonLogin.execute()
     }
 }

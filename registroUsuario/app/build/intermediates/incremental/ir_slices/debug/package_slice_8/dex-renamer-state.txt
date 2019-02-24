@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 #Mon Feb 18 18:46:17 MST 2019
 base.0=/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/transforms/dexMerger/debug/8
+=======
+#Mon Feb 18 16:24:25 MST 2019
+base.0=C\:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\8
+>>>>>>> 45ee768f79df712a2fdc8f8ba74d25be9e701dff
 path.0=classes.dex
 renamed.0=classes.dex

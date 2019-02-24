@@ -6036,7 +6036,7 @@ public final class R {
     public static final int direct=0x7f090080;
     public static final int disableHome=0x7f090081;
     public static final int display_always=0x7f090082;
-    public static final int editText2=0x7f090083;
+    public static final int editTextContraseña=0x7f090083;
     public static final int editTextCorreo=0x7f090084;
     public static final int edit_query=0x7f090085;
     public static final int end=0x7f090086;

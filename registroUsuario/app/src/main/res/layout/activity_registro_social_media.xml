@@ -9,19 +9,17 @@
 
     <com.facebook.login.widget.LoginButton
         android:id="@+id/botonlogin"
-        android:layout_width="216dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="74dp"
-        android:layout_marginLeft="74dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="74dp"
-        android:layout_marginRight="74dp"
-        android:layout_marginBottom="189dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Iniciar sesion con Facebook "
+        android:layout_width="310dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintTop_toBottomOf="@+id/loginCorreo"
+        tools:ignore="HardcodedText" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -39,41 +37,43 @@
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/SignInButton"
-        android:layout_width="230dp"
-        android:layout_height="35dp"
+        android:layout_width="315dp"
+        android:layout_height="36dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="74dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="74dp"
-        android:layout_marginBottom="128dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonlogin"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/botonlogin" />
 
     <Button
         android:id="@+id/loginCorreo"
-        android:layout_width="216dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="136dp"
+        android:layout_width="310dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="96dp"
-        android:layout_marginEnd="136dp"
-        android:text="correo"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/com_facebook_button_background_color_focused"
+        android:backgroundTint="@color/com_facebook_button_background_color_focused"
+        android:text="Iniciar sesion con Correo"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/botonlogin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.596"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <com.twitter.sdk.android.core.identity.TwitterLoginButton
         android:id="@+id/loginButtonTwitterr"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="76dp"
+        android:layout_width="310dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SignInButton" />
