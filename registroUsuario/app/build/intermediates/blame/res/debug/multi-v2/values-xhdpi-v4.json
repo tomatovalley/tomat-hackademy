@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xhdpi-v4\\values-xhdpi-v4.xml",
+            "outputFile": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-xhdpi-v4/values-xhdpi-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\twitter-core-3.1.1.aar\\988e76b73f459bcd740a8883ea48201b\\res\\values-xhdpi-v4\\values-xhdpi-v4.xml",
+                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/twitter-core-3.1.1.aar/1c79a118802d796377d968b35aeed404/res/values-xhdpi-v4/values-xhdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

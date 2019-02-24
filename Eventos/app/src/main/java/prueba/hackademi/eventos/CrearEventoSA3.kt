@@ -1,23 +1,27 @@
 package prueba.hackademi.eventos
 
 import android.content.Intent
+import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
-import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.crear_evento_sa3.*
 import okhttp3.*
 import java.io.IOException
-val url2 = "http://157.230.182.120/eventos/crear_evento/"
+val urlEventosPublicar = "http://157.230.182.120/eventos/crear_evento/"
 class CrearEventoSA3 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.crear_evento_sa3)
 
-
+        val image = intent.getStringExtra("Image")
+        // esta función es para pasar imagenes entre
+        // Glide.with(this).load(image).into(aa)
         val registerSede= intent.getStringExtra("registerSede")
         val registerEvento = intent.getStringExtra("registerEvento")
         val sdate = intent.getStringExtra("registerSdate")
@@ -29,7 +33,7 @@ class CrearEventoSA3 : AppCompatActivity() {
 
         val client2 = OkHttpClient()
 
-        val requestDeChequeo = Request.Builder().url(url2).build()
+        val requestDeChequeo = Request.Builder().url(urlEventosPublicar).build()
 
         var clienteConectado: Boolean = false
 
@@ -38,6 +42,7 @@ class CrearEventoSA3 : AppCompatActivity() {
         client2.newCall(requestDeChequeo).enqueue(object: Callback{
             override fun onResponse(call: Call, response: Response) {
                 clienteConectado = true
+                salir.setBackgroundColor(resources.getColor(R.color.color_ok))
             }
 
             override fun onFailure(call: Call, e: IOException) {
@@ -67,7 +72,7 @@ class CrearEventoSA3 : AppCompatActivity() {
 
         salir.setOnClickListener {
 
-            val organizador = findViewById<TextView>(R.id.registrar_organizador)
+            val organizador = findViewById<TextView>(R.id.nombre_emprendimiento)
             val registerOrganizador = organizador.text.toString()
 
             if (clienteConectado){
@@ -86,7 +91,7 @@ class CrearEventoSA3 : AppCompatActivity() {
 }""".trimIndent()
 
                 val body= RequestBody.create(MediaType.parse("application/json; charset=utf-8"),                json)
-                val request= Request.Builder().url(url2).post(body).build()
+                val request= Request.Builder().url(urlEventosPublicar).post(body).build()
 
                 var estadoDeRegistro: Boolean = true
 

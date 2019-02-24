@@ -13,7 +13,7 @@ android {
         config {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
-            storeFile file('C:/Users/luque/.android/debug.keystore')
+            storeFile file('/home/joaquinimt/Escritorio/debug.keystore')
             storePassword 'android'
         }
     }

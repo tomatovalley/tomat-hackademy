@@ -58,16 +58,6 @@ class login : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
             }
         }
 
-
-
-
-
-
-
-
-
-
-
         val botonlogin= findViewById(R.id.botonlogin) as Button
         botonlogin.setOnClickListener{
 

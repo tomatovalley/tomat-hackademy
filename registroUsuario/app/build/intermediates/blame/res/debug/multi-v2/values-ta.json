@@ -1,10 +1,61 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ta\\values-ta.xml",
+            "outputFile": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ta/values-ta.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\tweet-composer-3.1.1.aar\\047e6852ed1299b1b0b622f99245f1e2\\res\\values-ta\\values-ta.xml",
+                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/values-ta/values-ta.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,219,317,432,521,628,754,832,909,1009,1114,1210,1305,1412,1514,1618,1713,1815,1913,1995,2097,2201,2298,2408,2510,2617,2774,2874",
+                        "endColumns": "113,97,114,88,106,125,77,76,99,104,95,94,106,101,103,94,101,97,81,101,103,96,109,101,106,156,99,79",
+                        "endOffsets": "214,312,427,516,623,749,827,904,1004,1109,1205,1300,1407,1509,1613,1708,1810,1908,1990,2092,2196,2293,2403,2505,2612,2769,2869,2949"
+                    },
+                    "to": {
+                        "startLines": "14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,84",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "507,621,719,834,923,1030,1156,1234,1311,1411,1516,1612,1707,1814,1916,2020,2115,2217,2315,2397,2499,2603,2700,2810,2912,3019,3176,8839",
+                        "endColumns": "113,97,114,88,106,125,77,76,99,104,95,94,106,101,103,94,101,97,81,101,103,96,109,101,106,156,99,79",
+                        "endOffsets": "616,714,829,918,1025,1151,1229,1306,1406,1511,1607,1702,1809,1911,2015,2110,2212,2310,2392,2494,2598,2695,2805,2907,3014,3171,3271,8914"
+                    }
+                },
+                {
+                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/f4a368298d0ef5e5461e574bf8aa7728/res/values-ta/values-ta.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "85",
+                        "startColumns": "4",
+                        "startOffsets": "8919",
+                        "endColumns": "100",
+                        "endOffsets": "9015"
+                    }
+                },
+                {
+                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/81eb9b55a56a116c898fa39772b96c14/res/values-ta/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "224",
+                        "endOffsets": "471"
+                    },
+                    "to": {
+                        "startLines": "72",
+                        "startColumns": "4",
+                        "startOffsets": "7047",
+                        "endColumns": "224",
+                        "endOffsets": "7267"
+                    }
+                },
+                {
+                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/tweet-composer-3.1.1.aar/a415c9d3e5cd8906ec7c85efe6421820/res/values-ta/values-ta.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -21,7 +72,41 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\tweet-ui-3.1.1.aar\\a890f3794eee1c39a13dbba554753850\\res\\values-ta\\values-ta.xml",
+                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/play-services-places-16.0.0.aar/8b2b27fe5514d348f5accfa06cedbbd3/res/values-ta/values.xml",
+                    "from": {
+                        "startLines": "4,5",
+                        "startColumns": "0,0",
+                        "startOffsets": "193,295",
+                        "endColumns": "101,90",
+                        "endOffsets": "294,385"
+                    },
+                    "to": {
+                        "startLines": "82,83",
+                        "startColumns": "4,4",
+                        "startOffsets": "8638,8744",
+                        "endColumns": "105,94",
+                        "endOffsets": "8739,8834"
+                    }
+                },
+                {
+                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/66acb51a8af7f55cf0d6160d37c6bbdf/res/values-ta/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "245,348,532,657,761,972,1098,1237,1363,1605,1710,1894,2027,2240,2422,2510,2599",
+                        "endColumns": "102,183,124,103,210,125,138,125,241,104,183,132,212,181,87,88,105",
+                        "endOffsets": "347,531,656,760,971,1097,1236,1362,1604,1709,1893,2026,2239,2421,2509,2598,2704"
+                    },
+                    "to": {
+                        "startLines": "64,65,66,67,68,69,70,71,73,74,75,76,77,78,79,80,81",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "5905,6012,6196,6325,6433,6644,6774,6917,7272,7514,7623,7807,7944,8157,8343,8435,8528",
+                        "endColumns": "106,183,128,107,210,129,142,129,241,108,183,136,212,185,91,92,109",
+                        "endOffsets": "6007,6191,6320,6428,6639,6769,6912,7042,7509,7618,7802,7939,8152,8338,8430,8523,8633"
+                    }
+                },
+                {
+                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/tweet-ui-3.1.1.aar/b5d75a6ae1d0a38ea51c54f4f82bfe1c/res/values-ta/values-ta.xml",
                     "from": {
                         "startLines": "2,6,10,14,15,16,17,18,19,20,21,22,23,24,25",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -40,24 +125,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\34d5d5ec171557aaf345752cf2e04535\\res\\values-ta\\values-ta.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,219,317,432,521,628,754,832,909,1009,1114,1210,1305,1412,1514,1618,1713,1815,1913,1995,2097,2201,2298,2408,2510,2617,2774,2874",
-                        "endColumns": "113,97,114,88,106,125,77,76,99,104,95,94,106,101,103,94,101,97,81,101,103,96,109,101,106,156,99,79",
-                        "endOffsets": "214,312,427,516,623,749,827,904,1004,1109,1205,1300,1407,1509,1613,1708,1810,1908,1990,2092,2196,2293,2403,2505,2612,2769,2869,2949"
-                    },
-                    "to": {
-                        "startLines": "14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,84",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "507,621,719,834,923,1030,1156,1234,1311,1411,1516,1612,1707,1814,1916,2020,2115,2217,2315,2397,2499,2603,2700,2810,2912,3019,3176,8839",
-                        "endColumns": "113,97,114,88,106,125,77,76,99,104,95,94,106,101,103,94,101,97,81,101,103,96,109,101,106,156,99,79",
-                        "endOffsets": "616,714,829,918,1025,1151,1229,1306,1406,1511,1607,1702,1809,1911,2015,2110,2212,2310,2392,2494,2598,2695,2805,2907,3014,3171,3271,8914"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.39.0.aar\\e3d648cba1ced2be6653c77c07c68610\\res\\values-ta\\values-ta.xml",
+                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/facebook-login-4.39.0.aar/4fbd8842198dae83656675c19cd4b0a4/res/values-ta/values-ta.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -74,24 +142,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\0f2afc507142dac0fd57feed28570ed1\\res\\values-ta\\values.xml",
-                    "from": {
-                        "startLines": "4,5",
-                        "startColumns": "0,0",
-                        "startOffsets": "193,295",
-                        "endColumns": "101,90",
-                        "endOffsets": "294,385"
-                    },
-                    "to": {
-                        "startLines": "82,83",
-                        "startColumns": "4,4",
-                        "startOffsets": "8638,8744",
-                        "endColumns": "105,94",
-                        "endOffsets": "8739,8834"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\twitter-core-3.1.1.aar\\988e76b73f459bcd740a8883ea48201b\\res\\values-ta\\values-ta.xml",
+                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/twitter-core-3.1.1.aar/1c79a118802d796377d968b35aeed404/res/values-ta/values-ta.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -105,57 +156,6 @@
                         "startOffsets": "9274",
                         "endColumns": "71",
                         "endOffsets": "9341"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.0.1.aar\\01443727fa1ee5092b973e7e040c53d7\\res\\values-ta\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "224",
-                        "endOffsets": "471"
-                    },
-                    "to": {
-                        "startLines": "72",
-                        "startColumns": "4",
-                        "startOffsets": "7047",
-                        "endColumns": "224",
-                        "endOffsets": "7267"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\8516a212d8c4835e4f234f11232e793b\\res\\values-ta\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "245,348,532,657,761,972,1098,1237,1363,1605,1710,1894,2027,2240,2422,2510,2599",
-                        "endColumns": "102,183,124,103,210,125,138,125,241,104,183,132,212,181,87,88,105",
-                        "endOffsets": "347,531,656,760,971,1097,1236,1362,1604,1709,1893,2026,2239,2421,2509,2598,2704"
-                    },
-                    "to": {
-                        "startLines": "64,65,66,67,68,69,70,71,73,74,75,76,77,78,79,80,81",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "5905,6012,6196,6325,6433,6644,6774,6917,7272,7514,7623,7807,7944,8157,8343,8435,8528",
-                        "endColumns": "106,183,128,107,210,129,142,129,241,108,183,136,212,185,91,92,109",
-                        "endOffsets": "6007,6191,6320,6428,6639,6769,6912,7042,7509,7618,7802,7939,8152,8338,8430,8523,8633"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\2d98d2b1087434c674d9edd6c5f4faa6\\res\\values-ta\\values-ta.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "85",
-                        "startColumns": "4",
-                        "startOffsets": "8919",
-                        "endColumns": "100",
-                        "endOffsets": "9015"
                     }
                 }
             ]

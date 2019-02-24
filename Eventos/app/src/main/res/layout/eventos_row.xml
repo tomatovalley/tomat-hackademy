@@ -31,7 +31,7 @@
             app:layout_constraintEnd_toStartOf="@+id/name_sede" android:layout_marginEnd="4dp"/>
     <ImageView
             android:layout_width="0dp"
-            android:layout_height="wrap_content" app:srcCompat="@drawable/ic_wallpaper_black_24dp"
+            android:layout_height="185dp" app:srcCompat="@drawable/ic_wallpaper_black_24dp"
             android:id="@+id/foto_evento" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"

@@ -6,19 +6,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.TextInputEditText
 import android.support.v7.app.AppCompatActivity
-import android.text.Editable
-import android.view.View
 import android.widget.DatePicker
 import android.widget.TextView
-import android.widget.Toast
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.api.GoogleApiClient
-import com.google.android.gms.location.places.GeoDataClient
 import com.google.android.gms.location.places.PlaceFilter
-import com.google.android.gms.location.places.Places
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.LatLngBounds
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.crear_evento_sa1.*
 import okhttp3.OkHttpClient
 import java.text.SimpleDateFormat
@@ -54,10 +48,10 @@ class CrearEventoSA : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
         setContentView(R.layout.crear_evento_sa1)
         val position : String = intent.getStringExtra("eventolocacion")
         if(position=="Ubicacion"){
-            input_search.hintTextColors
-            input_search.hint = position
+            sitio_web_emprendimiento.hintTextColors
+            sitio_web_emprendimiento.hint = position
         }else{
-            input_search.setText(position)
+            sitio_web_emprendimiento.setText(position)
         }
 
 
@@ -174,10 +168,10 @@ class CrearEventoSA : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
         //va a la siguiente actividad
         boton_siguiente.setOnClickListener{
 
-            val nombreView = findViewById<TextView>(R.id.registrar_organizador)
+            val nombreView = findViewById<TextView>(R.id.nombre_emprendimiento)
             val registerEvento = nombreView.text.toString()
 
-            val sedeView = findViewById<TextView>(R.id.input_search)
+            val sedeView = findViewById<TextView>(R.id.sitio_web_emprendimiento)
             val registerSede:String = sedeView.text.toString()
 
             val detalle = findViewById<TextInputEditText>(R.id.texto_detalle)

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-uk\\values-uk.xml",
+            "outputFile": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-uk/values-uk.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\8516a212d8c4835e4f234f11232e793b\\res\\values-uk\\values.xml",
+                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/66acb51a8af7f55cf0d6160d37c6bbdf/res/values-uk/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -21,43 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\tweet-ui-3.1.1.aar\\a890f3794eee1c39a13dbba554753850\\res\\values-uk\\values-uk.xml",
-                    "from": {
-                        "startLines": "2,6,10,14,15,16,17,18,19,20,21,22,23,24,25",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,193,328,461,519,584,649,699,747,796,882,1003,1079,1141,1217",
-                        "endLines": "5,9,13,14,15,16,17,18,19,20,21,22,23,24,25",
-                        "endColumns": "14,14,14,57,64,64,49,47,48,85,120,75,61,75,61",
-                        "endOffsets": "188,323,456,514,579,644,694,742,791,877,998,1074,1136,1212,1274"
-                    },
-                    "to": {
-                        "startLines": "2,6,10,64,65,66,69,70,72,73,74,75,76,77,78",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,243,378,6391,6449,6514,6714,6764,6864,6913,6999,7120,7196,7258,7334",
-                        "endLines": "5,9,13,64,65,66,69,70,72,73,74,75,76,77,78",
-                        "endColumns": "14,14,14,57,64,64,49,47,48,85,120,75,61,75,61",
-                        "endOffsets": "238,373,506,6444,6509,6574,6759,6807,6908,6994,7115,7191,7253,7329,7391"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\twitter-core-3.1.1.aar\\988e76b73f459bcd740a8883ea48201b\\res\\values-uk\\values-uk.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "82",
-                        "endOffsets": "133"
-                    },
-                    "to": {
-                        "startLines": "67",
-                        "startColumns": "4",
-                        "startOffsets": "6579",
-                        "endColumns": "82",
-                        "endOffsets": "6657"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\34d5d5ec171557aaf345752cf2e04535\\res\\values-uk\\values-uk.xml",
+                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/values-uk/values-uk.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -74,41 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.0.1.aar\\01443727fa1ee5092b973e7e040c53d7\\res\\values-uk\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "204",
-                        "endOffsets": "451"
-                    },
-                    "to": {
-                        "startLines": "49",
-                        "startColumns": "4",
-                        "startOffsets": "4394",
-                        "endColumns": "204",
-                        "endOffsets": "4594"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\tweet-composer-3.1.1.aar\\047e6852ed1299b1b0b622f99245f1e2\\res\\values-uk\\values-uk.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,118,170",
-                        "endColumns": "62,51,51",
-                        "endOffsets": "113,165,217"
-                    },
-                    "to": {
-                        "startLines": "63,68,71",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "6328,6662,6812",
-                        "endColumns": "62,51,51",
-                        "endOffsets": "6386,6709,6859"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\0f2afc507142dac0fd57feed28570ed1\\res\\values-uk\\values.xml",
+                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/play-services-places-16.0.0.aar/8b2b27fe5514d348f5accfa06cedbbd3/res/values-uk/values.xml",
                     "from": {
                         "startLines": "4,5",
                         "startColumns": "0,0",
@@ -125,7 +55,58 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\2d98d2b1087434c674d9edd6c5f4faa6\\res\\values-uk\\values-uk.xml",
+                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/tweet-composer-3.1.1.aar/a415c9d3e5cd8906ec7c85efe6421820/res/values-uk/values-uk.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,118,170",
+                        "endColumns": "62,51,51",
+                        "endOffsets": "113,165,217"
+                    },
+                    "to": {
+                        "startLines": "63,68,71",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "6328,6662,6812",
+                        "endColumns": "62,51,51",
+                        "endOffsets": "6386,6709,6859"
+                    }
+                },
+                {
+                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/81eb9b55a56a116c898fa39772b96c14/res/values-uk/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "204",
+                        "endOffsets": "451"
+                    },
+                    "to": {
+                        "startLines": "49",
+                        "startColumns": "4",
+                        "startOffsets": "4394",
+                        "endColumns": "204",
+                        "endOffsets": "4594"
+                    }
+                },
+                {
+                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/twitter-core-3.1.1.aar/1c79a118802d796377d968b35aeed404/res/values-uk/values-uk.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "82",
+                        "endOffsets": "133"
+                    },
+                    "to": {
+                        "startLines": "67",
+                        "startColumns": "4",
+                        "startOffsets": "6579",
+                        "endColumns": "82",
+                        "endOffsets": "6657"
+                    }
+                },
+                {
+                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/f4a368298d0ef5e5461e574bf8aa7728/res/values-uk/values-uk.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -139,6 +120,25 @@
                         "startOffsets": "6227",
                         "endColumns": "100",
                         "endOffsets": "6323"
+                    }
+                },
+                {
+                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/tweet-ui-3.1.1.aar/b5d75a6ae1d0a38ea51c54f4f82bfe1c/res/values-uk/values-uk.xml",
+                    "from": {
+                        "startLines": "2,6,10,14,15,16,17,18,19,20,21,22,23,24,25",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,193,328,461,519,584,649,699,747,796,882,1003,1079,1141,1217",
+                        "endLines": "5,9,13,14,15,16,17,18,19,20,21,22,23,24,25",
+                        "endColumns": "14,14,14,57,64,64,49,47,48,85,120,75,61,75,61",
+                        "endOffsets": "188,323,456,514,579,644,694,742,791,877,998,1074,1136,1212,1274"
+                    },
+                    "to": {
+                        "startLines": "2,6,10,64,65,66,69,70,72,73,74,75,76,77,78",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,243,378,6391,6449,6514,6714,6764,6864,6913,6999,7120,7196,7258,7334",
+                        "endLines": "5,9,13,64,65,66,69,70,72,73,74,75,76,77,78",
+                        "endColumns": "14,14,14,57,64,64,49,47,48,85,120,75,61,75,61",
+                        "endOffsets": "238,373,506,6444,6509,6574,6759,6807,6908,6994,7115,7191,7253,7329,7391"
                     }
                 }
             ]

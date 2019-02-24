@@ -161,7 +161,6 @@ class CrearEventoSA2 : AppCompatActivity(){
                     }
                     popupMenu.inflate(R.menu.popup_de_camara)
                     popupMenu.show()
-                    val foto = encoder(image_rui?.path)
                 }
 
             }
@@ -189,9 +188,9 @@ class CrearEventoSA2 : AppCompatActivity(){
         }
 
         button_next2.setOnClickListener{
-            Toast.makeText(this,image_rui?.path,Toast.LENGTH_SHORT).show()
             //val foto = encoder(image_rui?.path)
             val intent = Intent(applicationContext,CrearEventoSA3::class.java)
+            intent.putExtra("Image",image_rui.toString())
             intent.putExtra("registerSede",registerSede)
             intent.putExtra("registerEvento",registerEvento)
             intent.putExtra("registerSdate",sdate)

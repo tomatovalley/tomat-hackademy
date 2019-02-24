@@ -19,4 +19,6 @@
     <string name="listo">Listo</string>
     <string name="imagen_para_crear_evento">Imagen para crear evento</string>
     <string name="boton_para_crear_emprendimiento">Boton para crear emprendimiento</string>
+    <string name="title_activity_emprendimientos">EmprendimientosActivity</string>
+    <string name="title_activity_mapa_evento">Map</string>
 </resources>

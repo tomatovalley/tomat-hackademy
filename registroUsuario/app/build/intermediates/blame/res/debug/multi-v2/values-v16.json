@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\luque\\Desktop\\registroUsuario\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\2d98d2b1087434c674d9edd6c5f4faa6\\res\\values-v16\\values-v16.xml",
+                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/f4a368298d0ef5e5461e574bf8aa7728/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\luque\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\34d5d5ec171557aaf345752cf2e04535\\res\\values-v16\\values-v16.xml",
+                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

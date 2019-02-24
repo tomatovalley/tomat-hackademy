@@ -18,18 +18,33 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".CrearEmprendimientoSA">
+        <activity android:name=".DetalleEmprendimiento">
         </activity>
-
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
         <meta-data
                 android:name="com.google.android.geo.API_KEY"
-                android:value="AIzaSyAzyEdi2WlTOsw9C1OiAKilvZqx6sp2S50"/>
+                android:value="AIzaSyDHC8KHoaihCIqUe0WkebIyPQbI98g7DJM"/>
 
+        <activity
+                android:name=".EmprendimientosActivity"
+                android:label="@string/title_activity_emprendimientos"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".CrearEmprendimientoSA2">
+        </activity>
+        <activity android:name=".CrearEmprendimientoSA">
+        </activity>
         <activity android:name=".CrearEventoSA4">
         </activity>
         <activity android:name=".datosRegistro"/>
         <activity android:name=".login"/>
-        <activity android:name=".eventos"/>
         <activity android:name=".iniciosecion">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -53,7 +68,9 @@
         </activity>
         <activity
                 android:name=".MainActivity"
-                android:launchMode="singleTop">
+                android:label="Eventos"
+                android:launchMode="singleTop"
+                android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
                 android:name=".CrearEventoSA"

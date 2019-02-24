@@ -54,15 +54,15 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
-        public static final int tw__btn_composer_tweet = 0x7f0800e5;
-        public static final int tw__composer_close = 0x7f0800e7;
-        public static final int tw__composer_logo_blue = 0x7f0800e8;
-        public static final int tw__composer_logo_white = 0x7f0800e9;
-        public static final int tw__ic_logo_default = 0x7f08012a;
-        public static final int tw__login_btn = 0x7f08013e;
-        public static final int tw__login_btn_default = 0x7f08013f;
-        public static final int tw__login_btn_disabled = 0x7f080140;
-        public static final int tw__login_btn_pressed = 0x7f080141;
+        public static final int tw__btn_composer_tweet = 0x7f0800e6;
+        public static final int tw__composer_close = 0x7f0800e8;
+        public static final int tw__composer_logo_blue = 0x7f0800e9;
+        public static final int tw__composer_logo_white = 0x7f0800ea;
+        public static final int tw__ic_logo_default = 0x7f08012b;
+        public static final int tw__login_btn = 0x7f08013f;
+        public static final int tw__login_btn_default = 0x7f080140;
+        public static final int tw__login_btn_disabled = 0x7f080141;
+        public static final int tw__login_btn_pressed = 0x7f080142;
     }
     public static final class id {
         private id() {}
