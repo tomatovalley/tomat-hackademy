@@ -70,15 +70,27 @@ class CrearEventoSA : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
         val day = calendar.get(Calendar.DAY_OF_MONTH)
         val hour = calendar.get(Calendar.HOUR_OF_DAY)
         var nMonth: Int = month.plus(1)
-
-        hora_fin.text = SimpleDateFormat("HH:mm").format(calendar.time)
-
-
+        var dia = "$day"
+        var mes = "$nMonth"
         var horaInicio: String
 
-        dia_fecha_inicio.setText(""+day+"/"+nMonth+"/"+year)
-        dia_fecha_fin.setText(""+day+"/"+nMonth+"/"+year)
+        if(nMonth<10 || day<10){
+            if(nMonth<10){
+                mes = "0$nMonth"
+            }
+            if(day<10){
+                dia = "0$day"
+            }
+        }
+
+        hora_fin.text = SimpleDateFormat("HH:mm").format(calendar.time)
+        Date(w=SimpleDateFormat("HH:mm").format(calendar.time))
+
+
+        dia_fecha_inicio.setText(""+dia+"/"+mes+"/"+year)
+        dia_fecha_fin.setText(""+dia+"/"+mes+"/"+year)
         hora_inicio.text = SimpleDateFormat("HH:mm").format(calendar.time)
+        Date(v=SimpleDateFormat("HH:mm").format(calendar.time))
 
         boton_lugar.setOnClickListener{
             //Toast.makeText(this,"Ya salio",Toast.LENGTH_SHORT).show()

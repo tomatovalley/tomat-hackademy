@@ -144,4 +144,4 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
 }
-class HomeFeed(val name:String, val place:String, val image:String,val description:String)
+class HomeFeed(val name:String, val place:String, var image:String, val description:String)

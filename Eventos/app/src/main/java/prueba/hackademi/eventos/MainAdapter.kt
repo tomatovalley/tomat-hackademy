@@ -34,33 +34,28 @@ class MainAdapter(val homeFeed: Array<HomeFeed>, val tipo: Boolean): RecyclerVie
     }
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
-        val titulo = homeFeed[position]
-        //tenemos diferencias para eventos y emprendimientos
+        val titulo: HomeFeed? = homeFeed[position]
 
+        //tenemos diferencias para eventos y emprendimientos
         if (tipo) {
             //val titulo = listaDeEventos.get(position)
-            holder.view.name_eventos?.text = titulo.name
-            holder.view.name_sede?.text = titulo.place
-            Picasso.with(holder.view.context)
-                .load(titulo.image)
+            holder.view.name_eventos?.text = titulo?.name
+            holder.view.name_sede?.text = titulo?.place
+                Picasso.with(holder.view.context)
+                .load(titulo?.image)
                 .into(holder.view.foto_evento)
-            holder.detalle = titulo
 
         }else{
 
             //val titulo = listaDeEventos.get(position)
-            holder.view.name_eventos?.text = titulo.name
+            holder.view.name_eventos?.text = titulo?.name
             holder.view.name_sede?.visibility = View.GONE
-            /*DownLoadImageTask(holder.view.foto_evento)
-                .execute(titulo.image)
-            */
+            holder.view.sede_text_view?.visibility = View.GONE
             Picasso.with(holder.view.context)
-                .load(titulo.image)
+                .load(titulo?.image)
                 .into(holder.view.foto_evento)
-
-            holder.detalle = titulo
-
         }
+        holder.detalle = titulo
     }
 }
 

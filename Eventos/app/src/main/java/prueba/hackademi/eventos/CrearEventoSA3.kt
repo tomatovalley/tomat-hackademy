@@ -1,18 +1,31 @@
 package prueba.hackademi.eventos
 
 import android.content.Intent
-import android.graphics.Color
+import android.content.res.Resources
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
+import android.os.Environment
 import android.os.Handler
+import android.provider.MediaStore
 import android.support.v7.app.AppCompatActivity
+import android.util.Base64
 import android.widget.TextView
 import android.widget.Toast
-import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.crear_evento_sa3.*
 import okhttp3.*
+import java.io.ByteArrayOutputStream
+import java.io.File
+import java.io.FileOutputStream
 import java.io.IOException
-val urlEventosPublicar = "http://157.230.182.120/eventos/crear_evento/"
+import java.nio.file.Files
+import java.nio.file.Paths
+import java.util.*
+val urlEventosPublicar = "http://192.168.10.54:8000/eventos/crear_evento/"
+//val urlEventosPublicar = "http://157.230.182.120/eventos/crear_evento/"
+var estadoDeRegistro: Boolean = true
+
 class CrearEventoSA3 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -76,13 +89,14 @@ class CrearEventoSA3 : AppCompatActivity() {
             val registerOrganizador = organizador.text.toString()
 
             if (clienteConectado){
+                val sendImage = imageHandler(image)
 
                 val json = """{
     "username": null,
     "name": "$registerEvento",
     "place": "$registerSede",
     "begin_date": "$sdate",
-    "image": null,
+    "image": "$sendImage",
     "start_hour": "$shour",
     "final_date": "$fdate",
     "end_hour": "$fhour",
@@ -90,10 +104,9 @@ class CrearEventoSA3 : AppCompatActivity() {
     "organizer": "$registerOrganizador"
 }""".trimIndent()
 
-                val body= RequestBody.create(MediaType.parse("application/json; charset=utf-8"),                json)
+                val body= RequestBody.create(MediaType
+                    .parse("application/json; charset=utf-8"),json)
                 val request= Request.Builder().url(urlEventosPublicar).post(body).build()
-
-                var estadoDeRegistro: Boolean = true
 
 
                 client2.newCall(request).enqueue(object: Callback {
@@ -104,7 +117,7 @@ class CrearEventoSA3 : AppCompatActivity() {
                     }
 
                     override fun onFailure(call: Call, e: IOException) {
-                        estadoDeRegistro = false
+                        funcionparasacar(false)
                         println("Failure, event not register")
                     }
 
@@ -144,6 +157,32 @@ class CrearEventoSA3 : AppCompatActivity() {
             }
 
         }
+
+    }
+    fun funcionparasacar(x:Boolean=true){
+        estadoDeRegistro = x
+    }
+    fun imageHandler(image:String):File {
+
+        val bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), Uri.parse(image))
+        val file = File(applicationContext.cacheDir,"Imagenpro")
+        file.createNewFile()
+
+        //val imageResult = BitmapFactory.decodeFile(image)
+        val bao= ByteArrayOutputStream()
+        //imageResult.compress(Bitmap.CompressFormat.JPEG,100,bao)
+        //return bao
+        bitmap.compress(Bitmap.CompressFormat.JPEG,100,bao)
+        val bb = bao.toByteArray()
+
+        val fOut = FileOutputStream(file)
+        fOut.write(bb)
+        fOut.flush()
+        fOut.close()
+
+        /*val sendImage = Base64.encodeToString(bb,Base64.DEFAULT)
+        print(sendImage)*/
+        return file
 
     }
 }
