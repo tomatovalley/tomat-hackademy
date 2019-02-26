@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.files.base import ContentFile
 
 # Create your models here.
 import datetime
@@ -19,7 +20,9 @@ class Evento(models.Model):
     end_hour = models.TimeField(blank=True,null=True, default = datetime.time)
     description = models.TextField( blank=True, null=True, max_length = 500, default="" )
     organizer = models.TextField(blank=True, null=True, max_length = 50, default="")
+    #data__ = models.TextField()
    
+
 
     def validate_unique(self, exclude=None):
         if Evento.objects.filter(name=self.name).exists():
@@ -77,8 +80,9 @@ class ComentarioEmprendimiento(models.Model):
         dic = {}
         username_ = self.comment_user
         comment = self.comment
+        date_ = self.create_date
 
-        dic = {"username":[str(username_ )],"Comentarios":[comment]} 
+        dic = {"username":[str(username_ )],"Comentarios":[comment],"Fecha":[date_]} 
          #return f"Username: {self.comment_user}  {self.comment}   {self.create_date}"
         dic_json = json.dumps(dic)
-        return f"{dic_json}"
+        return "{}".format(dic_json)

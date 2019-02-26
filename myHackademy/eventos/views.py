@@ -95,7 +95,7 @@ class GetEventoDetail(viewsets.ModelViewSet):
 class EmprendimientoView(viewsets.ModelViewSet):
 
     #parser_classes = (FileUploadParser,)
-    #permissions_classes = (permissions.IsAuthenticated, )
+    permissions_classes = (permissions.AllowAny, )
 
     queryset  = Emprendimiento.objects.all()
     serializer_class = EmprendimientoSerializer
