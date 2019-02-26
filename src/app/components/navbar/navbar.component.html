@@ -17,7 +17,6 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="/">Eventos | </a>
       </li>
-
       <li class="nav-item">
         <a class="nav-link" routerLink="/">Hackademy | </a>
       </li>
@@ -30,7 +29,7 @@
         <a class="nav-link" routerLink="/user/profile">Perfil |</a>
       </li>
       <li class="nav-item" *ngIf="isLogged">
-        <a class="nav-link" routerLink="/">Eventos |</a>
+        <a class="nav-link" (click)="onSelectedUser(user)" routerLink="/new-event">Eventos |</a>
       </li>
       <li class="nav-item" *ngIf="!isLogged">
         <a class="nav-link" routerLink="/user/login">| Log in</a>

@@ -1,64 +1,80 @@
-<!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
 <section class="section">
     <div class="perfil">
         <img class="perfilImage" src="https://3.bp.blogspot.com/-UzKCdjJQUF0/XGH57HTij_I/AAAAAAAAADs/8IsUnF4IPy46s98ciHlgqYpfz_XhauSGgCLcBGAs/s320/UserProfileGray.fw.jpg" />
         <p class="name"><strong>Name Surname</strong></p>
     </div>
     <div class="text">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <strong class="incididunt">#incididunt</strong> ero labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco poriti laboris nisi ut
-            aliquip ex ea commodo consequat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <strong class="incididunt">#incididunt</strong>
+            ero labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco poriti
+            laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
-    <img class="ibm" src="https://2.bp.blogspot.com/-cF7Cm2K0Ep8/XGHxeqhgXhI/AAAAAAAAADg/44AYL2hWLBst_4mY2beHtI7hce6JjjOaACLcBGAs/s320/IBM.jpg" />
+    <img src="https://2.bp.blogspot.com/-cF7Cm2K0Ep8/XGHxeqhgXhI/AAAAAAAAADg/44AYL2hWLBst_4mY2beHtI7hce6JjjOaACLcBGAs/s320/IBM.jpg" />
     <div class="Notification">
         <h3 class="notification"> <strong>Notificaciones</strong> </h3>
         <div class="message">
             Hola user, te invito a mi <br> emprendimiento llamado fireKoalas.
         </div>
         <div class="masNotification">
-            <h3 class="notification2">Mas notificaciones
-                <a href=""> <i class="fas fa-plus"></i></a>
-            </h3>
+            <h3 class="notification">mas notificaciones <a href=""> <i class="fas fa-plus"></i></a></h3>
         </div>
     </div>
 </section>
 <aside class="aside">
-    <form action="">
+    <form #formRegisterEvent="ngForm" (ngSubmit)="onUpload()">
         <div class="div-btn-1">
             <button class="newEvent"> <strong>Creacion del Evento</strong> </button>
         </div>
         <div class="nameEvent div-btn-2">
-            EVENTO
+            Evento
         </div>
         <div class="Requ div-btn-2">
-            <input class="Required" type="text" placeholder="Required Field">
+            <input class="Required" type="text" name="name" id="name" placeholder="Required Field" [(ngModel)]="event.name"
+                [ngModelOptions]="{standalone:
+                true}">
         </div>
         <div class="nameEvent div-btn-2">
             LUGAR
         </div>
         <div class="Requ div-btn-2">
-            <input class="Required" type="text" placeholder="Required Field">
+            <input class="Required" type="text" placeholder="Required Field" name="place" id="place" [(ngModel)]="event.place"
+                [ngModelOptions]="{standalone:
+                true}">
+            <input class="Required" type="hidden" placeholder="Required Field" name="username" id="username" [(ngModel)]="this.dataApiService.selectedUser.user_name"
+                [ngModelOptions]="{standalone:
+                    true}">
         </div>
-        <div class="nameEventime div-btn-2">
+        <div class="nameEventime div-btn-2 form-group">
 
             <button class="time div-btn-2">COMIENZA</button>
             <button class="time div-btn-2">FINALIZA</button>
         </div>
 
         <div class="Requ div-btn-2">
-            <input class="Require" type="date">
-            <input class="Require" type="time">
+            <input class="Require" type="date" name="begin_date" id="begin_date" [(ngModel)]="event.begin_date"
+                [ngModelOptions]="{standalone: true}">
+            <input class="Require" type="time" name="start_hour" id="start_hour" [(ngModel)]="event.start_hour"
+                [ngModelOptions]="{standalone: true}">
 
-            <input class="Require" type="date">
-            <input class="Require" type="time">
+            <input class="Require" type="date" name="final_date" id="final_date" [(ngModel)]="event.final_date"
+                [ngModelOptions]="{standalone: true}">
+            <input class="Require" type="time" name="end_hour" id="end_hour" [(ngModel)]="event.end_hour"
+                [ngModelOptions]="{standalone: true}">
         </div>
-        <div class="nameEvent div-btn-2" style="width:17%;">
+        <div class="nameEvent div-btn-2" style="width:30%;">
             DESCRIPCIÓN
         </div>
         <div>
-            <textarea class="div-btn-2" name="" id="" cols="54" rows="3" placeholder="Required field"></textarea>
+            <textarea class="div-btn-2" name="" id="" cols="55" rows="10" placeholder="Required field" [(ngModel)]="event.description"
+                [ngModelOptions]="{standalone: true}"></textarea>
         </div>
         <div>
-            <button class="next div-btn-1 "><i class="fas fa-arrow-right"></i></button>
+            <input type="file" name="image" id="image" (change)="onFileSelected($event)" [(ngModel)]="event.image"
+                [ngModelOptions]="{standalone: true}">
+        </div>
+        <div>
+            <button type="submit" id="submit" class="next div-btn-1 "><i class="fas fa-arrow-right"></i></button>
             <br>
         </div>
 

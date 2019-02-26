@@ -1,4 +1,5 @@
 import { UserInterface } from './../models/user-interface';
+import { Modelo } from 'src/app/models/modelo';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs/internal/Observable';
 import { Injectable } from '@angular/core';
@@ -29,6 +30,26 @@ export class LocalAuthService {
     }, {headers: this.headers}
     ).pipe(map(data=>data));
   }
+
+  /*registerUserDjango(user_name: string, password: string){
+    const url_api = "http://192.168.10.65:8000/eventos/clientes/";
+    //const url_api = "http://localhost:3000/users";
+    return this.http.post<UserInterface>(url_api, {
+      user_name: user_name,
+      password: password
+    }, {headers: this.headers}
+    ).pipe(map(data=>data));
+  }*/
+
+  registerUserDjango(username: string, password: string){
+    const url_api = "http://157.230.182.120/eventos/clientes/";
+    return this.http.post<Modelo>(url_api, {
+      username: username,
+      password: password
+    }, {headers: this.headers}
+    ).pipe(map(data=>data));
+  }
+  
   loginUser(email: string, password: string): Observable<any>{
     const url_api = "http://localhost:3000/users/login";
     return this.http.post<UserInterface>(url_api, {

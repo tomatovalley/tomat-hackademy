@@ -17,9 +17,9 @@ export class UpdateProfileComponent implements OnInit {
 
   ngOnInit() {
   }
-  onPreUpdateUser(user: UserInterface): void{
+  /*onPreUpdateUser(user: UserInterface): void{
     this.dataApiService.selectedUser = Object.assign({}, user);
-  }
+  }*/
 
   onSaveUser(userForm: NgForm){
     if(userForm.value.userId==null){

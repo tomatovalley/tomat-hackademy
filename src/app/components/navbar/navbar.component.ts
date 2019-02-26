@@ -1,3 +1,5 @@
+import { DataApiService } from './../../services/data-api.service';
+import { UserInterface } from 'src/app/models/user-interface';
 import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -7,12 +9,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private dataApiService: DataApiService) { }
+  user: UserInterface;
   public app_name = "Tomato-Hackademy";
   public isLogged: boolean = false;
   ngOnInit() {
     this.onCheckUser();
+    this.user = this.authService.getCurrentUser();
   }
 
   onLogout(): void{
@@ -25,6 +28,10 @@ export class NavbarComponent implements OnInit {
     }else{
       this.isLogged = true;
     }
+  }
+  
+  onSelectedUser(user: UserInterface): void{
+    this.dataApiService.selectedUser = Object.assign({}, user);
   }
 
   

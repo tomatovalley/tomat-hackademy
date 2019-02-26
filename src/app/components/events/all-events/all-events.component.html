@@ -4,103 +4,68 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
     crossorigin="anonymous">
-
-  <!--Import Google Icon Font
+Import Google Icon Font
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
   -->
 <div class="row">
-        <div class="col-sm-2">
-                <section class="section">
-                        <div class="perfil">
-                                <img class="perfilImage" src="https://3.bp.blogspot.com/-UzKCdjJQUF0/XGH57HTij_I/AAAAAAAAADs/8IsUnF4IPy46s98ciHlgqYpfz_XhauSGgCLcBGAs/s320/UserProfileGray.fw.jpg" />
-                                <p class="name"><strong>Name Surname</strong></p>
-                        </div>
-                        <div class="text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <strong class="incididunt">#incididunt</strong>  ero labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco poriti laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                        <img class="ibm"  src="https://2.bp.blogspot.com/-cF7Cm2K0Ep8/XGHxeqhgXhI/AAAAAAAAADg/44AYL2hWLBst_4mY2beHtI7hce6JjjOaACLcBGAs/s320/IBM.jpg" />
-                        <div class="Notification">
-                            <h3 class="notification"> <strong>Notificaciones</strong> </h3>
-                            <div class="message">
-                                    Hola user, te invito a mi <br> emprendimiento llamado fireKoalas.
-                            </div>
-                                <div class="masNotification">
-                                     <h3 class="notification">mas notificaciones <a href=""> <i class="fas fa-plus"></i></a></h3>     
-                                </div>
-                        </div>
-                    </section>
-        </div>
-
-
-
-        <div class="col-sm-3">
-                <div class="Content-Event1">
-                    <div class="Evento1">
-                        <div class="photo">
-                            <img src="https://1.bp.blogspot.com/-YkAnhLBqDD8/XGSd9FEp9KI/AAAAAAAAAEo/1oc0aNNAAU4SgspB1nN0UjOoA29a7OSngCLcBGAs/s320/UserC.jpg" />
-                        </div>
-                        <!--Fin de photo-->
-                        <div class="#">
-                            <div class="description">
-                                <h4>Excepteur sint.</h4>
-                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p>
-                            </div>
-                            <!--Fin de #-->
-                            <div class="#">
-                                <button class="asistir" type="submit" ><strong>Asisitir</strong></button>
-                                <i  class="fas fa-minus-square">120</i>
-                                <button class="shares" type="submit" >Share</button>
-                            </div>
-                            <!--Fin de #-->
-                        </div>
-
-                    </div>
-                    <div class="Evento1">
-                            <div class="photo">
-                                    <img src="https://1.bp.blogspot.com/-O8REzdpCLQI/XGSg_MDqTUI/AAAAAAAAAE0/2eadZ4Co98wQXU-dV78iUzR7qRB7CKGewCLcBGAs/s320/officina.jpeg"  />
-                            </div>
-                            <!--Fin de photo-->
-                            <div class="#">
-                                <div>
-                                    <h4>Excepteur sint.</h4>
-                                    <p>Excepteur sint occaecat cupidatat non </p>
-                                    <p>proident, sunt in culpa qui officia deserunt mollit anim.</p>
-                                </div>
-                                <!--Fin de #-->
-                                <div class="#">
-                                    <button class="asistir" type="submit" ><strong>Asisitir</strong></button>
-                                    <i class="fas fa-minus-square">120</i>
-                                    <button class="shares" type="submit" >Share</button>
-                                </div>
-                                <!--Fin de #-->
-                            </div>
-                            
-                        </div>
-                </div>
-        </div>
-        <div class="col-sm-5">
-            <div class="imagenFondo">
-            <div class="Titulo">
-                <h3 class="titles">Big Title</h3>
-            </div><!--Fin de Titulo-->
-            <div class="textoRelleno">
-                    <h3 class="titles">Excepteur sint occaecat cupidatat non proident, sunt in</h3>
-                    <h3 class="titles"> culpa qui officia deserunt</h3>
-            </div><!--Fin de textoRelleno-->
-            <div class="botonesBonitos">
-                    <button class="asistirs" type="submit" > <strong>Asisitir</strong></button>
-                    <i class="fas fa-minus-square number">120</i>
-                    <button class="share" type="submit">Share</button>
-            </div><!--Fin de botonesBonitos-->
-        </div>
-
-       <div class="col-sm-6">
-            <div class="EventSEC1">
-                    <img src="https://1.bp.blogspot.com/-O8REzdpCLQI/XGSg_MDqTUI/AAAAAAAAAE0/2eadZ4Co98wQXU-dV78iUzR7qRB7CKGewCLcBGAs/s320/officina.jpeg"  />
+    <div class="col-sm-2" *ngFor="let event of events">
+        <section class="section">
+            <div class="perfil">
+                <img class="perfilImage" src="https://3.bp.blogspot.com/-UzKCdjJQUF0/XGH57HTij_I/AAAAAAAAADs/8IsUnF4IPy46s98ciHlgqYpfz_XhauSGgCLcBGAs/s320/UserProfileGray.fw.jpg" />
+                <p class="name"><strong>{{event.name}}</strong></p>
+                <img src="{{event.image}}" alt="hello">
             </div>
-            <div class="#">
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <strong class="incididunt">#incididunt</strong>
+                    ero labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    poriti laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <img class="ibm" src="https://2.bp.blogspot.com/-cF7Cm2K0Ep8/XGHxeqhgXhI/AAAAAAAAADg/44AYL2hWLBst_4mY2beHtI7hce6JjjOaACLcBGAs/s320/IBM.jpg" />
+            <div class="Notification">
+                <h3 class="notification"> <strong>Notificaciones</strong> </h3>
+                <div class="message">
+                    Hola {{user.name}}, te invito a mi <br> emprendimiento llamado fireKoalas.
+                </div>
+                <div class="masNotification">
+                    <h3 class="notification">mas notificaciones <a href=""> <i class="fas fa-plus"></i></a></h3>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <div class="col-sm-3">
+        <div class="Content-Event1">
+            <div class="Evento1">
+                <div class="photo">
+                    <img src="https://1.bp.blogspot.com/-YkAnhLBqDD8/XGSd9FEp9KI/AAAAAAAAAEo/1oc0aNNAAU4SgspB1nN0UjOoA29a7OSngCLcBGAs/s320/UserC.jpg" />
+                </div>
+                <!--Fin de photo-->
+                <div class="#">
+                    <div class="description">
+                        <h4>Excepteur sint.</h4>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            anim.</p>
+                    </div>
+                    <!--Fin de #-->
+                    <div class="#">
+                        <button class="asistir" type="submit"><strong>Asisitir</strong></button>
+                        <i class="fas fa-minus-square">120</i>
+                        <button class="shares" type="submit">Share</button>
+                    </div>
+                    <!--Fin de #-->
+                </div>
+
+            </div>
+            <div class="Evento1">
+                <div class="photo">
+                    <img src="https://1.bp.blogspot.com/-O8REzdpCLQI/XGSg_MDqTUI/AAAAAAAAAE0/2eadZ4Co98wQXU-dV78iUzR7qRB7CKGewCLcBGAs/s320/officina.jpeg" />
+                </div>
+                <!--Fin de photo-->
+                <div class="#">
                     <div>
                         <h4>Excepteur sint.</h4>
                         <p>Excepteur sint occaecat cupidatat non </p>
@@ -108,157 +73,142 @@
                     </div>
                     <!--Fin de #-->
                     <div class="#">
-                        <button class="asistir" type="submit" ><strong>Asisitir</strong></button>
+                        <button class="asistir" type="submit"><strong>Asisitir</strong></button>
                         <i class="fas fa-minus-square">120</i>
-                        <button class="shares" type="submit" >Share</button>
+                        <button class="shares" type="submit">Share</button>
                     </div>
                     <!--Fin de #-->
                 </div>
+
             </div>
-            <div class="col-sm-6">
-                    <div class="EventSEC1">
-                            <img src="https://1.bp.blogspot.com/-O8REzdpCLQI/XGSg_MDqTUI/AAAAAAAAAE0/2eadZ4Co98wQXU-dV78iUzR7qRB7CKGewCLcBGAs/s320/officina.jpeg"  />
-                    </div>
-                    <div class="#">
-                            <div>
-                                <h4>Excepteur sint.</h4>
-                                <p>Excepteur sint occaecat cupidatat non </p>
-                                <p>proident, sunt in culpa qui officia deserunt mollit anim.</p>
-                            </div>
-                            <!--Fin de #-->
-                            <div class="#">
-                                <button class="asistir" type="submit" ><strong>Asisitir</strong></button>
-                                <i class="fas fa-minus-square">120</i>
-                                <button class="shares" type="submit" >Share</button>
-                            </div>
-                            <!--Fin de #-->
-                        </div>
-                    </div>
-        </div><!--Fin de col-sm-6-->
+        </div>
+    </div>
+    <div class="col-sm-5">
+        <div class="imagenFondo">
+            <div class="Titulo">
+                <h3 class="titles">Big Title</h3>
+            </div>
+            <!--Fin de Titulo-->
+            <div class="textoRelleno">
+                <h3 class="titles">Excepteur sint occaecat cupidatat non proident, sunt in</h3>
+                <h3 class="titles"> culpa qui officia deserunt</h3>
+            </div>
+            <!--Fin de textoRelleno-->
+            <div class="botonesBonitos">
+                <button class="asistirs" type="submit"> <strong>Asisitir</strong></button>
+                <i class="fas fa-minus-square number">120</i>
+                <button class="share" type="submit">Share</button>
+            </div>
+            <!--Fin de botonesBonitos-->
+        </div>
+
+        <div class="col-sm-6">
+            <div class="EventSEC1">
+                <img src="https://1.bp.blogspot.com/-O8REzdpCLQI/XGSg_MDqTUI/AAAAAAAAAE0/2eadZ4Co98wQXU-dV78iUzR7qRB7CKGewCLcBGAs/s320/officina.jpeg" />
+            </div>
+            <div class="#">
+                <div>
+                    <h4>Excepteur sint.</h4>
+                    <p>Excepteur sint occaecat cupidatat non </p>
+                    <p>proident, sunt in culpa qui officia deserunt mollit anim.</p>
+                </div>
+                <!--Fin de #-->
+                <div class="#">
+                    <button class="asistir" type="submit"><strong>Asisitir</strong></button>
+                    <i class="fas fa-minus-square">120</i>
+                    <button class="shares" type="submit">Share</button>
+                </div>
+                <!--Fin de #-->
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="EventSEC1">
+                <img src="https://1.bp.blogspot.com/-O8REzdpCLQI/XGSg_MDqTUI/AAAAAAAAAE0/2eadZ4Co98wQXU-dV78iUzR7qRB7CKGewCLcBGAs/s320/officina.jpeg" />
+            </div>
+            <div class="#">
+                <div>
+                    <h4>Excepteur sint.</h4>
+                    <p>Excepteur sint occaecat cupidatat non </p>
+                    <p>proident, sunt in culpa qui officia deserunt mollit anim.</p>
+                </div>
+                <!--Fin de #-->
+                <div class="#">
+                    <button class="asistir" type="submit"><strong>Asisitir</strong></button>
+                    <i class="fas fa-minus-square">120</i>
+                    <button class="shares" type="submit">Share</button>
+                </div>
+                <!--Fin de #-->
+            </div>
+        </div>
+    </div>
+    <!--Fin de col-sm-6-->
 
 
 
-          <div class="col-sm-2 trabajos">
-                        <div class="button">
-                            <button class="jobs" type="submit" ><strong>Jobs</strong></button>
-                        </div><!--Fin de button-->
-                        <div class="div1">
-                            <div class="title">
-                                <h4 class="tittle">Excepteur sint.</h4>
-                            </div><!--Fin de title-->
-                            <div class="text-content">
-                                <div>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </div><!--Fin de div -->
-                                <div class="titless">
-                                    <a href="#"><i class="fas fa-globe-europe">webpage</i> </a> 
-                                </div><!--Fin de div-->
-                            </div><!--Fin detext-content-->
-                        </div><!--Fin de div1-->
-                        <div class="div1">
-                                <div class="title">
-                                        <h4 class="tittle">Excepteur sint.</h4>
-                                </div><!--Fin de title-->
-                                <div class="text-content">
-                                    <div>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    </div><!--Fin de div -->
-                                    <div class="titless">
-                                        <a href="#"><i class="fas fa-globe-europe">webpage</i> </a> 
-                                    </div><!--Fin de div-->
-                                </div><!--Fin detext-content-->
-                            </div><!--Fin de div1-->
-                            <div class="div1">
-                                    <div class="title">
-                                            <h4 class="tittle">Excepteur sint.</h4>
-                                    </div><!--Fin de title-->
-                                    <div class="text-content">
-                                        <div>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        </div><!--Fin de div -->
-                                        <div class="titless">
-                                            <a href="#"><i class="fas fa-globe-europe">webpage</i> </a> 
-                                        </div><!--Fin de div-->
-                                    </div><!--Fin detext-content-->
-                                </div><!--Fin de div1-->
-                            
-                    </div><!--Fin de aside-->     
+    <div class="col-sm-2 trabajos">
+        <div class="button">
+            <button class="jobs" type="submit"><strong>Jobs</strong></button>
+        </div>
+        <!--Fin de button-->
+        <div class="div1">
+            <div class="title">
+                <h4 class="tittle">Excepteur sint.</h4>
+            </div>
+            <!--Fin de title-->
+            <div class="text-content">
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua.
+                </div>
+                <!--Fin de div -->
+                <div class="titless">
+                    <a href="#"><i class="fas fa-globe-europe">webpage</i> </a>
+                </div>
+                <!--Fin de div-->
+            </div>
+            <!--Fin detext-content-->
+        </div>
+        <!--Fin de div1-->
+        <div class="div1">
+            <div class="title">
+                <h4 class="tittle">Excepteur sint.</h4>
+            </div>
+            <!--Fin de title-->
+            <div class="text-content">
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua.
+                </div>
+                <!--Fin de div -->
+                <div class="titless">
+                    <a href="#"><i class="fas fa-globe-europe">webpage</i> </a>
+                </div>
+                <!--Fin de div-->
+            </div>
+            <!--Fin detext-content-->
+        </div>
+        <!--Fin de div1-->
+        <div class="div1">
+            <div class="title">
+                <h4 class="tittle">Excepteur sint.</h4>
+            </div>
+            <!--Fin de title-->
+            <div class="text-content">
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua.
+                </div>
+                <!--Fin de div -->
+                <div class="titless">
+                    <a href="#"><i class="fas fa-globe-europe">webpage</i> </a>
+                </div>
+                <!--Fin de div-->
+            </div>
+            <!--Fin detext-content-->
+        </div>
+        <!--Fin de div1-->
+
+    </div>
+    <!--Fin de aside-->
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-

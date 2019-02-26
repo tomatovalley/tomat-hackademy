@@ -34,7 +34,8 @@ export class LoginComponent implements OnInit {
       this.localAuth.setUser(result[0])
       let token = result[0].id;
       this.localAuth.setToken(token);
-      this.router.navigate(["/user/profile"]);
+      //this.router.navigate(["/user/profile"]);
+      this.router.navigate(["all-events"]);
     },
       error => console.log(error)
     );
@@ -60,7 +61,8 @@ export class LoginComponent implements OnInit {
       this.localAuth.setUser(result[0]);
       let token = result[0]._id;
       this.localAuth.setToken(token);
-      this.router.navigate(["/user/profile"]);
+      //this.router.navigate(["/user/profile"]);
+      this.router.navigate(["/all-events"]);
     },
       error => console.log(error)
     );

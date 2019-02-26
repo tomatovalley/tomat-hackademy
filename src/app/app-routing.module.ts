@@ -1,3 +1,4 @@
+import { AddImageComponent } from './components/events/add-image/add-image.component';
 import { CompletePerfilWriteComponent } from './components/user/complete-perfil-write/complete-perfil-write.component';
 import { IntroduceCodConfirmacionComponent } from './components/user/introduce-cod-confirmacion/introduce-cod-confirmacion.component';
 import { CompletarPerfilComponent } from './components/user/completar-perfil/completar-perfil.component';
@@ -13,12 +14,10 @@ import { Page404Component } from './components/page404/page404.component';
 import { UpdateProfileComponent } from './components/user/update-profile/update-profile.component';
 import { AllEventsComponent } from './components/events/all-events/all-events.component';
 import { NewEventComponent } from './components/events/new-event/new-event.component';
-import { OrganizaEventComponent  } from './components/events/organiza-event/organiza-event.component';
-import { LandingComponent } from  './landing/landing.component';
-import { TrendingComponent } from  './trending/trending.component';
+import { OrganizaEventComponent } from './components/events/organiza-event/organiza-event.component';
 import { ComeventComponent } from './components/comevent/comevent.component';
-import { ImagenEventComponent } from './components/events/imagen-event/imagen-event.component';
-import {ImageComponent} from './image/image.component';
+import { TrendingComponent } from './components/trending/trending.component';
+
 const routes: Routes = [
   {path: "", component: HomeComponent},
   {path: "user/login", component: LoginComponent},
@@ -30,12 +29,10 @@ const routes: Routes = [
   {path: "int-codigo", component: IntroduceCodConfirmacionComponent},
   {path: "all-events", component: AllEventsComponent},
   {path: "new-event", component: NewEventComponent},
-  {path: "app-landing", component:LandingComponent},
-  {path: "image-event", component:ImagenEventComponent},
-  {path: "app-com/event", component: ComeventComponent},
-  {path: "trending", component:TrendingComponent },
-  {path: "image-consume", component:ImageComponent},
   {path: "organiza-event", component: OrganizaEventComponent},
+  {path: "comment-events/:id", component: ComeventComponent},
+  {path: "add-image", component: AddImageComponent},
+  {path: "trending", component: TrendingComponent},
   {path: "user/profile", component: ProfileComponent, canActivate: [AuthGuard]},
   {path: "**", component: Page404Component},
   

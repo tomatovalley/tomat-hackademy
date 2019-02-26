@@ -1,0 +1,150 @@
+.title{
+    width: 30%;
+    margin-left: 35%;
+    
+}
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.centered {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.bottom-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.bottom-right {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+}
+.space {
+    padding: 10px 10px;
+}
+.tittle{
+    font-weight: 800;
+    font-family: Georgia;
+     margin-top: 10%;
+     margin-bottom: 10%;
+}
+.tema{
+    margin-bottom: 5%;
+}
+.works{
+    margin-left: 10%;
+    width: 80%;
+    border-radius: 60px;
+}
+.text{
+    width: 100%;
+}
+.content{
+    margin-left: 10%;
+    width: 60%;
+    text-align: justify;
+}
+.button{
+    width: 100%;
+    margin-right: 20%;
+    margin-top: 5%;
+    background: #33cc44;
+}
+.seeProyect{
+    width: 30%;
+    height: 50px;
+    float: right;
+    margin-right: 20%;
+    background: #2699FB;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 20px;
+    border: 0;
+    border-radius: 5px;
+
+}
+.principal{
+    border-bottom: 2px #cccccc;
+}
+.col-sm-6{
+    margin-bottom: 5%;
+}
+.col-sm-12{
+    
+    border-bottom: 3px solid #cccccc;
+}
+.col-sm-12 h1{
+    margin: 0;
+}
+/************************************************************************************/
+.sectionOne{
+    background-image: url("https://3.bp.blogspot.com/-YlGgIZRsxEY/XGc5xygot6I/AAAAAAAAAGk/z3RamNgKagEjyH97uJb_tlspPhpCYoWqwCLcBGAs/s640/arif-riyanto-974674-unsplash.jpg");
+    background-repeat: no-repeat;
+    width: 90%;
+
+}
+.titess{
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+.parrafo{
+    color: #ffffff;
+    line-height: 30px;
+    font-size: 20px;
+}
+.contenido{
+    width: 80%;
+    margin: 0 auto;
+}
+.sectionSecond{
+    background-image: url("https://4.bp.blogspot.com/-tNG8I3U3HFY/XGZemnptoZI/AAAAAAAAAGY/1z5dx6vVRzkNDjKTVi-BVSE1pOeU-GdqwCLcBGAs/s640/mimi-thian-737017-unsplash.jpg");
+    background-repeat: no-repeat;
+    width: 90%;
+}
+.sectionThree{
+    background-image: url("https://3.bp.blogspot.com/-ivIFohwqV80/XGdLDXV4kXI/AAAAAAAAAG8/eH-xQgMEVAE1_RR6VzuJMe1NLHdk1gtLgCLcBGAs/s640/rawpixel-749494-unsplash.jpg");
+    background-repeat: no-repeat;
+    width: 90%;
+}
+.sectionFour{
+    background-image: url("https://3.bp.blogspot.com/-YlGgIZRsxEY/XGc5xygot6I/AAAAAAAAAGk/z3RamNgKagEjyH97uJb_tlspPhpCYoWqwCLcBGAs/s640/arif-riyanto-974674-unsplash.jpg");
+    background-repeat: no-repeat;
+    width: 90%;
+}
+.sectionOn{
+    background-image: url("https://4.bp.blogspot.com/-tNG8I3U3HFY/XGZemnptoZI/AAAAAAAAAGY/1z5dx6vVRzkNDjKTVi-BVSE1pOeU-GdqwCLcBGAs/s640/mimi-thian-737017-unsplash.jpg");
+    background-repeat: no-repeat;
+    width: 90%;
+}
+.sectionSecon{
+    background-image: url("https://3.bp.blogspot.com/-YlGgIZRsxEY/XGc5xygot6I/AAAAAAAAAGk/z3RamNgKagEjyH97uJb_tlspPhpCYoWqwCLcBGAs/s640/arif-riyanto-974674-unsplash.jpg");
+    background-repeat: no-repeat;
+    width: 90%;
+}
+.compartir{
+    float: right;
+    margin-top: 40%;
+}
+.share{
+    width: 100%;
+    background: none;
+    border: 0;
+    color: #ffffff;
+    font-size: 40px;
+}
+.fas{
+    color: #ffffff;
+    font-size: 20px;
+    float: left;
+}
+.reaction{
+    float: left;
+}

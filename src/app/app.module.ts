@@ -25,14 +25,10 @@ import { IntroduceCodConfirmacionComponent } from './components/user/introduce-c
 import { CompletePerfilWriteComponent } from './components/user/complete-perfil-write/complete-perfil-write.component';
 import { AllEventsComponent } from './components/events/all-events/all-events.component';
 import { NewEventComponent } from './components/events/new-event/new-event.component';
-import { EventsComponent } from './src/app/components/events/events.component';
+import { AddImageComponent } from './components/events/add-image/add-image.component';
 import { OrganizaEventComponent } from './components/events/organiza-event/organiza-event.component';
-import { LandingComponent } from './landing/landing.component';
-import { TrendingComponent } from './trending/trending.component';
-
 import { ComeventComponent } from './components/comevent/comevent.component';
-import { ImagenEventComponent } from './components/events/imagen-event/imagen-event.component';
-import { ImageComponent } from './image/image.component';
+import { TrendingComponent } from './components/trending/trending.component';
 
 
 /*const config = new AuthServiceConfig([
@@ -75,13 +71,10 @@ export function getAuthServiceConfigs() {
     CompletePerfilWriteComponent,
     AllEventsComponent,
     NewEventComponent,
-    EventsComponent,
+    AddImageComponent,
     OrganizaEventComponent,
-    LandingComponent,
-    TrendingComponent,
     ComeventComponent,
-    ImagenEventComponent,
-    ImageComponent
+    TrendingComponent
   ],
   imports: [
     BrowserModule,

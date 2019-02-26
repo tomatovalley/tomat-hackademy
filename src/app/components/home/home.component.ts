@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataApiService } from 'src/app/services/data-api.service';
 import { Router } from '@angular/router';
 import { LocalAuthService } from 'src/app/services/local-auth.service';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -16,6 +17,7 @@ import { LocalAuthService } from 'src/app/services/local-auth.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  title = 'sweetAlert';
   constructor(private dataApi: DataApiService, private localAuth: LocalAuthService, private router: Router, private socialAuthService: AuthService) { }
   private user: UserInterface = {
     name: "",
@@ -35,6 +37,15 @@ export class HomeComponent implements OnInit {
     this.dataApi.getAllUsers().subscribe(users => console.log(users));
   }
 
+  showModal(){
+    Swal.fire({
+      title: 'Bienvenido',
+      text: '¡Bievenido a Tomato Valley, perro!',
+      type: 'success',
+      confirmButtonText: 'Ok!'
+    })
+  }
+
   onRegister(): void{
     this.localAuth.registerUser(
       this.user.name,
@@ -50,10 +61,21 @@ export class HomeComponent implements OnInit {
       this.localAuth.setUser(user);
       let token = user._id;
       this.localAuth.setToken(token);
-      this.router.navigate(["/user/profile"]);
+      //this.router.navigate(["/user/profile"]);
+      this.showModal();
+      this.router.navigate(["/all-events"]);
       //console.log(token);
       //console.log(this.user.birthdate);
     });
+  }
+  onRegisterDjango(): void{
+    this.localAuth.registerUserDjango(
+      this.user.user_name,
+      this.user.password
+    )
+    .subscribe(user => {
+      console.log(user);
+    })
   }
   //Login Social Media para Facebook y Google+, "funciona" parcialmente
   /*public socialSignIn(socialPlatform : string) {
@@ -122,7 +144,7 @@ export class HomeComponent implements OnInit {
           this.localAuth.setUser(user);
           let token = userData.idToken;
           this.localAuth.setToken(token);
-          this.router.navigate(["/user/profile"]);
+          this.router.navigate(["/all-events"]);
         })   
       }
     );

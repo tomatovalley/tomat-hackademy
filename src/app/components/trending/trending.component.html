@@ -1,0 +1,71 @@
+<div class="row">
+    <div class="col-sm-12">
+      <div class="title">
+        <h1 class="tittle">Cosas increíbles hechas personas increíbles.</h1>
+      </div>
+      <!--Fin de title-->
+      <div class="confiabilidad" style="margin-left:8%;">
+        Destacado
+      </div>
+      <div class="row principal">
+        <div class="col-sm-6">
+          <img class="works" src="https://4.bp.blogspot.com/-tNG8I3U3HFY/XGZemnptoZI/AAAAAAAAAGY/1z5dx6vVRzkNDjKTVi-BVSE1pOeU-GdqwCLcBGAs/s640/mimi-thian-737017-unsplash.jpg" />
+        </div>
+        <div class="col-sm-6">
+          <div class="tema">
+            <h1><!--{{ emp.name }}--></h1>
+          </div>
+          <div class="text">
+            <div class="content">
+              <!--{{ emp.description }}-->
+            </div>
+            <div class="botn">
+              <div class="button">
+                <button class="seeProyect" type="submit">Ver proyecto</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--fin de row principal-->
+
+    </div>
+    <div class="col-sm-12">
+      <div class="col-sm-12">
+        <h1>Trending</h1>
+
+        <div class="row" >
+          <div class="col-sm-3 container space" *ngFor="let emp of emps; index as i">
+            <!--<img src="{{emp.image}}" width="100%" height="100%" alt="">-->
+            <img src="{{emp.image}}" width="100%" height="100%" alt="">
+            <div class="text">
+              <div class="titess centered">
+                
+                <h1>{{emp.name}}</h1>
+              </div>
+              <!--titess-->
+              <div class="contenido">
+                <div class="parrafo bottom-center">
+                  {{emp.description}}
+                </div>
+                <!--parrafo-->
+              </div>
+              <!--contenido-->
+              <div class="compartir bottom-right">
+                <div><button routerLink="/comment-events/{{emp.id}}/" (click)= "onSelectedEmp(emps)" (click)="onSelectedUser(user)" class="share"><a class="share">Ver más</a></button></div>
+                
+              </div>
+            </div>
+            <!--text-->
+          </div>
+          
+          </div>
+
+        </div>
+
+
+      </div>
+      <!--Fin de col-sm-12-->
+
+    </div>
+    <!--Fin de row -->
