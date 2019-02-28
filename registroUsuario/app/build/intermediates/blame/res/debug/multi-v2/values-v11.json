@@ -1,10 +1,21 @@
 {
     "logs": [
         {
-            "outputFile": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v11/values-v11.xml",
+            "outputFile": "C:\\Users\\luqueochoa\\Desktop\\tomat-hackademy-movil\\tomat-hackademy-movil\\registroUsuario\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
             "map": [
                 {
-                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/tweet-ui-3.1.1.aar/b5d75a6ae1d0a38ea51c54f4f82bfe1c/res/values-v11/values-v11.xml",
+                    "source": "C:\\Users\\luqueochoa\\.gradle\\caches\\transforms-1\\files-1.1\\tweet-composer-3.1.1.aar\\5723bf4e49ea88fccf89ba0bfeb86c09\\res\\values-v11\\values-v11.xml",
+                    "from": {
+                        "startLines": "2,10",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,565",
+                        "endLines": "9,17",
+                        "endColumns": "12,12",
+                        "endOffsets": "560,1076"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\luqueochoa\\.gradle\\caches\\transforms-1\\files-1.1\\tweet-ui-3.1.1.aar\\18719aa136e22527fcf3b2e48a81cbcb\\res\\values-v11\\values-v11.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,17 +31,6 @@
                         "endLines": "22",
                         "endColumns": "12",
                         "endOffsets": "1341"
-                    }
-                },
-                {
-                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/tweet-composer-3.1.1.aar/a415c9d3e5cd8906ec7c85efe6421820/res/values-v11/values-v11.xml",
-                    "from": {
-                        "startLines": "2,10",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,565",
-                        "endLines": "9,17",
-                        "endColumns": "12,12",
-                        "endOffsets": "560,1076"
                     }
                 }
             ]

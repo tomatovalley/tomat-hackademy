@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rGB/values-en-rGB.xml",
+            "outputFile": "C:\\Users\\luqueochoa\\Desktop\\tomat-hackademy-movil\\tomat-hackademy-movil\\registroUsuario\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rGB\\values-en-rGB.xml",
             "map": [
                 {
-                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/values-en-rGB/values-en-rGB.xml",
+                    "source": "C:\\Users\\luqueochoa\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\2e0ad2751ac59af4de1527f05db43c17\\res\\values-en-rGB\\values-en-rGB.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,58 @@
                     }
                 },
                 {
-                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/facebook-login-4.39.0.aar/4fbd8842198dae83656675c19cd4b0a4/res/values-en-rGB/values-en-rGB.xml",
+                    "source": "C:\\Users\\luqueochoa\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\2a0a5f80e2346f2531983d391e69e262\\res\\values-en-rGB\\values-en-rGB.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "66",
+                        "startColumns": "4",
+                        "startOffsets": "6557",
+                        "endColumns": "100",
+                        "endOffsets": "6653"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\luqueochoa\\.gradle\\caches\\transforms-1\\files-1.1\\tweet-composer-3.1.1.aar\\5723bf4e49ea88fccf89ba0bfeb86c09\\res\\values-en-rGB\\values-en-rGB.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,120,172",
+                        "endColumns": "64,51,48",
+                        "endOffsets": "115,167,216"
+                    },
+                    "to": {
+                        "startLines": "67,72,75",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "6658,6957,7095",
+                        "endColumns": "64,51,48",
+                        "endOffsets": "6718,7004,7139"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\luqueochoa\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\774090507433bc850d227f893f731e8f\\res\\values-en-rGB\\values.xml",
+                    "from": {
+                        "startLines": "4,5",
+                        "startColumns": "0,0",
+                        "startOffsets": "197,296",
+                        "endColumns": "98,91",
+                        "endOffsets": "295,387"
+                    },
+                    "to": {
+                        "startLines": "63,64",
+                        "startColumns": "4,4",
+                        "startOffsets": "6276,6379",
+                        "endColumns": "102,95",
+                        "endOffsets": "6374,6470"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\luqueochoa\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.39.0.aar\\7dc6943c7f5c48791f8bb08fd98f456c\\res\\values-en-rGB\\values-en-rGB.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -38,24 +89,7 @@
                     }
                 },
                 {
-                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/81eb9b55a56a116c898fa39772b96c14/res/values-en-rGB/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "251",
-                        "endColumns": "196",
-                        "endOffsets": "447"
-                    },
-                    "to": {
-                        "startLines": "53",
-                        "startColumns": "4",
-                        "startOffsets": "4768",
-                        "endColumns": "196",
-                        "endOffsets": "4960"
-                    }
-                },
-                {
-                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/tweet-ui-3.1.1.aar/b5d75a6ae1d0a38ea51c54f4f82bfe1c/res/values-en-rGB/values-en-rGB.xml",
+                    "source": "C:\\Users\\luqueochoa\\.gradle\\caches\\transforms-1\\files-1.1\\tweet-ui-3.1.1.aar\\18719aa136e22527fcf3b2e48a81cbcb\\res\\values-en-rGB\\values-en-rGB.xml",
                     "from": {
                         "startLines": "2,6,10,14,15,16,17,18,19,20,21,22,23,24,25,26,27",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -74,75 +108,7 @@
                     }
                 },
                 {
-                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/tweet-composer-3.1.1.aar/a415c9d3e5cd8906ec7c85efe6421820/res/values-en-rGB/values-en-rGB.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,120,172",
-                        "endColumns": "64,51,48",
-                        "endOffsets": "115,167,216"
-                    },
-                    "to": {
-                        "startLines": "67,72,75",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "6658,6957,7095",
-                        "endColumns": "64,51,48",
-                        "endOffsets": "6718,7004,7139"
-                    }
-                },
-                {
-                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/f4a368298d0ef5e5461e574bf8aa7728/res/values-en-rGB/values-en-rGB.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "66",
-                        "startColumns": "4",
-                        "startOffsets": "6557",
-                        "endColumns": "100",
-                        "endOffsets": "6653"
-                    }
-                },
-                {
-                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/play-services-places-16.0.0.aar/8b2b27fe5514d348f5accfa06cedbbd3/res/values-en-rGB/values.xml",
-                    "from": {
-                        "startLines": "4,5",
-                        "startColumns": "0,0",
-                        "startOffsets": "197,296",
-                        "endColumns": "98,91",
-                        "endOffsets": "295,387"
-                    },
-                    "to": {
-                        "startLines": "63,64",
-                        "startColumns": "4,4",
-                        "startOffsets": "6276,6379",
-                        "endColumns": "102,95",
-                        "endOffsets": "6374,6470"
-                    }
-                },
-                {
-                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/twitter-core-3.1.1.aar/1c79a118802d796377d968b35aeed404/res/values-en-rGB/values-en-rGB.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    },
-                    "to": {
-                        "startLines": "71",
-                        "startColumns": "4",
-                        "startOffsets": "6891",
-                        "endColumns": "65",
-                        "endOffsets": "6952"
-                    }
-                },
-                {
-                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/66acb51a8af7f55cf0d6160d37c6bbdf/res/values-en-rGB/values.xml",
+                    "source": "C:\\Users\\luqueochoa\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\4ee7e8bebc9a58b2c9aa2e03be3ca13a\\res\\values-en-rGB\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -156,6 +122,40 @@
                         "startOffsets": "3628,3735,3919,4046,4155,4365,4490,4636,4965,5183,5290,5473,5600,5805,5983,6076,6168",
                         "endColumns": "106,183,126,108,209,124,145,131,217,106,182,126,204,177,92,91,107",
                         "endOffsets": "3730,3914,4041,4150,4360,4485,4631,4763,5178,5285,5468,5595,5800,5978,6071,6163,6271"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\luqueochoa\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.0.1.aar\\16eba2d1dd2e05aaf917e2ecbef52364\\res\\values-en-rGB\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "251",
+                        "endColumns": "196",
+                        "endOffsets": "447"
+                    },
+                    "to": {
+                        "startLines": "53",
+                        "startColumns": "4",
+                        "startOffsets": "4768",
+                        "endColumns": "196",
+                        "endOffsets": "4960"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\luqueochoa\\.gradle\\caches\\transforms-1\\files-1.1\\twitter-core-3.1.1.aar\\5a6acf8d56c911656aba80efe33315c9\\res\\values-en-rGB\\values-en-rGB.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    },
+                    "to": {
+                        "startLines": "71",
+                        "startColumns": "4",
+                        "startOffsets": "6891",
+                        "endColumns": "65",
+                        "endOffsets": "6952"
                     }
                 }
             ]

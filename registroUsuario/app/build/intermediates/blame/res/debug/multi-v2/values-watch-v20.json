@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "C:\\Users\\luqueochoa\\Desktop\\tomat-hackademy-movil\\tomat-hackademy-movil\\registroUsuario\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/1ebe3ddb8fc178d9cb1f041726ac4c85/res/values-watch-v20/values.xml",
+                    "source": "C:\\Users\\luqueochoa\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-auth-16.0.1.aar\\ccd33060fcb2162ad43600e96113b202\\res\\values-watch-v20\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/values-watch-v20/values-watch-v20.xml",
+                    "source": "C:\\Users\\luqueochoa\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\2e0ad2751ac59af4de1527f05db43c17\\res\\values-watch-v20\\values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/joaquinimt/Imágenes/tomat-hackademy/registroUsuario/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "outputFile": "C:\\Users\\luqueochoa\\Desktop\\tomat-hackademy-movil\\tomat-hackademy-movil\\registroUsuario\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/18cacb816cc8cfa6e09aa59c056c99a5/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\luqueochoa\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\5ba46933629659d2ed8f5542b5a5f3a9\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/home/joaquinimt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3408080ffbb627d41f1c890ec2023ec7/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\luqueochoa\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\2e0ad2751ac59af4de1527f05db43c17\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

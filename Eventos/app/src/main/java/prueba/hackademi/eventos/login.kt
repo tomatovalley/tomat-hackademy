@@ -27,22 +27,22 @@ class login : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    var loginButton: LoginButton? = null
-    var callbackManager: CallbackManager? = null
+    //var loginButton: LoginButton? = null
+    //var callbackManager: CallbackManager? = null
 
-    private var loginButtonTwitter : TwitterLoginButton? = null
-    var callback : Callback<TwitterSession>? = null
+    //private var loginButtonTwitter : TwitterLoginButton? = null
+    //var callback : Callback<TwitterSession>? = null
 
     open var googleApiClient: GoogleApiClient? = null
     open var signInButton: SignInButton? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Twitter.initialize(this)
+        //Twitter.initialize(this)
         setContentView(R.layout.activity_login)
-        callbackManager = CallbackManager.Factory.create()
+        //callbackManager = CallbackManager.Factory.create()
 
-        loginButtonTwitter = findViewById(R.id.loginButtonTwitterr)
+      //  loginButtonTwitter = findViewById(R.id.loginButtonTwitterr)
         val textoContraseña= findViewById(R.id.textoContraseña) as TextView
         var valor = true
         botonOjo.setOnClickListener{
@@ -69,6 +69,7 @@ class login : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
 
 
 
+        /*
         loginButton?.registerCallback(callbackManager, object : FacebookCallback<LoginResult> {
             override fun onSuccess(loginResult: LoginResult) {
                 goMainScreen()
@@ -82,6 +83,7 @@ class login : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
                 Toast.makeText(applicationContext, "R.string.error_login", Toast.LENGTH_SHORT).show()
             }
         })
+        */
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build()
@@ -97,12 +99,14 @@ class login : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
 
         signInButton?.setColorScheme(com.google.android.gms.common.SignInButton.COLOR_DARK)
 
+
         signInButton?.setOnClickListener {
             val intent = Auth.GoogleSignInApi.getSignInIntent(googleApiClient)
             startActivityForResult(intent, 777)
         }
 
         //var loginButtonTwitter = findViewById<TwitterLoginButton>(R.id.loginButtonTwitterr) //BIEN
+        /*
         loginButtonTwitter?.callback = object :Callback<TwitterSession>(){
             override fun success(Result : Result<TwitterSession>) {
                 var session : TwitterSession = TwitterCore.getInstance().sessionManager.activeSession
@@ -117,7 +121,7 @@ class login : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
             }
             //BIEN
         }
-
+        */
 
 
     }
@@ -128,19 +132,21 @@ class login : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
         callbackManager?.onActivityResult(requestCode, resultCode, data)
     }
     */
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {//da error por el metodo de TWITTER que tiene el mismo nombre con los mismos parametros si el metodo de Twitter es comentariado agarra el de google,el metodo esta bien implementado
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == 777) {
+        //if (requestCode == 777) {
             val result = Auth.GoogleSignInApi.getSignInResultFromIntent(data)
             handleSignInResult(result)
-        }
+       // }
+        /*
         if(requestCode == 64206){
             callbackManager?.onActivityResult(requestCode, resultCode, data)
         }
         if(requestCode == 140){
             loginButtonTwitter?.onActivityResult(requestCode, resultCode, data)
         }
+        */
     }
 
 
@@ -155,7 +161,7 @@ class login : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
         } else {
             Toast.makeText(this, "R.string.not_log_in", Toast.LENGTH_SHORT).show()
         }
-    }
+    }   /*
     fun login(session: TwitterSession) {
         val username = session.userName
         Toast.makeText(this, "Authentication suceesfult!", Toast.LENGTH_LONG).show()
@@ -167,4 +173,5 @@ class login : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
         intent.putExtra("username", username)
         startActivity(intent10)
     }
+    */
 }

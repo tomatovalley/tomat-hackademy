@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "755015373299",
-    "firebase_url": "https://eventos-tomato.firebaseio.com",
-    "project_id": "eventos-tomato",
-    "storage_bucket": "eventos-tomato.appspot.com"
+    "project_number": "241579256164",
+    "firebase_url": "https://eventos-16b33.firebaseio.com",
+    "project_id": "eventos-16b33",
+    "storage_bucket": "eventos-16b33.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:755015373299:android:b655e671551fc962",
+        "mobilesdk_app_id": "1:241579256164:android:b655e671551fc962",
         "android_client_info": {
           "package_name": "prueba.hackademi.eventos"
         }
       },
       "oauth_client": [
         {
-          "client_id": "755015373299-i9ql0kaf4mbk833bmhs7cv7fss44cv5h.apps.googleusercontent.com",
+          "client_id": "241579256164-9l268t1ccghs845k0pi0c9svsvil4bqu.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "prueba.hackademi.eventos",
-            "certificate_hash": "c853bc099f3cd1384d1c5009c14229ca1c5d0d11"
+            "certificate_hash": "4223a94ee10befc665ca036389140ea92bde1bf8"
           }
         },
         {
-          "client_id": "755015373299-bqic516tkdu0gtfkhrlnn737sdjvn2lj.apps.googleusercontent.com",
+          "client_id": "241579256164-jib7nncd40q8qm3nf441c2ph46uk97io.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBPWwnlFMx4FYu4Z-xpIxr4CqcIDAMvafE"
+          "current_key": "AIzaSyAQxDGnD_7tLf5G8398DYXtst0YCNvyzXo"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "755015373299-bqic516tkdu0gtfkhrlnn737sdjvn2lj.apps.googleusercontent.com",
+              "client_id": "241579256164-jib7nncd40q8qm3nf441c2ph46uk97io.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

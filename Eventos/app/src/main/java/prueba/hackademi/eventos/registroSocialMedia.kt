@@ -26,7 +26,7 @@ open class registroSocialMedia :  AppCompatActivity(), GoogleApiClient.OnConnect
     //otra pantalla LOGIN
 
     open var googleApiClient: GoogleApiClient? = null
-    open var signInButton: SignInButton? = null
+    open var botonaux: SignInButton? = null
     var SIGN_IN_CODE = 777
 
 
@@ -36,6 +36,7 @@ open class registroSocialMedia :  AppCompatActivity(), GoogleApiClient.OnConnect
         //loginButton?.setReadPermissions("email")
 
         var correo = findViewById<Button>(R.id.loginCorreo)
+        val botonaux = findViewById<Button>(R.id.botonaux)
         correo.setOnClickListener {
             var intent100 = Intent(this, registroManual::class.java)
             startActivity(intent100)
@@ -51,16 +52,22 @@ open class registroSocialMedia :  AppCompatActivity(), GoogleApiClient.OnConnect
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build()
 
-        signInButton = findViewById(R.id.SignInButton)
+        //botonaux = findViewById(R.id.SignInButton)
 
-        signInButton?.setSize(SignInButton.SIZE_WIDE)
+        //signInButton?.setSize(SignInButton.SIZE_WIDE)
 
-        signInButton?.setColorScheme(SignInButton.COLOR_DARK)
+        //signInButton?.setColorScheme(SignInButton.COLOR_DARK)
 
+        botonaux.setOnClickListener{
+            val intent = Auth.GoogleSignInApi.getSignInIntent(googleApiClient)
+            startActivityForResult(intent, 777)
+        }
+        /*
         signInButton?.setOnClickListener {
             val intent = Auth.GoogleSignInApi.getSignInIntent(googleApiClient)
             startActivityForResult(intent, 777)
         }
+        */
     }
 
     override fun onConnectionFailed(connectionResult: ConnectionResult) {

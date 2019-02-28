@@ -65,7 +65,7 @@ class datosRegistro : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_datos_registro)
         //VARIABLES DE KOTLIN INICIALIZADAS CON VALOR AL COMPONENTE XML
-        mDisplayDate = findViewById(R.id.textViewFecha) as TextView
+        //mDisplayDate = findViewById(R.id.textViewFecha) as TextView
         textoNombre = findViewById(R.id.textoNombre) as TextView
         textoApellido = findViewById(R.id.textoApellido) as TextView
         textoUsuario = findViewById(R.id.textoUsuario) as TextView
@@ -126,7 +126,7 @@ class datosRegistro : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
             botonSeleccionadoIdentidad(identidad!!)
         }
 
-
+/*
         //SUBRAYA EL TEXTO DEL BOTON DE LA FECHA
         val mitextoU = SpannableString(mDisplayDate?.text)
         mitextoU.setSpan(UnderlineSpan(), 0, mitextoU.length, 0)
@@ -147,6 +147,7 @@ class datosRegistro : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
             dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             dialog.show()
         }
+*/
 
         mDateSetListener = DatePickerDialog.OnDateSetListener { datePicker, year, month, day ->
             var month = month

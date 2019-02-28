@@ -13,14 +13,14 @@ android {
         config {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
-            storeFile file('/home/joaquinimt/Escritorio/debug.keystore')
+            storeFile file('C:/Users/luqueochoa/.android/adbkey')
             storePassword 'android'
         }
     }
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.example.luque.registrousuario"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -55,14 +55,11 @@ dependencies {
     implementation 'com.twitter.sdk.android:twitter-core:3.1.1'
     implementation 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
     //3rd party libs
-
     implementation 'com.squareup.okhttp3:okhttp:3.12.1'
-
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.android.support:design:28.0.0'
     implementation 'com.google.android.gms:play-services-location:16.0.0'
     implementation 'com.google.android.gms:play-services-maps:16.0.0'
     implementation 'com.google.android.gms:play-services-places:16.0.0'
     implementation 'com.google.android.gms:play-services-location:16.0.0'
-
 }
