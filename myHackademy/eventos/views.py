@@ -66,17 +66,18 @@ jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
 
 class EventoViewSet(viewsets.ModelViewSet):
     
-    #permission_classes = (permissions.IsAuthenticated,)
+    permission_classes = (permissions.IsAuthenticated,)
     
     queryset = Evento.objects.all()
     serializer_class = EventoSerializer
     http_method_names =['post']
 
 
+
 class GetEventoDetail(viewsets.ModelViewSet):
 
     #permissions_classes = (permissions.AllowAny,)
-    #permission_classes = (permissions.IsAuthenticated,)
+    permission_classes = (permissions.IsAuthenticated,)
 
 
     queryset = Evento.objects.all()
@@ -99,6 +100,7 @@ class EmprendimientoView(viewsets.ModelViewSet):
 
     queryset  = Emprendimiento.objects.all()
     serializer_class = EmprendimientoSerializer
+
 
 
 class Prueba(APIView):
@@ -147,17 +149,9 @@ class FilterComment(APIView):
 class tokenView(APIView):
 
     permissions_classes = (permissions.AllowAny,)
+    serializer_class = TokenSerializer
 
     def post(self, request, *args, **kwargs):
-        
-        token = request.META['HTTP_AUTHORIZATION']
-        print(token)
-        if 'Bearer' in token:
-            newstr = token.replace('Bearer ',"")
-            print(newstr)
-            b64tkn = base64.b64decode(newstr)
-            print(b64tkn)
-        #payload = 
         context = {
             'response':'response'
         }
@@ -179,7 +173,6 @@ class UserViewSet(APIView):
        
 
 
-
 class LoginView(generics.CreateAPIView):
    
     # This permission class will overide the global permission
@@ -192,11 +185,16 @@ class LoginView(generics.CreateAPIView):
     def post(self, request, *args, **kwargs):
         username = request.data.get("username", "")
         password = request.data.get("password", "")
+        email = request.data.get("email", "")
+
         user = authenticate(request, username=username, password = password)
-        if user is not None:
+        #user2 = authenticate(request, email=email, password=password)
+
+        if user  is not None:
             # login saves the user’s ID in the session,
             # using Django’s session framework.
             loginDjango(request, user)
+
             serializer = TokenSerializer(data={
                 # using drf jwt utility functions to generate a token
                 "token": jwt_encode_handler(
@@ -205,6 +203,7 @@ class LoginView(generics.CreateAPIView):
             serializer.is_valid()
             return Response(serializer.data)
         return Response(status=status.HTTP_401_UNAUTHORIZED)
+
 
 
 

@@ -11,10 +11,11 @@ import json
 class Evento(models.Model):
 
     username  = models.ForeignKey(User, related_name ='eventos', blank=True, null=True, on_delete = models.CASCADE)
+    email = models.EmailField(max_length = 50)
     name = models.TextField(max_length=200, default="")
     place = models.TextField(max_length=200, default="")
     begin_date = models.DateField( default = datetime.date.today )
-    image = models.ImageField(upload_to= 'images',null=True, blank=True)
+    image = models.FileField(upload_to= 'images',null=True, blank=True)
     start_hour = models.TimeField( default = datetime.time)
     final_date = models.DateField(blank= True, null=True,default = datetime.date.today)
     end_hour = models.TimeField(blank=True,null=True, default = datetime.time)
@@ -82,7 +83,8 @@ class ComentarioEmprendimiento(models.Model):
         comment = self.comment
         date_ = self.create_date
 
-        dic = {"username":[str(username_ )],"Comentarios":[comment],"Fecha":[date_]} 
+        #dic = {"username":[str(username_ )],"Comentarios":[comment],"Fecha":[date_]} 
          #return f"Username: {self.comment_user}  {self.comment}   {self.create_date}"
-        dic_json = json.dumps(dic)
-        return "{}".format(dic_json)
+        '''creara error '''
+    
+        return "{}:  {} {}".format(username_, comment, date_)

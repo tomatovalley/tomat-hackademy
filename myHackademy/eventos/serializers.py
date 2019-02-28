@@ -3,28 +3,19 @@ from django.contrib.auth.hashers import make_password
 
 
 from drf_extra_fields.fields import Base64ImageField
-
-
 from django.contrib.auth.models import User
 from .models import Emprendimiento
 from .models import Evento
 from .models import ComentarioEmprendimiento
-
-#from .models import Client
-
-
-
-
 '''
 from django.core.files.base import ContentFile
 import base64
 import six
 import uuid
 import imghdr
-'''
 
 
-'''
+
 class Base64ImageField(serializers.ImageField):
 
     def to_internal_value(self, data):
@@ -60,6 +51,12 @@ class Base64ImageField(serializers.ImageField):
 
         return extension
 '''
+class TokenSerializer(serializers.Serializer):
+    """
+    This serializer serializes the token data
+    """
+    #user = UserSerializer()
+    token = serializers.CharField(max_length=255)
 
 
 
@@ -69,10 +66,10 @@ class CreateUserSerializer(serializers.HyperlinkedModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
 
     #password = serializers.CharField(required = True, style = {'input_type':'password'}) 
-
+    #token = TokenSerializer()
     class Meta:
         model = User
-        fields = ('username', 'password')
+        fields = ( 'username', 'password')
 
 
     def create(self, validate_data):
@@ -84,11 +81,10 @@ class EmprendimientoSerializer(serializers.ModelSerializer):
 
     user_id= serializers.SlugRelatedField(queryset = User.objects.all(), slug_field = 'username')
     comments  = serializers.StringRelatedField(many = True)
-    #comments = serializers.HyperlinkedRelatedField(many=True, view_name = 'emprendimiento', read_only = True)
     
     class Meta:
         model = Emprendimiento
-        fields = ('id',  'user_id','name', 'description', 'website','email','image', 'create_date', 'comments')
+        fields = ('id', 'user_id','name', 'description', 'website','email','image', 'create_date', 'comments')
         ordering = ['comments']
         depth = 2
 
@@ -111,7 +107,11 @@ class ComentarioSerializer(serializers.ModelSerializer):
         return self.comment_user, self.id
 
 class EventoSerializer(serializers.ModelSerializer):
-    image = Base64ImageField(max_length = None)
+    
+    #image = Base64ImageField(max_length = None) 
+
+    username = serializers.SlugRelatedField(queryset = User.objects.all(), slug_field = 'username')  
+    
     class Meta:
         model = Evento
         fields = ('username', 'name','place','begin_date','image', 'start_hour', 'final_date','end_hour',
@@ -121,11 +121,6 @@ class EventoSerializer(serializers.ModelSerializer):
         def create(self, validate_data):
             return Evento.objects.create(**validate_data)
 
-class TokenSerializer(serializers.Serializer):
-    """
-    This serializer serializes the token data
-    """
-    token = serializers.CharField(max_length=255)
-
-
+    def __str__(self):
+        return self.username
 
