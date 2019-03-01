@@ -17,7 +17,7 @@ export class LocalAuthService {
   });
   
   registerUser(name: string, last_name: string, user_name: string, email: string, password: string, birthdate: Date, gender: string){
-    const url_api = "http://localhost:3000/users/signup";
+    const url_api = "http://157.230.182.120/nd/users/signup";
     //const url_api = "http://localhost:3000/users";
     return this.http.post<UserInterface>(url_api, {
       name: name, 
@@ -42,7 +42,7 @@ export class LocalAuthService {
   }*/
 
   registerUserDjango(username: string, password: string){
-    const url_api = "http://157.230.182.120/eventos/clientes/";
+    const url_api = "http://157.230.182.120/dj/eventos/clientes/";
     return this.http.post<Modelo>(url_api, {
       username: username,
       password: password
@@ -50,10 +50,28 @@ export class LocalAuthService {
     ).pipe(map(data=>data));
   }
   
-  loginUser(email: string, password: string): Observable<any>{
-    const url_api = "http://localhost:3000/users/login";
+  loginUser(user_name: string, password: string): Observable<any>{
+    const url_api = "http://157.230.182.120/nd/users/login";
     return this.http.post<UserInterface>(url_api, {
-      email: email, 
+      user_name: user_name, 
+      password: password
+    }, { headers: this.headers}
+    ).pipe(map(data=>data))
+  }
+
+  getTokenDjango(username: string, password: string): Observable<any>{
+    const url_api = "http://192.168.10.63:8000/api/token/";
+    return this.http.post<UserInterface>(url_api, {
+      username: username, 
+      password: password
+    }, { headers: this.headers}
+    ).pipe(map(data=>data))
+  }
+
+  loginUserDjango(username: string, password: string): Observable<any>{
+    const url_api = "http://157.230.182.120/dj/eventos/login/";
+    return this.http.post<UserInterface>(url_api, {
+      username: username, 
       password: password
     }, { headers: this.headers}
     ).pipe(map(data=>data))

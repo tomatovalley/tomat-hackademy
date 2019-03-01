@@ -1,12 +1,12 @@
 import { AuthService } from './../../../services/auth.service';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
 import { UserInterface } from './../../../models/user-interface';
 import { DataApiService } from 'src/app/services/data-api.service';
 import { Component, OnInit } from '@angular/core';
 import { EventInterface } from 'src/app/models/event-interface';
 import { Router } from '@angular/router';
-import { toTypeScript } from '@angular/compiler';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -17,7 +17,12 @@ import { toTypeScript } from '@angular/compiler';
 export class NewEventComponent implements OnInit {
   selectedFile: File = null;
   fileToUpload: File = null;
+  errors = null;
   constructor(private dataApiService: DataApiService, private http: HttpClient, private router: Router, private authService: AuthService) { }
+  headers : HttpHeaders = new HttpHeaders({
+    "Content-Type": "application/json",
+    "Authorization": "Bearer Token"
+  });
   private event: EventInterface = {
     name: "",
     place: "",
@@ -90,30 +95,21 @@ export class NewEventComponent implements OnInit {
     });
   }
 
-  onSaveEvent1(){
-    this.dataApiService.saveEvent(
-      this.event.name,
-      this.event.place,
-      this.event.start_hour,
-      this.selectedFile,
-      this.event.end_hour,
-      this.event.description,
-      this.event.organizer,
-      this.event.facebook,
-      this.event.instagram,
-      this.event.twitter
-    )
-    .subscribe(event=>{
-      console.log(event);
+  showModal(){
+    Swal.fire({
+      title: '¡FELICIDADES, EVENTO CREADO!',
+      text: '',
+      type: 'success',
+      confirmButtonText: 'Ok!'
     })
   }
-  
+
   onUpload(){
     const fd = new FormData();
     fd.append('image', this.selectedFile, this.selectedFile.name);
     fd.append('name', this.event.name);
     fd.append('place', this.event.place);
-    //fd.append('username', this.dataApiService.selectedUser.user_name);
+    fd.append('username', this.dataApiService.selectedUser.user_name);
     fd.append('start_hour', this.event.start_hour);
     fd.append('end_hour', this.event.end_hour);
     fd.append('description', this.event.description);
@@ -121,14 +117,25 @@ export class NewEventComponent implements OnInit {
     fd.append('facebook', this.event.facebook);
     fd.append('instagram', this.event.instagram);
     fd.append('twitter', this.event.twitter);
-    this.http.post('http://157.230.182.120/eventos/crear_evento/', fd)
+    this.http.post('http://157.230.182.120/dj/eventos/crear_evento/', fd)
       .subscribe(res => {
         console.log(res);
-      })
+      }, 
+      error => {
+        console.log(error);
+        this.errors = error
+      }
+      )
+      if (this.errors==null) {
+        //route to new page
+        this.showModal();
+      }
+      
   }
 
   onSelectedUser(user: UserInterface): void{
     this.dataApiService.selectedUser = Object.assign({}, user);
   }
 
+  //¡FELICIDADES EVENTO CREADO!
 }

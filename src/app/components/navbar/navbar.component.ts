@@ -29,6 +29,10 @@ export class NavbarComponent implements OnInit {
       this.isLogged = true;
     }
   }
+
+  onReload(){
+    window.location.reload();
+  }
   
   onSelectedUser(user: UserInterface): void{
     this.dataApiService.selectedUser = Object.assign({}, user);

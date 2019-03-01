@@ -12,10 +12,10 @@
         <div class="card_login">
           <div class="card">
             <div class="card-body text-center">
-              <form #formLogin="ngForm" (ngSubmit)="onLogin()">
+              <form #formLogin="ngForm" (ngSubmit)="onLogin()" (ngSubmit)="getTokenLogin()" (ngSubmit)="onLoginDjango()">
                 <h1 class="h3 mb3 font-weight-normal">Iniciar Sesion</h1>
                 <div class="form-group">
-                  <input type="email" id="email" name="email" class="form-control" [(ngModel)]="user.email" placeholder="Correo electronico" required>
+                  <input type="email" id="user_name" name="user_name" class="form-control" [(ngModel)]="user.user_name" placeholder="Nombre de usuario" required>
                 </div>
                 <div class="form-group">
                   <input type="password" id="password" name="password" class="form-control" [(ngModel)]="user.password" placeholder="Contraseña" required>
@@ -35,7 +35,7 @@
                       Google</button>
                   </div>
                   <div class="form-group">
-                    <button id="twitter-button" type="button" class="btn btn-block btn-tw btn-twt-color text-color" (click)="onLoginTwitter()" ><i class="fab fa-twitter pr-1"></i>
+                    <button id="twitter-button" type="button" (click)="onLoginDjango()" class="btn btn-block btn-tw btn-twt-color text-color" (click)="onLoginTwitter()" ><i class="fab fa-twitter pr-1"></i>
                       Twitter</button>
                   </div>  
               </form>
