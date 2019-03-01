@@ -7,50 +7,7 @@ from django.contrib.auth.models import User
 from .models import Emprendimiento
 from .models import Evento
 from .models import ComentarioEmprendimiento
-'''
-from django.core.files.base import ContentFile
-import base64
-import six
-import uuid
-import imghdr
 
-
-
-class Base64ImageField(serializers.ImageField):
-
-    def to_internal_value(self, data):
-
-        # Check if this is a base64 string
-        if isinstance(data, six.string_types):
-            # Check if the base64 string is in the "data:" format
-            if 'data:' in data and ';base64,' in data:
-                # Break out the header from the base64 content
-                header, data = data.split(';base64,')
-
-            # Try to decode the file. Return validation error if it fails.
-            try:
-                decoded_file = base64.b64decode(data)
-            except TypeError:
-                self.fail('invalid_image')
-
-            # Generate file name:
-            file_name = str(uuid.uuid4())[:12] # 12 characters are more than enough.
-            # Get the file name extension:
-            file_extension = self.get_file_extension(file_name, decoded_file)
-
-            complete_file_name = "%s.%s" % (file_name, file_extension, )
-
-            data = ContentFile(decoded_file, name=complete_file_name)
-
-        return super(Base64ImageField, self).to_internal_value(data)
-
-    def get_file_extension(self, file_name, decoded_file):
-
-        extension = imghdr.what(file_name, decoded_file)
-        extension = "jpg" if extension == "jpeg" else extension
-
-        return extension
-'''
 class TokenSerializer(serializers.Serializer):
     """
     This serializer serializes the token data
@@ -111,7 +68,8 @@ class EventoSerializer(serializers.ModelSerializer):
     #image = Base64ImageField(max_length = None) 
 
     username = serializers.SlugRelatedField(queryset = User.objects.all(), slug_field = 'username')  
-    
+    #eventos = serializers.StringRelatedField(many= True)
+
     class Meta:
         model = Evento
         fields = ('username', 'name','place','begin_date','image', 'start_hour', 'final_date','end_hour',
